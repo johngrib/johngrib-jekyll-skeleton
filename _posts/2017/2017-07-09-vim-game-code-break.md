@@ -1,10 +1,12 @@
 ---
-layout: post
-title:  "레거시 코드를 파괴하는 Vim 벽돌 깨기"
-summary: "혼돈! 파괴! Vim!"
-date:   2017-07-06 00:15:00 +0900
-tags: vim game
-public: true
+layout  : post
+title   : 레거시 코드를 파괴하는 Vim 벽돌 깨기
+summary : 혼돈! 파괴! Vim!
+date    : 2017-07-06 00:15:00 +0900
+tags    : vim game
+toc     : true
+comment : true
+public  : true
 ---
 
 > 혼돈! 파괴! Vim!

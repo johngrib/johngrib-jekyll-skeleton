@@ -1,10 +1,12 @@
 ---
-layout: post
-title:  "tmux 키 조합에서 C--가 불가능한 이유."
-summary: "결론: ascii 코드값 때문."
-date:   2017-03-27 22:57:52 +0900
-tags: TIL tmux ascii
-public: true
+layout  : post
+title   : tmux 키 조합에서 C--가 불가능한 이유.
+summary : 결론                                   : ascii 코드값 때문.
+date    : 2017-03-27 22:57:52 +0900
+tags    : TIL tmux ascii
+toc     : true
+comment : true
+public  : true
 ---
 
 

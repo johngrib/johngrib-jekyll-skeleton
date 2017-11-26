@@ -1,10 +1,12 @@
 ---
-layout: post
-title:  "Jekyll 블로그에 태그 추가하기."
-summary: "마음에 드는 플러그인이 없어서 조잡하게나마 직접 만들었다."
-date:   2017-01-22 08:52:22 +0900
-tags: jekyll
-public: true
+layout  : post
+title   : Jekyll 블로그에 태그 추가하기.
+summary : 마음에 드는 플러그인이 없어서 조잡하게나마 직접 만들었다.
+date    : 2017-01-22 08:52:22 +0900
+tags    : jekyll
+toc     : true
+comment : true
+public  : true
 ---
 
 Jekyll을 사용해 블로그를 만들었고 포스팅도 하나 올리긴 했는데 이제부턴 무엇을 한다?  

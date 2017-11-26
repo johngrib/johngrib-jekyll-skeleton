@@ -1,10 +1,12 @@
 ---
-layout: post
-title:  "Hammerspoon 튜토리얼 04 - 웹뷰와 urlevent 기능을 사용해 봅시다"
-summary: "결론은 터미널"
-date:   2017-08-06 13:35:00 +0900
-tags: hammerspoon
-public: true
+layout  : post
+title   : Hammerspoon 튜토리얼 04 - 웹뷰와 urlevent 기능을 사용해 봅시다
+summary : 결론은 터미널
+date    : 2017-08-06 13:35:00 +0900
+tags    : hammerspoon
+toc     : true
+comment : true
+public  : true
 ---
 
 # 웹뷰를 사용해 봅시다

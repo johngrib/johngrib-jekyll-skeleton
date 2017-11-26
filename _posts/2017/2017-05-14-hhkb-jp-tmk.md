@@ -1,10 +1,12 @@
 ---
-layout: post
-title:  "HHKB jp 컨트롤 보드를 tmk로 교체해 보았다."
-summary: "해피해킹을 더욱 해피하게"
-date:   2017-05-14 15:50:31 +0900
-tags: hhkb keyboard tmk
-public: true
+layout  : post
+title   : HHKB jp 컨트롤 보드를 tmk로 교체해 보았다.
+summary : 해피해킹을 더욱 해피하게
+date    : 2017-05-14 15:50:31 +0900
+tags    : hhkb keyboard tmk
+toc     : true
+comment : true
+public  : true
 ---
 
 # 해피해킹을 사용하지 않은 이유

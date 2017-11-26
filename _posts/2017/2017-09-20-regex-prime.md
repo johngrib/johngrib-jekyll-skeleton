@@ -1,10 +1,12 @@
 ---
-layout: post
-title:  "소수를 판별하는 정규식"
-summary: "1진법을 사용해 소수를 판별하자!"
-date:   2017-09-20 20:56:55 +0900
-tags: perl regex
-public: true
+layout  : post
+title   : 소수를 판별하는 정규식
+summary : 1진법을 사용해 소수를 판별하자!
+date    : 2017-09-20 20:56:55 +0900
+tags    : perl regex
+toc     : true
+comment : true
+public  : true
 ---
 
 어젯밤, [책](https://www.nostarch.com/perloneliners)을 읽다가 신기한 코드 하나를 발견했다.

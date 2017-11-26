@@ -1,11 +1,12 @@
 ---
-layout: post
-title:  "Vim 사용시 한/영 전환 문제 해결하기"
-summary: "hammerspoon으로 해결"
-date:   2017-05-04 22:05:30 +0900
-tags: vim 구름입력기 hammerspoon karabiner input-source
-public: true
-toc: true
+layout  : post
+title   : Vim 사용시 한/영 전환 문제 해결하기
+summary : hammerspoon으로 해결
+date    : 2017-05-04 22:05:30 +0900
+tags    : vim 구름입력기 hammerspoon karabiner input-source
+toc     : true
+comment : true
+public  : true
 ---
 
 # 짜증나는 한영전환을 완벽히 해결해 보자
