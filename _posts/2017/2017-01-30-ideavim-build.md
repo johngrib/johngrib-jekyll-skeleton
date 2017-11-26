@@ -1,7 +1,7 @@
 ---
 layout  : post
 title   : IdeaVIM 빌드가 안 되는 문제 해결.
-summary : 결론: 삽질 끝에 공식 계정에 물어보고 해결.
+summary : "결론: 삽질 끝에 공식 계정에 물어보고 해결."
 date    : 2017-01-30 21:22:53 +0900
 tags    : ideavim open-source jetBrains intelliJ 삽질
 toc     : true
