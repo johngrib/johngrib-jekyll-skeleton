@@ -42,3 +42,5 @@ disqus:
   id: johngrib
   shortname: johngrib
 
+google_analytics:
+  ua: UA-110224147-1
