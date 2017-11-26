@@ -1,0 +1,65 @@
+---
+layout: home
+---
+
+<div class="home">
+    <div>
+        <H3>
+            <a href="https://github.com/vimwiki/vimwiki">Vimwiki</a>
+            +
+            <a href="https://jekyllrb.com/">Jekyll</a>
+            +
+            <a href="https://pages.github.com/">Github.io</a>
+        </H3>
+    </div>
+        기억 보조용 위키
+    <div>
+    </div>
+    <div>
+        <a href="/blog/">블로그</a>
+    </div>
+    <div class="contact">
+{% if site.github_username %}
+        <a href="https://github.com/{{ site.github_username }}">GitHub</a>
+{% endif %}
+{% if site.twitter_username %}
+        <a href="https://twitter.com/{{ site.twitter_username }}">Twitter</a>
+{% endif %}
+{% if site.email %}
+        <a href="mailto:{{ site.email }}">Email</a>
+{% endif %}
+        <a href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS</a>
+    </div>
+</div>
+<div>
+    <H3>최근 변경된 문서</H3>
+    <div>
+        <div>
+            <ul class="post-list">
+{% assign documents = site.wiki | sort %}
+{% for doc in documents limit: 10 %}
+    {% if doc.public == true %}
+                <li>
+                    <a class="post-link" href="{{ doc.url | prepend: site.baseurl }}">
+                        <div class="post-meta">
+                            {{ doc.updated | date: "%Y.%m.%d" }}
+                            -
+                            {{ doc.title }}
+                        </div>
+                        <div class="post-excerpt">{{ doc.summary }}</div>
+
+                        <ul class="tag-list">
+        {% for tag in doc.tags %}
+                            <li class="post-tag">
+                                <a href="/tag/#{{tag}}" >#{{tag}}</a>
+                            </li>
+        {% endfor %}
+                        </ul>
+                    </a>
+                </li>
+    {% endif %}
+{% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
