@@ -8,6 +8,8 @@ toc     : true
 comment : true
 public  : true
 ---
+* TOC
+{:toc}
 
 Jekyll을 이용해 새 블로그를 만들었다.
 

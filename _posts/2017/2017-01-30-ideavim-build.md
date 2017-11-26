@@ -8,6 +8,8 @@ toc     : true
 comment : true
 public  : true
 ---
+* TOC
+{:toc}
 
 오래간만에 [IdeaVIM Github][link1]에 가보니 Commit이 꽤 많아졌길래 별 생각 없이 `pull`을 했다.
 

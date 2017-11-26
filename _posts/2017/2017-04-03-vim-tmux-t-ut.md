@@ -8,6 +8,8 @@ toc     : true
 comment : true
 public  : true
 ---
+* TOC
+{:toc}
 
 # 문제
 iTerm2 tmux에서 Vim이나 MacVim을 사용하면 스크린샷과 같이 터미널의 배경색이 Vim의 배경색을 침범한다.

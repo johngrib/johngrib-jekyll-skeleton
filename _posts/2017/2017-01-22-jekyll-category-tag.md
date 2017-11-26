@@ -8,6 +8,8 @@ toc     : true
 comment : true
 public  : true
 ---
+* TOC
+{:toc}
 
 Jekyll을 사용해 블로그를 만들었고 포스팅도 하나 올리긴 했는데 이제부턴 무엇을 한다?  
 나중에 글이 쌓이게 되면 정리가 필요할 테니까 작업을 미리 해두면 좋을 것 같았다.  

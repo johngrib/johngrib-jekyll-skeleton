@@ -8,6 +8,8 @@ toc     : true
 comment : true
 public  : true
 ---
+* TOC
+{:toc}
 
 # `chooser`를 사용해 봅시다
 
