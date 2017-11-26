@@ -1,10 +1,12 @@
 ---
-layout: post
-title:  "중괄호 인덴트 스타일을 조사해 보았다."
-summary: "K&R style, Allman style."
-date:   2017-03-08 23:00:00 +0900
-tags: TIL style
-public: true
+layout  : post
+title   : 중괄호 인덴트 스타일을 조사해 보았다.
+summary : K&R style, Allman style.
+date    : 2017-03-08 23:00:00 +0900
+tags    : TIL style
+toc     : true
+comment : true
+public  : true
 ---
 
 중괄호 인덴테이션 방식에도 이름이 있을 거라는 생각은 했었지만 실제로 찾아본 건 오늘이 처음이다.

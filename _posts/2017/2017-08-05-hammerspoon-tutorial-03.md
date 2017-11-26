@@ -1,10 +1,12 @@
 ---
-layout: post
-title:  "Hammerspoon 튜토리얼 03 - 한영 전환 키를 만들어 봅시다"
-summary: "Esc - 영문전환도 만들어 봅시다"
-date:   2017-08-05 12:11:00 +0900
-tags: hammerspoon
-public: true
+layout  : post
+title   : Hammerspoon 튜토리얼 03 - 한영 전환 키를 만들어 봅시다
+summary : Esc - 영문전환도 만들어 봅시다
+date    : 2017-08-05 12:11:00 +0900
+tags    : hammerspoon
+toc     : true
+comment : true
+public  : true
 ---
 
 # 콘솔을 열어 봅시다

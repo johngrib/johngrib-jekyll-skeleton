@@ -1,10 +1,12 @@
 ---
-layout: post
-title:  "Hammerspoon 튜토리얼 00 - 시작하기"
-summary: "일단 맥이 있어야 한다"
-date:   2017-07-31 21:57:27 +0900
-tags: hammerspoon
-public: true
+layout  : post
+title   : Hammerspoon 튜토리얼 00 - 시작하기
+summary : 일단 맥이 있어야 한다
+date    : 2017-07-31 21:57:27 +0900
+tags    : hammerspoon
+toc     : true
+comment : true
+public  : true
 ---
 
 # 이 글의 타깃

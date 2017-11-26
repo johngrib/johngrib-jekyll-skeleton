@@ -1,10 +1,12 @@
 ---
-layout: post
-title:  "Hammerspoon 튜토리얼 02 - 클립보드 확장 기능을 만들어 봅시다"
-summary: "복붙을 편하게!"
-date:   2017-08-04 21:32:22 +0900
-tags: hammerspoon
-public: true
+layout  : post
+title   : Hammerspoon 튜토리얼 02 - 클립보드 확장 기능을 만들어 봅시다
+summary : 복붙을 편하게!
+date    : 2017-08-04 21:32:22 +0900
+tags    : hammerspoon
+toc     : true
+comment : true
+public  : true
 ---
 
 # 클립보드 확장 기능을 만들어 봅시다

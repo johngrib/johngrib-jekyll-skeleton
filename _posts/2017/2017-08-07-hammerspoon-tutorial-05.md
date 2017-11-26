@@ -1,10 +1,12 @@
 ---
-layout: post
-title:  "Hammerspoon 튜토리얼 05 - chooser를 사용해 봅시다"
-summary: "클립보드 히스토리도 만들어 봅시다"
-date:   2017-08-07 09:33:00 +0900
-tags: hammerspoon
-public: true
+layout  : post
+title   : Hammerspoon 튜토리얼 05 - chooser를 사용해 봅시다
+summary : 클립보드 히스토리도 만들어 봅시다
+date    : 2017-08-07 09:33:00 +0900
+tags    : hammerspoon
+toc     : true
+comment : true
+public  : true
 ---
 
 # `chooser`를 사용해 봅시다

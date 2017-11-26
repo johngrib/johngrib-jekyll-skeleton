@@ -1,10 +1,12 @@
 ---
-layout: post
-title:  "IdeaVIM 빌드가 안 되는 문제 해결."
-summary: "결론: 삽질 끝에 공식 계정에 물어보고 해결."
-date:   2017-01-30 21:22:53 +0900
-tags: ideavim open-source jetBrains intelliJ 삽질
-public: true
+layout  : post
+title   : IdeaVIM 빌드가 안 되는 문제 해결.
+summary : 결론: 삽질 끝에 공식 계정에 물어보고 해결.
+date    : 2017-01-30 21:22:53 +0900
+tags    : ideavim open-source jetBrains intelliJ 삽질
+toc     : true
+comment : true
+public  : true
 ---
 
 오래간만에 [IdeaVIM Github][link1]에 가보니 Commit이 꽤 많아졌길래 별 생각 없이 `pull`을 했다.
