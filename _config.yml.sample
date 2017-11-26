@@ -42,3 +42,5 @@ disqus:
   id:
   shortname:
 
+google_analytics:
+  ua:
