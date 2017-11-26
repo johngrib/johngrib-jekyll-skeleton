@@ -1,7 +1,7 @@
 ---
 layout  : post
 title   : tmux vim에서 나타나는 배경색 번짐 문제 해결
-summary : `set t_ut=`로 한 방에 해결
+summary : "`set t_ut=`로 한 방에 해결"
 date    : 2017-04-03 07:33:49 +0900
 tags    : vim tmux fix
 toc     : true
