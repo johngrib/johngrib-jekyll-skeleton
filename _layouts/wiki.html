@@ -35,11 +35,6 @@ layout: document
         <h2>{{ page.summary }}</h2>
 {% endif %}
 
-{% if page.toc %}
-        <div class="toc">
-            {{ content | toc_only }}
-        </div>
-{% endif %}
     </header>
     <article class="post-content">
         {{ content }}
