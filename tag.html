@@ -1,0 +1,74 @@
+---
+layout: document
+title: Tag
+permalink: /tag/
+public: true
+---
+
+{% assign tagMap = site.data.tagMap %}
+{% assign tagList = site.data.tagList %}
+<div>
+    <ul class="tag-list">
+{% for tag in tagList %}
+        <li>
+            <a href="#{{tag}}" onclick="showTag('#{{tag}}')">
+                {{tag}}<sup>{{ tagMap[tag] | size }}</sup>
+            </a>
+        </li>
+{% endfor %}
+    </ul>
+</div>
+
+<div>
+{% for tag in tagList %}
+    <div class="archive-group invisible" id="{{tag}}">
+
+        <h3 id="{{tag}}">{{ tag }}</h3>
+
+        <ul class="post-list">
+    {% assign list = tagMap[tag] %}
+    {% for post in list %}
+        {% if post.public != false %}
+            <li>
+                <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+                    <span>{{ post.title }}</span>
+                    <div class="post-meta" style="float: right;">
+                        {{ post.modified | date: "%Y.%m.%d" }}
+                    </div>
+            {% if post.summary %}
+                        <div class="post-excerpt">
+                            - {{ post.summary }}
+                        </div>
+            {% endif %}
+                </a>
+            </li>
+        {% endif %}
+    {% endfor %}
+        </ul>
+    </div>
+{% endfor %}
+</div>
+<script>
+    function showTag(selector) {
+
+        document.querySelectorAll('.visible')
+            .forEach(function(el) {
+                el.classList.remove('visible');
+                el.classList.add('invisible');
+            })
+
+        var list = document.querySelector(selector);
+        list.classList.add('visible');
+        list.classList.remove('invisible');
+    }
+
+    ;(function showInitTag() {
+        const url = window.location.href;
+        const req = /#([^\s]+)$/.exec(url);
+        if(Array.isArray(req)) {
+            var selector = '#' + req.pop();
+            showTag(selector);
+        }
+    })();
+</script>
+
