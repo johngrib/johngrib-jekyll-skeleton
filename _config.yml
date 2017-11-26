@@ -1,0 +1,45 @@
+# Site settings
+title: 기계인간 John Grib
+url: "https://johngrib.github.io"
+baseurl: ""
+description: >
+    기계인간 블로그
+
+# My information
+email: johngrib82@gmail.com
+author: 기계인간 John Grib
+profile: 유물론자
+twitter_username: John_Grib
+github_username: johngrib
+disqus_shortname: johngrib
+
+# Build settings
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-gist
+  - jekyll-toc
+
+permalink: /blog/:year/:month/:day/:title/
+
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+paginate: 10
+paginator_path: "/blog"
+paginate_path: "/blog/page:num/"
+
+# Collections
+collections:
+    wiki:
+        output: true
+        permalink: /:collection/:path/
+
+# Comment Service
+disqus:
+  id: johngrib
+  shortname: johngrib
+
