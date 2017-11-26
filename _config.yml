@@ -18,7 +18,6 @@ plugins:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-gist
-  - jekyll-toc
 
 permalink: /blog/:year/:month/:day/:title/
 
