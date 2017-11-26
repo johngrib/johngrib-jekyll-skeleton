@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+}
+body, th, td, div, p, li {
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+blockquote {
+    background: #FFFFFF;
+    margin:0;
+    padding: 5px 20px;
+    border-left: 10px solid #CCCCCC;
+}
+code,pre {
+    font-family:  $coding-font;
+}
+code {
+    color: #900;
+    background-color: #e7e9ee;
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+pre {
+    overflow-x: auto;
+    padding: 10px 10px;
+}
+pre, pre code {
+    color: #fafafa;
+    background-color: #223;
+}
+pre code {
+    padding: 0;
+}
+.hide {
+    display: none;
+}
+.center {
+    text-align: center;
+}
+.language-html table {
+    background: transparent;
+    margin: 0;
+}
+.language-html td {
+    padding: 0;
+    border: 0;
+
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-weight: normal;
+}
