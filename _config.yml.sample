@@ -1,0 +1,45 @@
+# Site settings
+title: blog title
+url: "https://.........."
+baseurl: ""
+description: >
+    blog description
+
+# My information
+email:
+author:
+profile:
+twitter_username:
+github_username:
+disqus_shortname:
+
+# Build settings
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-gist
+  - jekyll-toc
+
+permalink: /blog/:year/:month/:day/:title/
+
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+paginate: 10
+paginator_path: "/blog"
+paginate_path: "/blog/page:num/"
+
+# Collections
+collections:
+    wiki:
+        output: true
+        permalink: /:collection/:path/
+
+# Comment Service
+disqus:
+  id:
+  shortname:
+
