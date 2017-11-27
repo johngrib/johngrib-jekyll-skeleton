@@ -122,12 +122,6 @@ function parseInfo(file, info) {
     obj.fileName = file.name.replace(/\.md$/, '');
     obj.type = file.type;
 
-    if(file.type === 'blog') {
-        obj.url = '/blog/' + obj.fileName.replace(/^(\d{4})-(\d{2})-(\d{2})-/, '$1/$2/$3/');
-    } else if(file.type === 'wiki') {
-        obj.url = '/wiki/' + obj.fileName;
-    }
-
     const rawData = info.split('\n');
 
     rawData.forEach(function(str) {
@@ -142,6 +136,13 @@ function parseInfo(file, info) {
 
         obj[key] = val;
     });
+
+    if(file.type === 'blog') {
+        obj.url = '/blog/' + obj.date.replace(/^(\d{4})-(\d{2})-(\d{2}).*$/, '$1/$2/$3/');
+        obj.url += obj.fileName.replace(/^(\d{4}-\d{2}-\d{2}-)?(.*)$/, '$2');
+    } else if(file.type === 'wiki') {
+        obj.url = '/wiki/' + obj.fileName;
+    }
 
     if(obj.tags) {
         obj.tags = obj.tags.split(/\s+/);
