@@ -11,6 +11,8 @@ div.gsc-control-cse {
 }
 
 div.search {
+    width: 100%;
+    position: relative;
 }
 .search form.gsc-search-box {
     font-size: 13px;
@@ -194,3 +196,28 @@ ul.tag-list {
     background-color: #FFFFFF;
 }
 
+.searchInput {
+    background-color: #f6f5ea;
+    z-index: 1;
+    width: 100%;
+    height: 1.5em;
+    position: relative;
+    padding: 0px;
+    border: 0px;
+    margin: 0px;
+    font-size: 13px;
+    direction: ltr;
+    -webkit-appearance: textfield;
+    border-bottom: 1px solid $theme-color;
+}
+
+.searchButton {
+    border: 0px;
+    border-radius: 0px;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    z-index: 2;
+}
