@@ -1,4 +1,4 @@
 bundle install
 # bundle exec jekyll serve --watch
-./generateTag.js
+./generateData.js
 jekyll server --watch
