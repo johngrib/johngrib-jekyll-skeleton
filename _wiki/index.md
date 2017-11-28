@@ -10,3 +10,5 @@ comment : false
 ---
 
 * [[test]](../test)
+* [[google-search-console-remove-outdated-content]](../google-search-console-remove-outdated-content)
+    * 구글 웹 도구 - 오래된 콘텐츠 삭제
