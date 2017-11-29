@@ -34,15 +34,6 @@ function writeFiles() {
         return row != null;
     });
 
-    // create dataMap
-    const dataMap = {};
-
-    dataList.forEach(function(data) {
-        dataMap[data.fileName] = data;
-    });
-
-    saveWikiMap(dataMap);
-
     // create tagMap
     const tagMap = {};
 
@@ -76,15 +67,6 @@ function writeFiles() {
     });
 
     savePageList(pageList);
-}
-
-function saveWikiMap(dataMap) {
-    fs.writeFile("./_data/wikiMap.json", JSON.stringify(dataMap), function(err) {
-        if(err) {
-            return console.log(err);
-        }
-        console.log("wikiMap saved.");
-    });
 }
 
 function saveTagMap(tagMap) {
