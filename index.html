@@ -33,33 +33,31 @@ layout: home
 </div>
 <div>
     <H3>최근 변경된 문서</H3>
-    <div>
-        <div>
-            <ul class="post-list">
+    <ul class="post-list">
 {% assign documents = site.wiki | sort: 'updated' | reverse %}
 {% for doc in documents limit: 10 %}
     {% if doc.public == true and doc.title != 'wiki index'%}
-                <li>
-                    <a class="post-link" href="{{ doc.url | prepend: site.baseurl }}">
-                        <div class="post-meta">
-                            {{ doc.updated | date: "%Y.%m.%d" }}
-                            -
-                            {{ doc.title }}
-                        </div>
-                        <div class="post-excerpt">{{ doc.summary }}</div>
+        <li>
+            <div>
+                <a class="post-link" href="{{ doc.url | prepend: site.baseurl }}">
+                    <div class="post-meta">
+                        {{ doc.updated | date: "%Y.%m.%d" }}
+                        -
+                        {{ doc.title }}
+                    </div>
+                    <div class="post-excerpt">{{ doc.summary }}</div>
 
-                        <ul class="tag-list">
+                    <ul class="tag-list">
         {% for tag in doc.tags %}
-                            <li class="post-tag">
-                                <a href="/tag/#{{tag}}" >#{{tag}}</a>
-                            </li>
+                        <li class="post-tag">
+                            <a href="/tag/#{{tag}}" >#{{tag}}</a>
+                        </li>
         {% endfor %}
-                        </ul>
-                    </a>
-                </li>
+                    </ul>
+                </a>
+            </div>
+        </li>
     {% endif %}
 {% endfor %}
-            </ul>
-        </div>
-    </div>
+    </ul>
 </div>
