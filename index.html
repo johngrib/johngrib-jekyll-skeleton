@@ -36,7 +36,7 @@ layout: home
     <div>
         <div>
             <ul class="post-list">
-{% assign documents = (site.wiki | sort: 'updated') | reverse %}
+{% assign documents = site.wiki | sort: 'updated' | reverse %}
 {% for doc in documents limit: 10 %}
     {% if doc.public == true and doc.title != 'wiki index'%}
                 <li>
