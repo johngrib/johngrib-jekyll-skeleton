@@ -3,17 +3,22 @@ layout: document
 ---
 
 {% assign thisName = page.id | remove: '/wiki/' %}
-{% assign updated = site.data.wikiMap[thisName].modified | date: '%Y.%m.%d' %}
-{% assign tags = site.data.wikiMap[thisName].tags %}
 
 <div class="post">
     <header class="post-header">
         <h1 class="post-title">{{ page.title }}</h1>
-        <p class="edit-date">updated: {{ updated }}</p>
+        <p class="edit-date">updated: {{ page.updated | date: '%Y.%m.%d' }}</p>
 
 {% if page.parent %}
     {% assign parentLink = '/wiki/' | append: page.parent %}
-    {% assign parentTitle = site.data.wikiMap[page.parent].title %}
+    {% assign parentTitle = parentLink %}
+
+    {% for item in site.wiki %}
+        {% if item.id == parentLink %}
+            {% assign parentTitle = item.title %}
+            {% break %}
+        {% endif %}
+    {% endfor %}
         <ul>
             <li>
                 <p>상위 문서: <a href="{{ parentLink }}">{{ parentTitle }}</a></p>
@@ -21,9 +26,10 @@ layout: document
         </ul>
 {% endif %}
 
-{% if tags %}
+{% if page.tags %}
         <div class="post-tags">
             <div>
+    {% assign tags = page.tags | sort %}
     {% for tag in tags %}
                 <a href="/tag/#{{tag|slugize}}">#{{tag}}</a>{% unless forloop.last %},{% endunless %}
     {% endfor %}
