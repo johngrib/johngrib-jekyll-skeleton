@@ -3,7 +3,6 @@
 const fs = require('fs');
 const path = './_wiki'
 const list = [];
-const dataMap = {};
 
 getFiles('./_wiki', 'wiki', list);
 getFiles('./_posts', 'blog', list);
@@ -22,12 +21,6 @@ const dataList = list.map(function collectData(file) {
     return a.fileName.toLowerCase().localeCompare(b.fileName.toLowerCase());
 
 });
-
-dataList.forEach(function collectMap(data) {
-    dataMap[data.fileName] = data;
-});
-saveWikiMap(dataMap);
-
 
 const tagMap = {};
 
@@ -62,15 +55,6 @@ const pageList = dataList.sort(function(a, b) {
 });
 
 savePageList(pageList);
-
-function saveWikiMap(dataMap) {
-    fs.writeFile("./_data/wikiMap.json", JSON.stringify(dataMap), function(err) {
-        if(err) {
-            return console.log(err);
-        }
-        console.log("wikiMap saved.");
-    });
-}
 
 function saveTagMap(tagMap) {
     fs.writeFile("./_data/tagMap.json", JSON.stringify(tagMap), function(err) {
