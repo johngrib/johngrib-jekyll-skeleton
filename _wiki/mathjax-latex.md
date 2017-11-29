@@ -3,6 +3,7 @@ layout  : wiki
 title   : MathJax로 LaTeX 사용하기
 summary :
 date    : 2017-11-28 22:56:29 +0900
+updated : 2017-11-28 22:56:29 +0900
 tags    : latex
 toc     : true
 public  : true
