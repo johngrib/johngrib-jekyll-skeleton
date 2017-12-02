@@ -33,7 +33,10 @@ dataList.forEach(function collectTagMap(data) {
         if(!tagMap[tag]) {
             tagMap[tag] = [];
         }
-        tagMap[tag].push(data);
+        tagMap[tag].push({
+            fileName: data.fileName,
+            updated: data.updated || data.date,
+        });
     });
 });
 
@@ -70,7 +73,7 @@ dataList.sort(function(a, b) {
 savePageList(pageMap);
 
 function saveTagMap(tagMap) {
-    fs.writeFile("./_data/tagMap.json", JSON.stringify(tagMap), function(err) {
+    fs.writeFile("./_data/tagMap.yml", YAML.stringify(tagMap), function(err) {
         if(err) {
             return console.log(err);
         }
