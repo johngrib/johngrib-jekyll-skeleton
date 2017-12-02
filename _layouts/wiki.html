@@ -10,18 +10,10 @@ layout: document
         <p class="edit-date"><a href="{{ site.blame }}/{{ thisName }}.md" target="_blank">updated: {{ page.updated | date: '%Y.%m.%d' }}</a></p>
 
 {% if page.parent %}
-    {% assign parentLink = '/wiki/' | append: page.parent %}
-    {% assign parentTitle = parentLink %}
-
-    {% for item in site.wiki %}
-        {% if item.id == parentLink %}
-            {% assign parentTitle = item.title %}
-            {% break %}
-        {% endif %}
-    {% endfor %}
+    {% assign parent = site.data.pageMap[page.parent] %}
         <ul>
             <li>
-                <p>상위 문서: <a href="{{ parentLink }}">{{ parentTitle }}</a></p>
+                <p>상위 문서: <a href="{{ parent.url }}">{{ parent.title }}</a></p>
             </li>
         </ul>
 {% endif %}
