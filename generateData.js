@@ -82,7 +82,7 @@ function saveTagMap(tagMap) {
 }
 
 function saveTagList(tagList) {
-    fs.writeFile("./_data/tagList.json", JSON.stringify(tagList), function(err) {
+    fs.writeFile("./_data/tagList.yml", YAML.stringify(tagList), function(err) {
         if(err) {
             return console.log(err);
         }
