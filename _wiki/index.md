@@ -14,3 +14,4 @@ comment : false
 * `[[google-search-console-remove-outdated-content]]`[구글 웹 도구 - 오래된 콘텐츠 삭제](../google-search-console-remove-outdated-content)
 * `[[mathjax-latex]]`[MathJax로 latex 사용하기](../mathjax-latex)
 * `[[vim-conceallevel]]`[conceallevel (Vim)](../vim-conceallevel)
+* `[[yaml]]`[YAML](../yaml)
