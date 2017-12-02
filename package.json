@@ -1,0 +1,23 @@
+{
+  "name": "johngrib.github.io",
+  "version": "1.0.0",
+  "description": "data generator",
+  "main": "generateData.js",
+  "dependencies": {
+    "yamljs": "^0.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johngrib/johngrib.github.io.git"
+  },
+  "author": "John Grib",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/johngrib/johngrib.github.io/issues"
+  },
+  "homepage": "https://github.com/johngrib/johngrib.github.io#readme"
+}

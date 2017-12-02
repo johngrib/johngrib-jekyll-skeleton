@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+const YAML = require('yamljs');
 const fs = require('fs');
 const path = './_wiki'
 const list = [];
@@ -50,11 +51,23 @@ const tagList = Object.keys(tagMap).sort(function sortByTagName(a, b) {
 
 saveTagList(tagList)
 
-const pageList = dataList.sort(function(a, b) {
+const pageMap = {};
+dataList.sort(function(a, b) {
     return a.modified < b.modified;
+}).forEach(function(page) {
+
+    pageMap[page.fileName] = {
+        type: page.type,
+        title: page.title,
+        summary: page.summary,
+        parent: page.parent,
+        url: page.url,
+        updated: page.updated || page.date,
+    };
+
 });
 
-savePageList(pageList);
+savePageList(pageMap);
 
 function saveTagMap(tagMap) {
     fs.writeFile("./_data/tagMap.json", JSON.stringify(tagMap), function(err) {
@@ -74,12 +87,12 @@ function saveTagList(tagList) {
     });
 }
 
-function savePageList(pageList) {
-    fs.writeFile("./_data/pageList.json", JSON.stringify(pageList), function(err) {
+function savePageList(pageMap) {
+    fs.writeFile("./_data/pageMap.yml", YAML.stringify(pageMap), function(err) {
         if(err) {
             return console.log(err);
         }
-        console.log("pageList saved.");
+        console.log("pageMap saved.");
     });
 }
 
@@ -150,3 +163,4 @@ function getFiles(path, type, array){
         }
     });
 }
+
