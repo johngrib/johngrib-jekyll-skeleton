@@ -9,7 +9,6 @@ public  : true
 comment : false
 ---
 
-* [[test]](../test)
 * `[[coding-font]]`[코딩 폰트](../coding-font)
 * `[[google-search-console-remove-outdated-content]]`[구글 웹 도구 - 오래된 콘텐츠 삭제](../google-search-console-remove-outdated-content)
 * `[[mathjax-latex]]`[MathJax로 latex 사용하기](../mathjax-latex)
