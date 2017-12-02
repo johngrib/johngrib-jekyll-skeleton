@@ -4,3 +4,4 @@ _site
 tags
 *.swp
 Gemfile.lock
+/node_modules
