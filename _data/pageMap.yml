@@ -5,34 +5,27 @@
     parent: null
     url: /blog/2017/05/20/jwp-12
     updated: '2017-05-20 20:44:40 +0900'
-vim-conceallevel:
+yaml:
     type: wiki
-    title: 'conceallevel (Vim)'
-    summary: 'Vim에서 글자나 기호가 사라진다면 conceallevel을 확인해보자'
+    title: YAML
+    summary: 'YAML Ain''t Markup Language'
     parent: index
-    url: /wiki/vim-conceallevel
-    updated: '2017-11-29 17:47:59 +0900'
-index:
-    type: wiki
-    title: 'wiki index'
-    summary: null
-    parent: null
-    url: /wiki/index
-    updated: '2017-11-29 21:37:03 +0900'
-coding-font:
-    type: wiki
-    title: '코딩 폰트'
-    summary: '내가 선호하는 코딩 폰트를 기록한다'
-    parent: index
-    url: /wiki/coding-font
-    updated: '2017-12-01 06:02:30 +0900'
-2017-05-27-jwp-14:
+    url: /wiki/yaml
+    updated: '2017-12-02 16:45:25 +0900'
+2017-05-23-jwp-13:
     type: blog
-    title: 'Next JWP Study #14'
-    summary: 'ORM 및 Spring Data JPA'
+    title: 'Next JWP Study #13'
+    summary: 'AOP 개념 및 로그인 기반 테스트'
     parent: null
-    url: /blog/2017/05/27/jwp-14
-    updated: '2017-05-27 18:00:40 +0900'
+    url: /blog/2017/05/23/jwp-13
+    updated: '2017-05-23 22:05:44 +0900'
+2017-01-30-ideavim-build:
+    type: blog
+    title: 'IdeaVIM 빌드가 안 되는 문제 해결.'
+    summary: '"결론: 삽질 끝에 공식 계정에 물어보고 해결."'
+    parent: null
+    url: /blog/2017/01/30/ideavim-build
+    updated: '2017-01-30 21:22:53 +0900'
 2017-03-12-telegram-bot:
     type: blog
     title: '텔레그램 봇 스켈레톤 만들기.'
@@ -40,6 +33,13 @@ coding-font:
     parent: null
     url: /blog/2017/03/12/telegram-bot
     updated: '2017-03-12 21:08:16 +0900'
+2017-03-13-uri-url:
+    type: blog
+    title: 'URI와 URL 의미가 헷갈려서 조사해 보았다.'
+    summary: '"결론: URL은 URI의 부분집합."'
+    parent: null
+    url: /blog/2017/03/13/uri-url
+    updated: '2017-03-13 21:30:46 +0900'
 2017-03-27-tmux-ascii-control:
     type: blog
     title: 'tmux 키 조합에서 C--가 불가능한 이유.'
@@ -159,27 +159,27 @@ coding-font:
     parent: null
     url: /blog/2017/05/16/jwp-11
     updated: '2017-05-16 21:36:06 +0900'
-test:
+vim-conceallevel:
     type: wiki
-    title: 'test 1'
-    summary: 'test summary'
+    title: 'conceallevel (Vim)'
+    summary: 'Vim에서 글자나 기호가 사라진다면 conceallevel을 확인해보자'
     parent: index
-    url: /wiki/test
-    updated: '2017-11-26 21:39:45 +0900'
-2017-05-23-jwp-13:
+    url: /wiki/vim-conceallevel
+    updated: '2017-11-29 17:47:59 +0900'
+2017-03-08-til-indent-style:
     type: blog
-    title: 'Next JWP Study #13'
-    summary: 'AOP 개념 및 로그인 기반 테스트'
+    title: '중괄호 인덴트 스타일을 조사해 보았다.'
+    summary: 'K&R style, Allman style.'
     parent: null
-    url: /blog/2017/05/23/jwp-13
-    updated: '2017-05-23 22:05:44 +0900'
-2017-03-13-uri-url:
+    url: /blog/2017/03/08/til-indent-style
+    updated: '2017-03-08 23:00:00 +0900'
+2017-05-27-jwp-14:
     type: blog
-    title: 'URI와 URL 의미가 헷갈려서 조사해 보았다.'
-    summary: '"결론: URL은 URI의 부분집합."'
+    title: 'Next JWP Study #14'
+    summary: 'ORM 및 Spring Data JPA'
     parent: null
-    url: /blog/2017/03/13/uri-url
-    updated: '2017-03-13 21:30:46 +0900'
+    url: /blog/2017/05/27/jwp-14
+    updated: '2017-05-27 18:00:40 +0900'
 2017-05-29-jwp-15:
     type: blog
     title: 'Next JWP Study #15'
@@ -271,13 +271,13 @@ test:
     parent: null
     url: /blog/2017/09/20/regex-prime
     updated: '2017-09-20 20:56:55 +0900'
-mathjax-latex:
+coding-font:
     type: wiki
-    title: 'MathJax로 LaTeX 사용하기'
-    summary: null
+    title: '코딩 폰트'
+    summary: '내가 선호하는 코딩 폰트를 기록한다'
     parent: index
-    url: /wiki/mathjax-latex
-    updated: '2017-11-28 22:56:29 +0900'
+    url: /wiki/coding-font
+    updated: '2017-12-01 06:02:30 +0900'
 default-post:
     type: blog
     title: 'sample title'
@@ -292,20 +292,27 @@ google-search-console-remove-outdated-content:
     parent: index
     url: /wiki/google-search-console-remove-outdated-content
     updated: '2017-11-28 08:50:10 +0900'
-2017-01-30-ideavim-build:
-    type: blog
-    title: 'IdeaVIM 빌드가 안 되는 문제 해결.'
-    summary: '"결론: 삽질 끝에 공식 계정에 물어보고 해결."'
+index:
+    type: wiki
+    title: 'wiki index'
+    summary: null
     parent: null
-    url: /blog/2017/01/30/ideavim-build
-    updated: '2017-01-30 21:22:53 +0900'
-2017-03-08-til-indent-style:
-    type: blog
-    title: '중괄호 인덴트 스타일을 조사해 보았다.'
-    summary: 'K&R style, Allman style.'
-    parent: null
-    url: /blog/2017/03/08/til-indent-style
-    updated: '2017-03-08 23:00:00 +0900'
+    url: /wiki/index
+    updated: '2017-11-29 21:37:03 +0900'
+mathjax-latex:
+    type: wiki
+    title: 'MathJax로 LaTeX 사용하기'
+    summary: null
+    parent: index
+    url: /wiki/mathjax-latex
+    updated: '2017-11-28 22:56:29 +0900'
+test:
+    type: wiki
+    title: 'test 1'
+    summary: 'test summary'
+    parent: index
+    url: /wiki/test
+    updated: '2017-11-26 21:39:45 +0900'
 2017-01-22-jekyll-category-tag:
     type: blog
     title: 'Jekyll 블로그에 태그 추가하기.'
