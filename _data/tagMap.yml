@@ -146,16 +146,26 @@ test1:
     - {fileName: default-post, updated: '2017-04-02 12:15:32 +0900'}
 test2:
     - {fileName: default-post, updated: '2017-04-02 12:15:32 +0900'}
+math:
+    - {fileName: frac1e, updated: '2017-12-03 09:44:20 +0900'}
+확률:
+    - {fileName: frac1e, updated: '2017-12-03 09:44:20 +0900'}
 google:
     - {fileName: google-search-console-remove-outdated-content, updated: '2017-11-28 08:50:10 +0900'}
+gradle:
+    - {fileName: gradle, updated: '2017-12-03 10:40:55 +0900'}
+tool:
+    - {fileName: gradle, updated: '2017-12-03 10:40:55 +0900'}
 index:
     - {fileName: index, updated: '2017-11-29 21:37:03 +0900'}
+bash:
+    - {fileName: java_home, updated: '2017-12-03 15:01:36 +0900'}
+java:
+    - {fileName: java_home, updated: '2017-12-03 15:01:36 +0900'}
+mac:
+    - {fileName: java_home, updated: '2017-12-03 15:01:36 +0900'}
 latex:
     - {fileName: mathjax-latex, updated: '2017-11-28 22:56:29 +0900'}
-test:
-    - {fileName: test, updated: '2017-11-26 21:39:45 +0900'}
-wiki:
-    - {fileName: test, updated: '2017-11-26 21:39:45 +0900'}
 trouble-shooting:
     - {fileName: vim-conceallevel, updated: '2017-11-29 17:47:59 +0900'}
 yaml:
