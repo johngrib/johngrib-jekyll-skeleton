@@ -1,24 +1,26 @@
 ---
 layout: default
 ---
-<div class="post">
+<div class="post-main" style="display:none">
     <header class="post-header">
         <h1 class="post-title">{{ page.title }}</h1>
-        <p class="created-date">
-            {{ page.date | date: "%Y.%m.%d" }}
-        </p>
-        {% include post-tags.html %}
-        <h2>{{ page.summary }}</h2>
     </header>
-
-{% if page.toc %}
-    <div class="toc">
-    </div>
-{% endif %}
-    <article class="post-content code-hide">
+    <article class="post-content code-hide wiki-list">
         {{ content }}
     </article>
-
-    {% include comment.html %}
-
 </div>
+<script>
+    function random() {
+        var list = document.querySelectorAll('.wiki-list a')
+        var random = Math.floor((Math.random() * list.length));
+        var url = list[random].href;
+        window.location.href = url;
+    }
+
+    (function init() {
+        if(/#random$/.test(window.location.href)) {
+            return random();
+        }
+        document.querySelector('div.post-main').style.display = 'block';
+    })();
+</script>
