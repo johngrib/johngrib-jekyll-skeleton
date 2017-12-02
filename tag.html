@@ -26,14 +26,15 @@ public: true
         <h3 id="{{tag}}">{{ tag }}</h3>
 
         <ul class="post-list">
-    {% assign list = tagMap[tag] %}
-    {% for post in list %}
+    {% assign list = tagMap[tag] | sort: 'updated' | reverse %}
+    {% for postObj in list %}
+        {% assign post = site.data.pageMap[postObj.fileName] %}
         {% if post.public != false %}
             <li>
                 <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
                     <span>{{ post.title }}</span>
                     <div class="post-meta" style="float: right;">
-                        {{ post.modified | date: "%Y.%m.%d" }}
+                        {{ post.updated | date: "%Y.%m.%d" }}
                     </div>
             {% if post.summary %}
                         <div class="post-excerpt">
