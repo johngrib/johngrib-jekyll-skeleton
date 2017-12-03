@@ -16,3 +16,4 @@ comment : false
 * `[[yaml]]`[YAML](../yaml)
 * `[[frac1e]]`[n개의 제비뽑기에 n번 도전](../frac1e)
 * `[[Gradle]]`[Gradle](../Gradle)
+* `[[java_home]]`[java_home 명령어](../java_home)
