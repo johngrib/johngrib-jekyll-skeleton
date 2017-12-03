@@ -10,12 +10,30 @@ layout: document
         <p class="edit-date"><a href="{{ site.blame }}/{{ thisName }}.md" target="_blank">updated: {{ page.updated | date: '%Y.%m.%d' }}</a></p>
 
 {% if page.parent %}
-    {% assign parent = site.data.pageMap[page.parent] %}
-        <ul>
-            <li>
-                <p>상위 문서: <a href="{{ parent.url }}">{{ parent.title }}</a></p>
-            </li>
-        </ul>
+
+    {% assign plist = page.parent | split: "," %}
+    {% assign loop = "1234567890" | split: "" %}
+    {% assign pid = page.parent %}
+    {% for item in loop %}
+
+        {% if site.data.pageMap[pid] %}
+            {% assign ancestor = site.data.pageMap[pid] %}
+            {% assign pid = ancestor.parent %}
+            {% assign plist = plist | push: pid %}
+        {% endif %}
+
+        {% if pid == 'index' %}
+            {% break %}
+        {% endif %}
+    {% endfor %}
+
+    {% assign plist = plist | reverse %}
+        <p> 상위 문서:
+    {% for item in plist %}
+        {% assign p = site.data.pageMap[item] %}
+            <a href="{{ p.url }}">{{ p.title }}</a>{% unless forloop.last %} - {% endunless %}
+    {% endfor %}
+        </p>
 {% endif %}
 
 {% if page.tags %}
