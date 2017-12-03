@@ -69,6 +69,10 @@
 
 {% for pageData in links %}
     {% assign link = pageData[0] %}
+    {% if link == '/page1' %}
+        {% assign link = '/' %}
+    {% endif %}
+
     {% assign label = pageData[1] %}
     {% if link == site.url %}
         {% assign link = '/' %}
