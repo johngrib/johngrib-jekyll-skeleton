@@ -14,3 +14,5 @@ comment : false
 * `[[mathjax-latex]]`[MathJax로 latex 사용하기](../mathjax-latex)
 * `[[vim-conceallevel]]`[conceallevel (Vim)](../vim-conceallevel)
 * `[[yaml]]`[YAML](../yaml)
+* `[[frac1e]]`[n개의 제비뽑기에 n번 도전](../frac1e)
+* `[[Gradle]]`[Gradle](../Gradle)
