@@ -15,5 +15,5 @@ comment : false
 * `[[vim-conceallevel]]`[conceallevel (Vim)](../vim-conceallevel)
 * `[[yaml]]`[YAML](../yaml)
 * `[[frac1e]]`[n개의 제비뽑기에 n번 도전](../frac1e)
-* `[[Gradle]]`[Gradle](../Gradle)
+* `[[gradle]]`[Gradle](../gradle)
 * `[[java_home]]`[java_home 명령어](../java_home)
