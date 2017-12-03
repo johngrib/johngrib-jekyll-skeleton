@@ -3,7 +3,7 @@ layout  : wiki
 title   : Gradle
 summary : Gradle Build Tool
 date    : 2017-12-03 10:40:55 +0900
-updated : 2017-12-03 10:40:55 +0900
+updated : 2017-12-03 17:13:32 +0900
 tags    : gradle tool
 toc     : true
 public  : true
@@ -25,6 +25,15 @@ latex   : false
 따라서 조건 분기나 반복 기능을 구현하려면 앤트와 메이븐에서 구조를 바꿔서 직접 해당 기능을 만들어야 한다.
 반면 그레이들의 DSL은 그루비로 구축되어 있어서 그루비가 제공하는 언어 기능을 그대로 이용할 수 있다.
 게다가 그루비는 자바 클래스를 직접 호출할 수 있으므로 빌드 스크립트에서 자바 유틸리티도 쉽게 사용할 수 있다.[^2]
+
+## 사용 방법/팁 모음
+
+### JVM heap 사이즈 설정
+
+```bash
+# Gradle 실행시 JVM 최대 힙 사이즈를 1GB로 설정한다.
+export GRADLE_OPTS=-Xmx1024m
+```
 
 ## Links
 
