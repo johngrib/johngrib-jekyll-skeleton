@@ -153,9 +153,16 @@ math:
 google:
     - {fileName: google-search-console-remove-outdated-content, updated: '2017-11-28 08:50:10 +0900'}
 gradle:
-    - {fileName: gradle, updated: '2017-12-03 10:40:55 +0900'}
+    - {fileName: gradle, updated: '2017-12-03 17:13:32 +0900'}
 tool:
-    - {fileName: gradle, updated: '2017-12-03 10:40:55 +0900'}
+    - {fileName: gradle, updated: '2017-12-03 17:13:32 +0900'}
+language:
+    - {fileName: groovy, updated: '2017-12-03 15:01:36 +0900'}
+    - {fileName: programming-language, updated: '2017-12-03 15:01:36 +0900'}
+jvm-lang:
+    - {fileName: groovy, updated: '2017-12-03 15:01:36 +0900'}
+groovy:
+    - {fileName: groovy, updated: '2017-12-03 15:01:36 +0900'}
 index:
     - {fileName: index, updated: '2017-11-29 21:37:03 +0900'}
 bash:
@@ -166,6 +173,8 @@ mac:
     - {fileName: java_home, updated: '2017-12-03 15:01:36 +0900'}
 latex:
     - {fileName: mathjax-latex, updated: '2017-11-28 22:56:29 +0900'}
+programming:
+    - {fileName: programming-language, updated: '2017-12-03 15:01:36 +0900'}
 trouble-shooting:
     - {fileName: vim-conceallevel, updated: '2017-11-29 17:47:59 +0900'}
 yaml:
