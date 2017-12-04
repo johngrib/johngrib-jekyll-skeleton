@@ -19,3 +19,5 @@ comment : false
 * `[[java_home]]`[java_home 명령어](../java_home)
 * `[[programming-language]]`[프로그래밍 언어](../programming-language)
     * `[[groovy]]`[Groovy](../groovy)
+* `[[proverb]]`[속담, 법칙, 관용어 모음](../proverb)
+    * [[Conway-s-law]][콘웨이의 법칙](../Conway-s-law)
