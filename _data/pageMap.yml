@@ -26,27 +26,34 @@ programming-language:
     parent: index
     url: /wiki/programming-language
     updated: '2017-12-03 15:01:36 +0900'
-2017-07-14-aheui-explained:
-    type: blog
-    title: '아희 ''Hello, World!''에 코멘트를 달아 보았다.'
-    summary: '아희 재밌네'
+index:
+    type: wiki
+    title: 'wiki index'
+    summary: null
     parent: null
-    url: /blog/2017/07/14/aheui-explained
-    updated: '2017-07-14 23:00:17 +0900'
-2017-03-12-telegram-bot:
+    url: /wiki/index
+    updated: '2017-11-29 21:37:03 +0900'
+Code-Complete-2:
+    type: wiki
+    title: 'Code Complete 2nd Edition by Steve McConnell'
+    summary: '코드 컴플리트 - 스티브 맥코넬'
+    parent: book
+    url: /wiki/Code-Complete-2
+    updated: '2017-12-05 21:53:52 +0900'
+book:
+    type: wiki
+    title: 도서
+    summary: null
+    parent: index
+    url: /wiki/book
+    updated: '2017-12-05 19:19:56 +0900'
+2017-07-31-hammerspoon-tutorial-00-start:
     type: blog
-    title: '텔레그램 봇 스켈레톤 만들기.'
-    summary: 'node.js, heroku로 만드는 텔레그램 챗봇.'
+    title: 'Hammerspoon 튜토리얼 00 - 시작하기'
+    summary: '일단 맥이 있어야 한다'
     parent: null
-    url: /blog/2017/03/12/telegram-bot
-    updated: '2017-03-12 21:08:16 +0900'
-2017-03-27-tmux-ascii-control:
-    type: blog
-    title: 'tmux 키 조합에서 C--가 불가능한 이유.'
-    summary: '"결론: ascii 코드값 때문."'
-    parent: null
-    url: /blog/2017/03/27/tmux-ascii-control
-    updated: '2017-03-27 22:57:52 +0900'
+    url: /blog/2017/07/31/hammerspoon-tutorial-00-start
+    updated: '2017-07-31 21:57:27 +0900'
 2017-04-02-jwp-00-prepare:
     type: blog
     title: 'Next JWP Study #00'
@@ -54,13 +61,6 @@ programming-language:
     parent: null
     url: /blog/2017/04/02/jwp-00-prepare
     updated: '2017-04-02 12:15:32 +0900'
-2017-04-03-emacs-start:
-    type: blog
-    title: 'emacs 사용 시작!'
-    summary: '하지만 Vim은 포기하지 않는다.'
-    parent: null
-    url: /blog/2017/04/02/emacs-start
-    updated: '2017-04-02 16:33:24 +0900'
 2017-04-03-jwp-01:
     type: blog
     title: 'Next JWP Study #01'
@@ -201,13 +201,13 @@ vim-conceallevel:
     parent: null
     url: /blog/2017/07/06/vim-game-code-break
     updated: '2017-07-06 00:15:00 +0900'
-2017-03-13-uri-url:
+2017-07-14-aheui-explained:
     type: blog
-    title: 'URI와 URL 의미가 헷갈려서 조사해 보았다.'
-    summary: '"결론: URL은 URI의 부분집합."'
+    title: '아희 ''Hello, World!''에 코멘트를 달아 보았다.'
+    summary: '아희 재밌네'
     parent: null
-    url: /blog/2017/03/13/uri-url
-    updated: '2017-03-13 21:30:46 +0900'
+    url: /blog/2017/07/14/aheui-explained
+    updated: '2017-07-14 23:00:17 +0900'
 2017-07-30-luarocks:
     type: blog
     title: 'luarocks로 Hammerspoon 패키지 관리하기'
@@ -215,13 +215,13 @@ vim-conceallevel:
     parent: null
     url: /blog/2017/07/30/luarocks
     updated: '2017-07-30 16:32:25 +0900'
-2017-07-31-hammerspoon-tutorial-00-start:
+2017-04-03-emacs-start:
     type: blog
-    title: 'Hammerspoon 튜토리얼 00 - 시작하기'
-    summary: '일단 맥이 있어야 한다'
+    title: 'emacs 사용 시작!'
+    summary: '하지만 Vim은 포기하지 않는다.'
     parent: null
-    url: /blog/2017/07/31/hammerspoon-tutorial-00-start
-    updated: '2017-07-31 21:57:27 +0900'
+    url: /blog/2017/04/02/emacs-start
+    updated: '2017-04-02 16:33:24 +0900'
 2017-08-01-hammerspoon-tutorial-01:
     type: blog
     title: 'Hammerspoon 튜토리얼 01 - 윈도우 힌트와 이동'
@@ -271,20 +271,20 @@ vim-conceallevel:
     parent: null
     url: /blog/2017/09/20/regex-prime
     updated: '2017-09-20 20:56:55 +0900'
-book:
+2017-03-27-tmux-ascii-control:
+    type: blog
+    title: 'tmux 키 조합에서 C--가 불가능한 이유.'
+    summary: '"결론: ascii 코드값 때문."'
+    parent: null
+    url: /blog/2017/03/27/tmux-ascii-control
+    updated: '2017-03-27 22:57:52 +0900'
+mathjax-latex:
     type: wiki
-    title: 도서
+    title: 'MathJax로 LaTeX 사용하기'
     summary: null
     parent: index
-    url: /wiki/book
-    updated: '2017-12-05 19:19:56 +0900'
-Code-Complete:
-    type: wiki
-    title: 'Code Complete'
-    summary: '코드 컴플리트'
-    parent: book
-    url: /wiki/Code-Complete
-    updated: '2017-12-05 19:22:28 +0900'
+    url: /wiki/mathjax-latex
+    updated: '2017-11-28 22:56:29 +0900'
 coding-font:
     type: wiki
     title: '코딩 폰트'
@@ -334,13 +334,6 @@ groovy:
     parent: programming-language
     url: /wiki/groovy
     updated: '2017-12-03 15:01:36 +0900'
-index:
-    type: wiki
-    title: 'wiki index'
-    summary: null
-    parent: null
-    url: /wiki/index
-    updated: '2017-11-29 21:37:03 +0900'
 java_home:
     type: wiki
     title: 'java_home 명령어'
@@ -348,13 +341,20 @@ java_home:
     parent: index
     url: /wiki/java_home
     updated: '2017-12-03 15:01:36 +0900'
-mathjax-latex:
-    type: wiki
-    title: 'MathJax로 LaTeX 사용하기'
-    summary: null
-    parent: index
-    url: /wiki/mathjax-latex
-    updated: '2017-11-28 22:56:29 +0900'
+2017-03-12-telegram-bot:
+    type: blog
+    title: '텔레그램 봇 스켈레톤 만들기.'
+    summary: 'node.js, heroku로 만드는 텔레그램 챗봇.'
+    parent: null
+    url: /blog/2017/03/12/telegram-bot
+    updated: '2017-03-12 21:08:16 +0900'
+2017-03-13-uri-url:
+    type: blog
+    title: 'URI와 URL 의미가 헷갈려서 조사해 보았다.'
+    summary: '"결론: URL은 URI의 부분집합."'
+    parent: null
+    url: /blog/2017/03/13/uri-url
+    updated: '2017-03-13 21:30:46 +0900'
 2017-03-08-til-indent-style:
     type: blog
     title: '중괄호 인덴트 스타일을 조사해 보았다.'
