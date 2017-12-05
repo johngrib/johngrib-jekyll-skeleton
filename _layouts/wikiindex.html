@@ -17,11 +17,17 @@ layout: default
         window.location.href = url;
     }
 
-    (function init() {
+    function init() {
         if(/#random$/.test(window.location.href)) {
             return random();
         }
         document.querySelector('div.post-main').style.display = 'block';
-    })();
+    };
+
+    if (document.readyState === 'complete' || document.readyState !== 'loading') {
+      init();
+    } else {
+      document.addEventListener('DOMContentLoaded', init);
+    }
 </script>
 {% include createLink.html %}
