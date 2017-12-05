@@ -187,7 +187,7 @@ end
 * `F15`: 앱 선택/실행 전담
 * `F16`: 윈도우 사이즈 조정/이동 전담
 
-(사실 저는 좀 [특수한 키보드]({{ site.url }}/archivers/hhkb-jp-tmk)를 사용하고 있어서 `F16` 키가 있습니다.)
+(사실 저는 좀 [특수한 키보드](/blog/2017/05/14/hhkb-jp-tmk)를 사용하고 있어서 `F16` 키가 있습니다.)
 
 Karabiner-Elements와 Hammerspoon 모두
 [`F20` 키 까지 지원](http://www.hammerspoon.org/docs/hs.keycodes.html#map)하니

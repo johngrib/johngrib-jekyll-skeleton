@@ -92,7 +92,7 @@ end)
 
 아래와 같이 구현해 보았습니다.
 
-지난번에 구현한 [클립보드 확장 기능]({{ site.url }}/archivers/hammerspoon-tutorial-02)과 비슷한 코드가 많아서 함께 읽으면 어렵지 않게 이해할 수 있을 것입니다.
+지난번에 구현한 [클립보드 확장 기능](/blog/2017/08/04/hammerspoon-tutorial-02)과 비슷한 코드가 많아서 함께 읽으면 어렵지 않게 이해할 수 있을 것입니다.
 
 ### `/init.lua`
 
@@ -204,5 +204,5 @@ return obj
     * [hs.chooser](http://www.hammerspoon.org/docs/hs.chooser.html)
 * 기타
     * [Alfred](https://www.alfredapp.com/)
-    * [Hammerspoon 튜토리얼 02 - 클립보드 확장 기능을 만들어 봅시다]({{ site.url }}/archivers/hammerspoon-tutorial-02)
+    * [Hammerspoon 튜토리얼 02 - 클립보드 확장 기능을 만들어 봅시다](/blog/2017/08/04/hammerspoon-tutorial-02)
     * [johngrib/hammerspoon_clipboard](https://github.com/johngrib/hammerspoon_clipboard/tree/0.1.0)
