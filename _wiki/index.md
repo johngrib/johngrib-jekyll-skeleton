@@ -9,15 +9,17 @@ public  : true
 comment : false
 ---
 
-* `[[coding-font]]`[코딩 폰트](../coding-font)
-* `[[google-search-console-remove-outdated-content]]`[구글 웹 도구 - 오래된 콘텐츠 삭제](../google-search-console-remove-outdated-content)
-* `[[mathjax-latex]]`[MathJax로 latex 사용하기](../mathjax-latex)
-* `[[vim-conceallevel]]`[conceallevel (Vim)](../vim-conceallevel)
-* `[[yaml]]`[YAML](../yaml)
-* `[[frac1e]]`[n개의 제비뽑기에 n번 도전](../frac1e)
-* `[[gradle]]`[Gradle](../gradle)
-* `[[java_home]]`[java_home 명령어](../java_home)
-* `[[programming-language]]`[프로그래밍 언어](../programming-language)
-    * `[[groovy]]`[Groovy](../groovy)
-* `[[proverb]]`[속담, 법칙, 관용어 모음](../proverb)
-    * [[Conway-s-law]][콘웨이의 법칙](../Conway-s-law)
+* [[coding-font]]{코딩 폰트}
+* [[google-search-console-remove-outdated-content]]{구글 웹 도구 - 오래된 콘텐츠 삭제}
+* [[mathjax-latex]]{MathJax로 latex 사용하기}
+* [[vim-conceallevel]]{conceallevel (Vim)}
+* [[YAML]]
+* [[frac1e]]{n개의 제비뽑기에 n번 도전}
+* [[Gradle]]
+* [[java_home]]{java_home 명령어}
+* [[programming-language]]{프로그래밍 언어}
+    * [[Groovy]]
+* [[proverb]]{속담, 법칙, 관용어 모음}
+    * [[Conway-s-law]]{콘웨이의 법칙}
+* [[book]]{도서}
+

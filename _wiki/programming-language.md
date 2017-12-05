@@ -15,5 +15,5 @@ latex   : false
 
 ## 목록
 
-* [[groovy]](../groovy)
+* [[Groovy]]
 

@@ -29,7 +29,7 @@ latex   : false
 * 람다 함수의 기본 변수로 `it`을 사용
 * 0.1 + 0.2 가 0.3 으로 나온다[^1].
 * 기타
-    * [[gradle]](../gradle) 빌드 스크립트가 groovy를 쓴다.
+    * [[Gradle]] 빌드 스크립트가 groovy를 쓴다.
 
 ## install
 

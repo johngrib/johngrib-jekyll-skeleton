@@ -13,4 +13,4 @@ latex   : false
 * TOC
 {:toc}
 
-* [[Conway-s-law]][콘웨이의 법칙](../Conway-s-law)
+* [[Conway-s-law]]{콘웨이의 법칙}
