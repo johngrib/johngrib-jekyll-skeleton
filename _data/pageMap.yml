@@ -1,10 +1,10 @@
-2017-05-29-jwp-15:
+2017-06-01-jwp-16:
     type: blog
-    title: 'Next JWP Study #15'
-    summary: 'RESTful API 설계'
+    title: 'Next JWP Study #16'
+    summary: 'Test, OOP 피드백 (끝)'
     parent: null
-    url: /blog/2017/05/29/jwp-15
-    updated: '2017-05-29 19:54:06 +0900'
+    url: /blog/2017/06/01/jwp-16
+    updated: '2017-06-01 19:52:40 +0900'
 yaml:
     type: wiki
     title: YAML
@@ -19,55 +19,48 @@ proverb:
     parent: index
     url: /wiki/proverb
     updated: '2017-12-04 09:10:02 +0900'
-index:
+programming-language:
     type: wiki
-    title: 'wiki index'
+    title: '프로그래밍 언어'
     summary: null
-    parent: null
-    url: /wiki/index
-    updated: '2017-11-29 21:37:03 +0900'
-default-post:
+    parent: index
+    url: /wiki/programming-language
+    updated: '2017-12-03 15:01:36 +0900'
+2017-07-14-aheui-explained:
     type: blog
-    title: 'sample title'
-    summary: 'sample summary'
+    title: '아희 ''Hello, World!''에 코멘트를 달아 보았다.'
+    summary: '아희 재밌네'
     parent: null
-    url: /blog/2017/04/02/default-post
+    url: /blog/2017/07/14/aheui-explained
+    updated: '2017-07-14 23:00:17 +0900'
+2017-03-12-telegram-bot:
+    type: blog
+    title: '텔레그램 봇 스켈레톤 만들기.'
+    summary: 'node.js, heroku로 만드는 텔레그램 챗봇.'
+    parent: null
+    url: /blog/2017/03/12/telegram-bot
+    updated: '2017-03-12 21:08:16 +0900'
+2017-03-27-tmux-ascii-control:
+    type: blog
+    title: 'tmux 키 조합에서 C--가 불가능한 이유.'
+    summary: '"결론: ascii 코드값 때문."'
+    parent: null
+    url: /blog/2017/03/27/tmux-ascii-control
+    updated: '2017-03-27 22:57:52 +0900'
+2017-04-02-jwp-00-prepare:
+    type: blog
+    title: 'Next JWP Study #00'
+    summary: 'NextStep Java Web Programming Study 준비 작업.'
+    parent: null
+    url: /blog/2017/04/02/jwp-00-prepare
     updated: '2017-04-02 12:15:32 +0900'
-Conway-s-law:
-    type: wiki
-    title: '콘웨이의 법칙'
-    summary: '소프트웨어 구조는 개발 조직의 커뮤니케이션 구조를 닮는다.'
-    parent: proverb
-    url: /wiki/Conway-s-law
-    updated: '2017-12-04 21:34:28 +0900'
-2017-08-07-hammerspoon-tutorial-05:
+2017-04-03-emacs-start:
     type: blog
-    title: 'Hammerspoon 튜토리얼 05 - chooser를 사용해 봅시다'
-    summary: '클립보드 히스토리도 만들어 봅시다'
+    title: 'emacs 사용 시작!'
+    summary: '하지만 Vim은 포기하지 않는다.'
     parent: null
-    url: /blog/2017/08/07/hammerspoon-tutorial-05
-    updated: '2017-08-07 09:33:00 +0900'
-2017-08-04-hammerspoon-tutorial-02:
-    type: blog
-    title: 'Hammerspoon 튜토리얼 02 - 클립보드 확장 기능을 만들어 봅시다'
-    summary: '복붙을 편하게!'
-    parent: null
-    url: /blog/2017/08/04/hammerspoon-tutorial-02
-    updated: '2017-08-04 21:32:22 +0900'
-2017-08-01-hammerspoon-tutorial-01:
-    type: blog
-    title: 'Hammerspoon 튜토리얼 01 - 윈도우 힌트와 이동'
-    summary: '윈도우즈에는 있으나 맥에는 없는 그것'
-    parent: null
-    url: /blog/2017/08/01/hammerspoon-tutorial-01
-    updated: '2017-08-01 22:47:08 +0900'
-2017-07-31-hammerspoon-tutorial-00-start:
-    type: blog
-    title: 'Hammerspoon 튜토리얼 00 - 시작하기'
-    summary: '일단 맥이 있어야 한다'
-    parent: null
-    url: /blog/2017/07/31/hammerspoon-tutorial-00-start
-    updated: '2017-07-31 21:57:27 +0900'
+    url: /blog/2017/04/02/emacs-start
+    updated: '2017-04-02 16:33:24 +0900'
 2017-04-03-jwp-01:
     type: blog
     title: 'Next JWP Study #01'
@@ -82,6 +75,13 @@ Conway-s-law:
     parent: null
     url: /blog/2017/04/03/vim-tmux-t-ut
     updated: '2017-04-03 07:33:49 +0900'
+2017-04-08-jwp-02:
+    type: blog
+    title: 'Next JWP Study #02'
+    summary: 'HTTP 이해'
+    parent: null
+    url: /blog/2017/04/08/jwp-02
+    updated: '2017-04-08 21:29:47 +0900'
 2017-04-10-jwp-03:
     type: blog
     title: 'Next JWP Study #03'
@@ -180,6 +180,13 @@ Conway-s-law:
     parent: null
     url: /blog/2017/05/27/jwp-14
     updated: '2017-05-27 18:00:40 +0900'
+2017-05-29-jwp-15:
+    type: blog
+    title: 'Next JWP Study #15'
+    summary: 'RESTful API 설계'
+    parent: null
+    url: /blog/2017/05/29/jwp-15
+    updated: '2017-05-29 19:54:06 +0900'
 vim-conceallevel:
     type: wiki
     title: 'conceallevel (Vim)'
@@ -187,13 +194,6 @@ vim-conceallevel:
     parent: index
     url: /wiki/vim-conceallevel
     updated: '2017-11-29 17:47:59 +0900'
-2017-06-01-jwp-16:
-    type: blog
-    title: 'Next JWP Study #16'
-    summary: 'Test, OOP 피드백 (끝)'
-    parent: null
-    url: /blog/2017/06/01/jwp-16
-    updated: '2017-06-01 19:52:40 +0900'
 2017-07-09-vim-game-code-break:
     type: blog
     title: '레거시 코드를 파괴하는 Vim 벽돌 깨기'
@@ -201,13 +201,13 @@ vim-conceallevel:
     parent: null
     url: /blog/2017/07/06/vim-game-code-break
     updated: '2017-07-06 00:15:00 +0900'
-2017-07-14-aheui-explained:
+2017-03-13-uri-url:
     type: blog
-    title: '아희 ''Hello, World!''에 코멘트를 달아 보았다.'
-    summary: '아희 재밌네'
+    title: 'URI와 URL 의미가 헷갈려서 조사해 보았다.'
+    summary: '"결론: URL은 URI의 부분집합."'
     parent: null
-    url: /blog/2017/07/14/aheui-explained
-    updated: '2017-07-14 23:00:17 +0900'
+    url: /blog/2017/03/13/uri-url
+    updated: '2017-03-13 21:30:46 +0900'
 2017-07-30-luarocks:
     type: blog
     title: 'luarocks로 Hammerspoon 패키지 관리하기'
@@ -215,27 +215,27 @@ vim-conceallevel:
     parent: null
     url: /blog/2017/07/30/luarocks
     updated: '2017-07-30 16:32:25 +0900'
-2017-04-08-jwp-02:
+2017-07-31-hammerspoon-tutorial-00-start:
     type: blog
-    title: 'Next JWP Study #02'
-    summary: 'HTTP 이해'
+    title: 'Hammerspoon 튜토리얼 00 - 시작하기'
+    summary: '일단 맥이 있어야 한다'
     parent: null
-    url: /blog/2017/04/08/jwp-02
-    updated: '2017-04-08 21:29:47 +0900'
-programming-language:
-    type: wiki
-    title: '프로그래밍 언어'
-    summary: null
-    parent: index
-    url: /wiki/programming-language
-    updated: '2017-12-03 15:01:36 +0900'
-mathjax-latex:
-    type: wiki
-    title: 'MathJax로 LaTeX 사용하기'
-    summary: null
-    parent: index
-    url: /wiki/mathjax-latex
-    updated: '2017-11-28 22:56:29 +0900'
+    url: /blog/2017/07/31/hammerspoon-tutorial-00-start
+    updated: '2017-07-31 21:57:27 +0900'
+2017-08-01-hammerspoon-tutorial-01:
+    type: blog
+    title: 'Hammerspoon 튜토리얼 01 - 윈도우 힌트와 이동'
+    summary: '윈도우즈에는 있으나 맥에는 없는 그것'
+    parent: null
+    url: /blog/2017/08/01/hammerspoon-tutorial-01
+    updated: '2017-08-01 22:47:08 +0900'
+2017-08-04-hammerspoon-tutorial-02:
+    type: blog
+    title: 'Hammerspoon 튜토리얼 02 - 클립보드 확장 기능을 만들어 봅시다'
+    summary: '복붙을 편하게!'
+    parent: null
+    url: /blog/2017/08/04/hammerspoon-tutorial-02
+    updated: '2017-08-04 21:32:22 +0900'
 2017-08-05-hammerspoon-tutorial-03:
     type: blog
     title: 'Hammerspoon 튜토리얼 03 - 한영 전환 키를 만들어 봅시다'
@@ -250,13 +250,13 @@ mathjax-latex:
     parent: null
     url: /blog/2017/08/06/hammerspoon-tutorial-04
     updated: '2017-08-06 13:35:00 +0900'
-java_home:
-    type: wiki
-    title: 'java_home 명령어'
-    summary: 'return a value for $JAVA_HOME'
-    parent: index
-    url: /wiki/java_home
-    updated: '2017-12-03 15:01:36 +0900'
+2017-08-07-hammerspoon-tutorial-05:
+    type: blog
+    title: 'Hammerspoon 튜토리얼 05 - chooser를 사용해 봅시다'
+    summary: '클립보드 히스토리도 만들어 봅시다'
+    parent: null
+    url: /blog/2017/08/07/hammerspoon-tutorial-05
+    updated: '2017-08-07 09:33:00 +0900'
 2017-08-23-0.30000000000000004:
     type: blog
     title: '0.1 + 0.2 == 0.30000000000000004'
@@ -271,6 +271,20 @@ java_home:
     parent: null
     url: /blog/2017/09/20/regex-prime
     updated: '2017-09-20 20:56:55 +0900'
+book:
+    type: wiki
+    title: 도서
+    summary: null
+    parent: index
+    url: /wiki/book
+    updated: '2017-12-05 19:19:56 +0900'
+Code-Complete:
+    type: wiki
+    title: 'Code Complete'
+    summary: '코드 컴플리트'
+    parent: book
+    url: /wiki/Code-Complete
+    updated: '2017-12-05 19:22:28 +0900'
 coding-font:
     type: wiki
     title: '코딩 폰트'
@@ -278,20 +292,20 @@ coding-font:
     parent: index
     url: /wiki/coding-font
     updated: '2017-12-01 06:02:30 +0900'
-groovy:
+Conway-s-law:
     type: wiki
-    title: Groovy
-    summary: 'A multi-faceted language for the Java platform'
-    parent: programming-language
-    url: /wiki/groovy
-    updated: '2017-12-03 15:01:36 +0900'
-gradle:
-    type: wiki
-    title: Gradle
-    summary: 'Gradle Build Tool'
-    parent: index
-    url: /wiki/gradle
-    updated: '2017-12-03 17:13:32 +0900'
+    title: '콘웨이의 법칙'
+    summary: '소프트웨어 구조는 개발 조직의 커뮤니케이션 구조를 닮는다.'
+    parent: proverb
+    url: /wiki/Conway-s-law
+    updated: '2017-12-04 21:34:28 +0900'
+default-post:
+    type: blog
+    title: 'sample title'
+    summary: 'sample summary'
+    parent: null
+    url: /blog/2017/04/02/default-post
+    updated: '2017-04-02 12:15:32 +0900'
 frac1e:
     type: wiki
     title: 'n개의 제비뽑기에 n번 도전'
@@ -306,41 +320,41 @@ google-search-console-remove-outdated-content:
     parent: index
     url: /wiki/google-search-console-remove-outdated-content
     updated: '2017-11-28 08:50:10 +0900'
-2017-04-03-emacs-start:
-    type: blog
-    title: 'emacs 사용 시작!'
-    summary: '하지만 Vim은 포기하지 않는다.'
+gradle:
+    type: wiki
+    title: Gradle
+    summary: 'Gradle Build Tool'
+    parent: index
+    url: /wiki/gradle
+    updated: '2017-12-03 17:13:32 +0900'
+groovy:
+    type: wiki
+    title: Groovy
+    summary: 'A multi-faceted language for the Java platform'
+    parent: programming-language
+    url: /wiki/groovy
+    updated: '2017-12-03 15:01:36 +0900'
+index:
+    type: wiki
+    title: 'wiki index'
+    summary: null
     parent: null
-    url: /blog/2017/04/02/emacs-start
-    updated: '2017-04-02 16:33:24 +0900'
-2017-03-27-tmux-ascii-control:
-    type: blog
-    title: 'tmux 키 조합에서 C--가 불가능한 이유.'
-    summary: '"결론: ascii 코드값 때문."'
-    parent: null
-    url: /blog/2017/03/27/tmux-ascii-control
-    updated: '2017-03-27 22:57:52 +0900'
-2017-04-02-jwp-00-prepare:
-    type: blog
-    title: 'Next JWP Study #00'
-    summary: 'NextStep Java Web Programming Study 준비 작업.'
-    parent: null
-    url: /blog/2017/04/02/jwp-00-prepare
-    updated: '2017-04-02 12:15:32 +0900'
-2017-03-12-telegram-bot:
-    type: blog
-    title: '텔레그램 봇 스켈레톤 만들기.'
-    summary: 'node.js, heroku로 만드는 텔레그램 챗봇.'
-    parent: null
-    url: /blog/2017/03/12/telegram-bot
-    updated: '2017-03-12 21:08:16 +0900'
-2017-03-13-uri-url:
-    type: blog
-    title: 'URI와 URL 의미가 헷갈려서 조사해 보았다.'
-    summary: '"결론: URL은 URI의 부분집합."'
-    parent: null
-    url: /blog/2017/03/13/uri-url
-    updated: '2017-03-13 21:30:46 +0900'
+    url: /wiki/index
+    updated: '2017-11-29 21:37:03 +0900'
+java_home:
+    type: wiki
+    title: 'java_home 명령어'
+    summary: 'return a value for $JAVA_HOME'
+    parent: index
+    url: /wiki/java_home
+    updated: '2017-12-03 15:01:36 +0900'
+mathjax-latex:
+    type: wiki
+    title: 'MathJax로 LaTeX 사용하기'
+    summary: null
+    parent: index
+    url: /wiki/mathjax-latex
+    updated: '2017-11-28 22:56:29 +0900'
 2017-03-08-til-indent-style:
     type: blog
     title: '중괄호 인덴트 스타일을 조사해 보았다.'
