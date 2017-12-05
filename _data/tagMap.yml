@@ -147,9 +147,7 @@ proverb:
     - {fileName: proverb, updated: '2017-12-04 09:10:02 +0900'}
 law:
     - {fileName: Conway-s-law, updated: '2017-12-04 21:34:28 +0900'}
-test1:
-    - {fileName: default-post, updated: '2017-04-02 12:15:32 +0900'}
-test2:
+test:
     - {fileName: default-post, updated: '2017-04-02 12:15:32 +0900'}
 math:
     - {fileName: frac1e, updated: '2017-12-03 09:44:20 +0900'}

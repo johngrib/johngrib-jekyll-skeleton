@@ -13,7 +13,7 @@ public  : true
 
 # 윈도우 힌트 기능을 사용해 봅시다
 
-[이전 글]({{ site.url }}/archivers/hammerspoon-tutorial-00-start)의 마지막에서는 단축키에 앱 활성화 기능을 붙여 보았습니다.  
+[이전 글](/blog/2017/07/31/hammerspoon-tutorial-00-start)의 마지막에서는 단축키에 앱 활성화 기능을 붙여 보았습니다.  
 자주 사용하는 앱 9개 정도를 골라 단축키를 바인딩하면 무척 편리하게 사용할 수 있습니다.
 
 이번에는 앱 활성화와 함께 사용하기 좋은 기능인 `windowHints`를 사용해 봅시다.
@@ -141,7 +141,7 @@ hs.hotkey.bind(mod, '9', move_win(right, top, half_width, half_height))
 
 # Links
 
-* [Hammerspoon 튜토리얼 00]({{ site.url }}/archivers/hammerspoon-tutorial-00-start)
+* [Hammerspoon 튜토리얼 00](/blog/2017/07/31/hammerspoon-tutorial-00-start)
 * [API 문서](http://www.hammerspoon.org/docs/index.html)
     * [hs.keycodes.map](http://www.hammerspoon.org/docs/hs.keycodes.html#map): 설정 가능한 키 목록을 볼 수 있습니다.
     * [hs.application.launchOrFocus](http://www.hammerspoon.org/docs/hs.application.html#launchOrFocus)
