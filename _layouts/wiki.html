@@ -7,6 +7,7 @@ layout: document
 <div class="post">
     <header class="post-header">
         <h1 class="post-title">{{ page.title }}</h1>
+        <p class="edit-date"><a href="{{ site.blame }}/{{ thisName }}.md" target="_blank">created: {{ page.date | date: '%Y.%m.%d' }}</a></p>
         <p class="edit-date"><a href="{{ site.blame }}/{{ thisName }}.md" target="_blank">updated: {{ page.updated | date: '%Y.%m.%d' }}</a></p>
 
 {% if page.parent %}
