@@ -15,7 +15,6 @@ disqus_shortname: johngrib
 
 # Build settings
 plugins:
-  - jekyll-feed
   - jekyll-paginate
   - jekyll-gist
 
@@ -45,4 +44,9 @@ disqus:
 google_analytics:
   ua: UA-110224147-1
 
+google_adsense:
+  client: ca-pub-3675948545737694
+
 blame: "https://github.com/johngrib/johngrib.github.io/blame/master/_wiki"
+edit: "https://github.com/johngrib/johngrib.github.io/edit/master/_wiki"
+issue: "https://github.com/johngrib/johngrib.github.io/issues/new"

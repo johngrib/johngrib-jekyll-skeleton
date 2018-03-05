@@ -1,0 +1,102 @@
+---
+layout: document
+---
+
+{% assign thisName = page.id | remove: '/wiki/' %}
+
+<div class="post">
+    <header class="post-header">
+        <h1 class="post-title">{{ page.title }}</h1>
+
+{% if page.parent %}
+
+    {% assign plist = page.parent | split: "," %}
+    {% assign loop = "1234567890" | split: "" %}
+    {% assign pid = page.parent %}
+    {% for item in loop %}
+
+        {% if site.data.pageMap[pid] %}
+            {% assign ancestor = site.data.pageMap[pid] %}
+            {% assign pid = ancestor.parent %}
+            {% assign plist = plist | push: pid %}
+        {% endif %}
+
+        {% if pid == 'index' %}
+            {% break %}
+        {% endif %}
+    {% endfor %}
+
+    {% assign plist = plist | reverse %}
+        <p> 상위 문서:
+    {% for item in plist %}
+        {% assign p = site.data.pageMap[item] %}
+            <a href="{{ p.url }}">{{ p.title }}</a>{% unless forloop.last %} - {% endunless %}
+    {% endfor %}
+        </p>
+{% endif %}
+
+{% if page.tags %}
+    {% include post-tags.html %}
+{% endif %}
+
+        <h2>{{ page.summary }}</h2>
+
+    </header>
+    <article class="post-content">
+        {{ content }}
+{% raw %}
+        <div id="app">
+            <template>
+                <ul class="post-list" v-for="item in getList">
+                        <li>
+                            <a class="post-link" v-bind="{ href: item.url }">
+                                <span>{{ item.title }}</span>
+                                <div class="post-meta" style="float: right;">
+                                    {{ item.updated }}
+                                </div>
+                                <div class="post-excerpt" v-if="item.summary">
+                                    - {{ item.summary }}
+                                </div>
+                            </a>
+                        </li>
+                </ul>
+            </template>
+        </div>
+{% endraw %}
+    </article>
+<script src="/js/vue.js"></script>
+{% assign list = site.data.pageMap[thisName].children %}
+<script>
+var app = new Vue({
+    el: '#app',
+    data: {
+        list: [
+{% for postObj in list %}
+    {% assign post = site.data.pageMap[postObj] %}
+    {% if post.public != false %}
+            {
+                title: "{{ post.title }}",
+                url: "{{ post.url }}",
+                updated: "{{ post.updated | date: "%Y.%m.%d" }}",
+                summary: "{{ post.summary }}"
+            }
+    {% endif %}
+            {% unless forloop.last %},{% endunless %}
+{% endfor %}
+        ].sort(function sortByFileName(a, b) { return a.title.toLowerCase().localeCompare(b.title.toLowerCase()); })
+    },
+    computed: {
+        getList: function() {
+            return this.list;
+        }
+    }
+})
+</script>
+
+{% if page.comment != false %}
+    {% include comment.html %}
+{% endif%}
+
+</div>
+{% include createLink.html %}
+

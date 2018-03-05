@@ -26,7 +26,7 @@ public: true
         <h3 id="{{tag}}">{{ tag }}</h3>
 
         <ul class="post-list">
-    {% assign list = tagMap[tag] | sort: 'updated' | reverse %}
+    {% assign list = tagMap[tag] | sort: 'fileName' %}
     {% for postObj in list %}
         {% assign post = site.data.pageMap[postObj.fileName] %}
         {% if post.public != false %}

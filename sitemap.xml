@@ -2,6 +2,21 @@
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>{{ site.url }}/tag/</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>{{ site.url }}/wiki/index/</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>{{ site.url }}/blog/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+    </url>
 {% for post in site.posts %}
     <url>
         <loc>{{ site.url }}{{ post.url }}</loc>
@@ -22,6 +37,31 @@
         <priority>{{ post.sitemap.priority }}</priority>
     {% endif %}
     </url>
+{% endfor %}
+{% assign documents = site.wiki %}
+{% for doc in documents %}
+    {% if doc.public == true and doc.title != 'wiki index'%}
+    <url>
+        <loc>{{ site.url }}{{ doc.url }}</loc>
+        {% if doc.updated == null %}
+            <lastmod>{{ doc.date | date_to_xmlschema }}</lastmod>
+        {% else %}
+            <lastmod>{{ doc.updated | date_to_xmlschema }}</lastmod>
+        {% endif %}
+
+        {% if doc.sitemap.changefreq == null %}
+            <changefreq>daily</changefreq>
+        {% else %}
+            <changefreq>{{ doc.sitemap.changefreq }}</changefreq>
+        {% endif %}
+
+        {% if doc.sitemap.priority == null %}
+            <priority>0.5</priority>
+        {% else %}
+            <priority>{{ doc.sitemap.priority }}</priority>
+        {% endif %}
+    </url>
+    {% endif %}
 {% endfor %}
 </urlset>
 

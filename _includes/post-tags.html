@@ -1,8 +1,6 @@
-<div class="post-tags">
+<div class="post-tag">
 {% assign tags = page.tags | sort %}
-    <div>
 {% for tag in tags %}
-        <a href="/tag/#{{tag|slugize}}">#{{tag}}</a>{% unless forloop.last %},{% endunless %}
+    <a href="/tag/#{{tag|slugize}}">#{{tag}}</a>{% unless forloop.last %},{% endunless %}
 {% endfor %}
-    </div>
 </div>

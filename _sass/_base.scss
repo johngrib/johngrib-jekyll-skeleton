@@ -1,9 +1,22 @@
 body {
     margin: 0;
+    height: 100%;
 }
 body, th, td, div, p, li {
+    font-family: "Open Sans", arial, "Apple SD Gothic Neo", "Noto Sans CJK KR", 본고딕, "KoPubDotum Medium", 나눔바른고딕, 나눔고딕, NanumGothic, 맑은고딕, "Malgun Gothic", sans-serif;
     font-size: 0.9rem;
     line-height: 1.5;
+    color: $default-font-color;
+}
+
+a:link {
+}
+a:visited {
+    color: #344B83;
+}
+
+.post-content {
+    line-height: 2;
 }
 
 blockquote {
@@ -11,12 +24,16 @@ blockquote {
     margin:0;
     padding: 5px 20px;
     border-left: 10px solid #CCCCCC;
+    p {
+        line-height: 2;
+        color: $second-font-color;
+    }
 }
 code,pre {
     font-family:  $coding-font;
 }
 code {
-    color: #900;
+    color: #850085;
     background-color: #e7e9ee;
     padding: 2px 5px;
     border-radius: 5px;

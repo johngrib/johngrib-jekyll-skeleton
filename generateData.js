@@ -17,6 +17,10 @@ const dataList = list.map(function collectData(file) {
 
     return row != null;
 
+}).filter(function removePrivate(row) {
+
+    return row.public != 'false';
+
 }).sort(function sortByFileName(a, b) {
 
     return a.fileName.toLowerCase().localeCompare(b.fileName.toLowerCase());
@@ -35,14 +39,14 @@ dataList.forEach(function collectTagMap(data) {
         }
         tagMap[tag].push({
             fileName: data.fileName,
-            updated: data.updated || data.date,
+            // updated: data.updated || data.date,
         });
     });
 });
 
 for(tag in tagMap) {
-    tagMap[tag].sort(function sortByModifiedDateTime(a, b) {
-        return a.modified < b.modified;
+    tagMap[tag].sort(function sortByFileName(a, b) {
+        return a.fileName.toLowerCase().localeCompare(b.fileName.toLowerCase());
     });
 }
 saveTagMap(tagMap);
@@ -56,7 +60,7 @@ saveTagList(tagList)
 
 const pageMap = {};
 dataList.sort(function(a, b) {
-    return a.modified < b.modified;
+    return a.url.toLowerCase().localeCompare(b.url.toLowerCase());
 }).forEach(function(page) {
 
     pageMap[page.fileName] = {
@@ -66,8 +70,20 @@ dataList.sort(function(a, b) {
         parent: page.parent,
         url: page.url,
         updated: page.updated || page.date,
+        children: [],
     };
 
+});
+
+dataList.forEach(function(page) {
+    if(page.parent && page.parent != 'index') {
+
+        var parent = pageMap[page.parent];
+
+        if(parent && parent.children) {
+            parent.children.push(page.fileName);
+        }
+    }
 });
 
 savePageList(pageMap);
@@ -161,6 +177,7 @@ function getFiles(path, type, array){
                 'path': path + '/' + fileName,
                 'type': type,
                 'name': fileName,
+                'children': [],
             };
             return array.push(obj);
         }

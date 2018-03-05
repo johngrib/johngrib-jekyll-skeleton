@@ -7,7 +7,10 @@ layout: document
 <div class="post">
     <header class="post-header">
         <h1 class="post-title">{{ page.title }}</h1>
-        <p><a href="{{ site.edit }}/{{ thisName }}.md">편집하기</a></p>
+        <p>
+            <a href="{{ site.edit }}/{{ thisName }}.md">편집하기</a>
+            <a href="{{ site.issue }}?title={{ page.title | url_encode }}&body=의견을%20남겨주세요">의견 남기기</a>
+        </p>
         <p class="edit-date"><a href="{{ site.blame }}/{{ thisName }}.md" target="_blank">created: {{ page.date | date: '%Y.%m.%d' }}</a></p>
         <p class="edit-date"><a href="{{ site.blame }}/{{ thisName }}.md" target="_blank">updated: {{ page.updated | date: '%Y.%m.%d' }}</a></p>
 
@@ -39,14 +42,7 @@ layout: document
 {% endif %}
 
 {% if page.tags %}
-        <div class="post-tags">
-            <div>
-    {% assign tags = page.tags | sort %}
-    {% for tag in tags %}
-                <a href="/tag/#{{tag|slugize}}">#{{tag}}</a>{% unless forloop.last %},{% endunless %}
-    {% endfor %}
-            </div>
-        </div>
+    {% include post-tags.html %}
 {% endif %}
 
 {% if page.summary %}
@@ -57,5 +53,11 @@ layout: document
     <article class="post-content">
         {{ content }}
     </article>
+
+{% if page.comment != false %}
+    {% include comment.html %}
+{% endif%}
+
 </div>
 {% include createLink.html %}
+

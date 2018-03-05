@@ -1,160 +1,172 @@
 jekyll:
-    - {fileName: 2017-01-21-create-jekyll-blog, updated: '2017-01-21 22:37:25 +0900'}
-    - {fileName: 2017-01-22-jekyll-category-tag, updated: '2017-01-22 08:52:22 +0900'}
+    - {fileName: 2017-01-21-create-jekyll-blog}
+    - {fileName: 2017-01-22-jekyll-category-tag}
 ideavim:
-    - {fileName: 2017-01-30-ideavim-build, updated: '2017-01-30 21:22:53 +0900'}
+    - {fileName: 2017-01-30-ideavim-build}
 open-source:
-    - {fileName: 2017-01-30-ideavim-build, updated: '2017-01-30 21:22:53 +0900'}
+    - {fileName: 2017-01-30-ideavim-build}
 jetBrains:
-    - {fileName: 2017-01-30-ideavim-build, updated: '2017-01-30 21:22:53 +0900'}
+    - {fileName: 2017-01-30-ideavim-build}
 intelliJ:
-    - {fileName: 2017-01-30-ideavim-build, updated: '2017-01-30 21:22:53 +0900'}
+    - {fileName: 2017-01-30-ideavim-build}
 삽질:
-    - {fileName: 2017-01-30-ideavim-build, updated: '2017-01-30 21:22:53 +0900'}
+    - {fileName: 2017-01-30-ideavim-build}
 TIL:
-    - {fileName: 2017-03-08-til-indent-style, updated: '2017-03-08 23:00:00 +0900'}
-    - {fileName: 2017-03-27-tmux-ascii-control, updated: '2017-03-27 22:57:52 +0900'}
-    - {fileName: 2017-08-23-0.30000000000000004, updated: '2017-08-23 18:15:32 +0900'}
+    - {fileName: 2017-03-08-til-indent-style}
+    - {fileName: 2017-03-27-tmux-ascii-control}
+    - {fileName: 2017-08-23-0.30000000000000004}
 style:
-    - {fileName: 2017-03-08-til-indent-style, updated: '2017-03-08 23:00:00 +0900'}
+    - {fileName: 2017-03-08-til-indent-style}
 node-js:
-    - {fileName: 2017-03-12-telegram-bot, updated: '2017-03-12 21:08:16 +0900'}
+    - {fileName: 2017-03-12-telegram-bot}
 telegram:
-    - {fileName: 2017-03-12-telegram-bot, updated: '2017-03-12 21:08:16 +0900'}
+    - {fileName: 2017-03-12-telegram-bot}
 heroku:
-    - {fileName: 2017-03-12-telegram-bot, updated: '2017-03-12 21:08:16 +0900'}
+    - {fileName: 2017-03-12-telegram-bot}
 chatbot:
-    - {fileName: 2017-03-12-telegram-bot, updated: '2017-03-12 21:08:16 +0900'}
+    - {fileName: 2017-03-12-telegram-bot}
 bot:
-    - {fileName: 2017-03-12-telegram-bot, updated: '2017-03-12 21:08:16 +0900'}
+    - {fileName: 2017-03-12-telegram-bot}
 uri:
-    - {fileName: 2017-03-13-uri-url, updated: '2017-03-13 21:30:46 +0900'}
+    - {fileName: 2017-03-13-uri-url}
 url:
-    - {fileName: 2017-03-13-uri-url, updated: '2017-03-13 21:30:46 +0900'}
+    - {fileName: 2017-03-13-uri-url}
 rfc3986:
-    - {fileName: 2017-03-13-uri-url, updated: '2017-03-13 21:30:46 +0900'}
+    - {fileName: 2017-03-13-uri-url}
 tmux:
-    - {fileName: 2017-03-27-tmux-ascii-control, updated: '2017-03-27 22:57:52 +0900'}
-    - {fileName: 2017-04-03-vim-tmux-t-ut, updated: '2017-04-03 07:33:49 +0900'}
+    - {fileName: 2017-03-27-tmux-ascii-control}
+    - {fileName: 2017-04-03-vim-tmux-t-ut}
 ascii:
-    - {fileName: 2017-03-27-tmux-ascii-control, updated: '2017-03-27 22:57:52 +0900'}
+    - {fileName: 2017-03-27-tmux-ascii-control}
 study:
-    - {fileName: 2017-05-01-jwp-08, updated: '2017-05-01 07:33:10 +0900'}
-    - {fileName: 2017-04-02-jwp-00-prepare, updated: '2017-04-02 12:15:32 +0900'}
-    - {fileName: 2017-04-08-jwp-02, updated: '2017-04-08 21:29:47 +0900'}
-    - {fileName: 2017-04-10-jwp-03, updated: '2017-04-11 22:47:18 +0900'}
-    - {fileName: 2017-04-13-jwp-04, updated: '2017-04-13 12:15:32 +0900'}
-    - {fileName: 2017-04-17-jwp-05, updated: '2017-04-17 15:20:00 +0900'}
-    - {fileName: 2017-04-20-jwp-06, updated: '2017-04-22 23:36:10 +0900'}
-    - {fileName: 2017-04-25-jwp-07, updated: '2017-04-26 21:49:43 +0900'}
-    - {fileName: 2017-04-03-jwp-01, updated: '2017-04-05 21:52:28 +0900'}
-    - {fileName: 2017-05-09-jwp-09, updated: '2017-05-09 10:45:58 +0900'}
-    - {fileName: 2017-05-14-jwp-10, updated: '2017-05-14 14:10:50 +0900'}
-    - {fileName: 2017-05-16-jwp-11, updated: '2017-05-16 21:36:06 +0900'}
-    - {fileName: 2017-05-20-jwp-12, updated: '2017-05-20 20:44:40 +0900'}
-    - {fileName: 2017-05-23-jwp-13, updated: '2017-05-23 22:05:44 +0900'}
-    - {fileName: 2017-05-27-jwp-14, updated: '2017-05-27 18:00:40 +0900'}
-    - {fileName: 2017-05-29-jwp-15, updated: '2017-05-29 19:54:06 +0900'}
-    - {fileName: 2017-06-01-jwp-16, updated: '2017-06-01 19:52:40 +0900'}
+    - {fileName: 2017-04-02-jwp-00-prepare}
+    - {fileName: 2017-04-03-jwp-01}
+    - {fileName: 2017-04-08-jwp-02}
+    - {fileName: 2017-04-10-jwp-03}
+    - {fileName: 2017-04-13-jwp-04}
+    - {fileName: 2017-04-17-jwp-05}
+    - {fileName: 2017-04-20-jwp-06}
+    - {fileName: 2017-04-25-jwp-07}
+    - {fileName: 2017-05-01-jwp-08}
+    - {fileName: 2017-05-09-jwp-09}
+    - {fileName: 2017-05-14-jwp-10}
+    - {fileName: 2017-05-16-jwp-11}
+    - {fileName: 2017-05-20-jwp-12}
+    - {fileName: 2017-05-23-jwp-13}
+    - {fileName: 2017-05-27-jwp-14}
+    - {fileName: 2017-05-29-jwp-15}
+    - {fileName: 2017-06-01-jwp-16}
 jwp:
-    - {fileName: 2017-05-01-jwp-08, updated: '2017-05-01 07:33:10 +0900'}
-    - {fileName: 2017-04-02-jwp-00-prepare, updated: '2017-04-02 12:15:32 +0900'}
-    - {fileName: 2017-04-08-jwp-02, updated: '2017-04-08 21:29:47 +0900'}
-    - {fileName: 2017-04-10-jwp-03, updated: '2017-04-11 22:47:18 +0900'}
-    - {fileName: 2017-04-13-jwp-04, updated: '2017-04-13 12:15:32 +0900'}
-    - {fileName: 2017-04-17-jwp-05, updated: '2017-04-17 15:20:00 +0900'}
-    - {fileName: 2017-04-20-jwp-06, updated: '2017-04-22 23:36:10 +0900'}
-    - {fileName: 2017-04-25-jwp-07, updated: '2017-04-26 21:49:43 +0900'}
-    - {fileName: 2017-04-03-jwp-01, updated: '2017-04-05 21:52:28 +0900'}
-    - {fileName: 2017-05-09-jwp-09, updated: '2017-05-09 10:45:58 +0900'}
-    - {fileName: 2017-05-14-jwp-10, updated: '2017-05-14 14:10:50 +0900'}
-    - {fileName: 2017-05-16-jwp-11, updated: '2017-05-16 21:36:06 +0900'}
-    - {fileName: 2017-05-20-jwp-12, updated: '2017-05-20 20:44:40 +0900'}
-    - {fileName: 2017-05-23-jwp-13, updated: '2017-05-23 22:05:44 +0900'}
-    - {fileName: 2017-05-27-jwp-14, updated: '2017-05-27 18:00:40 +0900'}
-    - {fileName: 2017-05-29-jwp-15, updated: '2017-05-29 19:54:06 +0900'}
-    - {fileName: 2017-06-01-jwp-16, updated: '2017-06-01 19:52:40 +0900'}
+    - {fileName: 2017-04-02-jwp-00-prepare}
+    - {fileName: 2017-04-03-jwp-01}
+    - {fileName: 2017-04-08-jwp-02}
+    - {fileName: 2017-04-10-jwp-03}
+    - {fileName: 2017-04-13-jwp-04}
+    - {fileName: 2017-04-17-jwp-05}
+    - {fileName: 2017-04-20-jwp-06}
+    - {fileName: 2017-04-25-jwp-07}
+    - {fileName: 2017-05-01-jwp-08}
+    - {fileName: 2017-05-09-jwp-09}
+    - {fileName: 2017-05-14-jwp-10}
+    - {fileName: 2017-05-16-jwp-11}
+    - {fileName: 2017-05-20-jwp-12}
+    - {fileName: 2017-05-23-jwp-13}
+    - {fileName: 2017-05-27-jwp-14}
+    - {fileName: 2017-05-29-jwp-15}
+    - {fileName: 2017-06-01-jwp-16}
 aws:
-    - {fileName: 2017-04-02-jwp-00-prepare, updated: '2017-04-02 12:15:32 +0900'}
+    - {fileName: 2017-04-02-jwp-00-prepare}
 emacs:
-    - {fileName: 2017-04-03-emacs-start, updated: '2017-04-02 16:33:24 +0900'}
+    - {fileName: 2017-04-03-emacs-start}
 evil:
-    - {fileName: 2017-04-03-emacs-start, updated: '2017-04-02 16:33:24 +0900'}
+    - {fileName: 2017-04-03-emacs-start}
 vim:
-    - {fileName: 2017-04-03-vim-tmux-t-ut, updated: '2017-04-03 07:33:49 +0900'}
-    - {fileName: 2017-05-04-input-source, updated: '2017-05-04 22:05:30 +0900'}
-    - {fileName: 2017-07-09-vim-game-code-break, updated: '2017-07-06 00:15:00 +0900'}
-    - {fileName: vim-conceallevel, updated: '2017-11-29 17:47:59 +0900'}
+    - {fileName: 2017-04-03-vim-tmux-t-ut}
+    - {fileName: 2017-05-04-input-source}
+    - {fileName: 2017-07-09-vim-game-code-break}
+    - {fileName: Vim}
+    - {fileName: vim-conceallevel}
 fix:
-    - {fileName: 2017-04-03-vim-tmux-t-ut, updated: '2017-04-03 07:33:49 +0900'}
+    - {fileName: 2017-04-03-vim-tmux-t-ut}
 소트웍스-앤솔러지:
-    - {fileName: 2017-04-08-jwp-02, updated: '2017-04-08 21:29:47 +0900'}
+    - {fileName: 2017-04-08-jwp-02}
 Martin-Fowler:
-    - {fileName: 2017-04-08-jwp-02, updated: '2017-04-08 21:29:47 +0900'}
+    - {fileName: 2017-04-08-jwp-02}
 OOP:
-    - {fileName: 2017-04-08-jwp-02, updated: '2017-04-08 21:29:47 +0900'}
+    - {fileName: 2017-04-08-jwp-02}
 개발자:
-    - {fileName: 2017-04-10-jwp-03, updated: '2017-04-11 22:47:18 +0900'}
+    - {fileName: 2017-04-10-jwp-03}
 프로그래밍-심리학:
-    - {fileName: 2017-04-10-jwp-03, updated: '2017-04-11 22:47:18 +0900'}
+    - {fileName: 2017-04-10-jwp-03}
 Gerald-Weinberg:
-    - {fileName: 2017-04-10-jwp-03, updated: '2017-04-11 22:47:18 +0900'}
+    - {fileName: 2017-04-10-jwp-03}
 AWS:
-    - {fileName: 2017-04-13-jwp-04, updated: '2017-04-13 12:15:32 +0900'}
+    - {fileName: 2017-04-13-jwp-04}
 구름입력기:
-    - {fileName: 2017-05-04-input-source, updated: '2017-05-04 22:05:30 +0900'}
+    - {fileName: 2017-05-04-input-source}
 hammerspoon:
-    - {fileName: 2017-05-04-input-source, updated: '2017-05-04 22:05:30 +0900'}
-    - {fileName: 2017-07-30-luarocks, updated: '2017-07-30 16:32:25 +0900'}
-    - {fileName: 2017-07-31-hammerspoon-tutorial-00-start, updated: '2017-07-31 21:57:27 +0900'}
-    - {fileName: 2017-08-01-hammerspoon-tutorial-01, updated: '2017-08-01 22:47:08 +0900'}
-    - {fileName: 2017-08-04-hammerspoon-tutorial-02, updated: '2017-08-04 21:32:22 +0900'}
-    - {fileName: 2017-08-05-hammerspoon-tutorial-03, updated: '2017-08-05 12:11:00 +0900'}
-    - {fileName: 2017-08-06-hammerspoon-tutorial-04, updated: '2017-08-06 13:35:00 +0900'}
-    - {fileName: 2017-08-07-hammerspoon-tutorial-05, updated: '2017-08-07 09:33:00 +0900'}
+    - {fileName: 2017-05-04-input-source}
+    - {fileName: 2017-07-30-luarocks}
+    - {fileName: 2017-07-31-hammerspoon-tutorial-00-start}
+    - {fileName: 2017-08-01-hammerspoon-tutorial-01}
+    - {fileName: 2017-08-04-hammerspoon-tutorial-02}
+    - {fileName: 2017-08-05-hammerspoon-tutorial-03}
+    - {fileName: 2017-08-06-hammerspoon-tutorial-04}
+    - {fileName: 2017-08-07-hammerspoon-tutorial-05}
 karabiner:
-    - {fileName: 2017-05-04-input-source, updated: '2017-05-04 22:05:30 +0900'}
+    - {fileName: 2017-05-04-input-source}
 input-source:
-    - {fileName: 2017-05-04-input-source, updated: '2017-05-04 22:05:30 +0900'}
+    - {fileName: 2017-05-04-input-source}
 hhkb:
-    - {fileName: 2017-05-14-hhkb-jp-tmk, updated: '2017-05-14 15:50:31 +0900'}
+    - {fileName: 2017-05-14-hhkb-jp-tmk}
 keyboard:
-    - {fileName: 2017-05-14-hhkb-jp-tmk, updated: '2017-05-14 15:50:31 +0900'}
+    - {fileName: 2017-05-14-hhkb-jp-tmk}
 tmk:
-    - {fileName: 2017-05-14-hhkb-jp-tmk, updated: '2017-05-14 15:50:31 +0900'}
+    - {fileName: 2017-05-14-hhkb-jp-tmk}
 mockito:
-    - {fileName: 2017-05-16-jwp-11, updated: '2017-05-16 21:36:06 +0900'}
+    - {fileName: 2017-05-16-jwp-11}
 DI:
-    - {fileName: 2017-05-16-jwp-11, updated: '2017-05-16 21:36:06 +0900'}
+    - {fileName: 2017-05-16-jwp-11}
 game:
-    - {fileName: 2017-07-09-vim-game-code-break, updated: '2017-07-06 00:15:00 +0900'}
+    - {fileName: 2017-07-09-vim-game-code-break}
 aheui:
-    - {fileName: 2017-07-14-aheui-explained, updated: '2017-07-14 23:00:17 +0900'}
+    - {fileName: 2017-07-14-aheui-explained}
 lua:
-    - {fileName: 2017-07-30-luarocks, updated: '2017-07-30 16:32:25 +0900'}
+    - {fileName: 2017-07-30-luarocks}
 luarocks:
-    - {fileName: 2017-07-30-luarocks, updated: '2017-07-30 16:32:25 +0900'}
+    - {fileName: 2017-07-30-luarocks}
 perl:
-    - {fileName: 2017-09-20-regex-prime, updated: '2017-09-20 20:56:55 +0900'}
+    - {fileName: 2017-09-20-regex-prime}
 regex:
-    - {fileName: 2017-09-20-regex-prime, updated: '2017-09-20 20:56:55 +0900'}
-font:
-    - {fileName: coding-font, updated: '2017-12-01 06:02:30 +0900'}
-config:
-    - {fileName: coding-font, updated: '2017-12-01 06:02:30 +0900'}
-test1:
-    - {fileName: default-post, updated: '2017-04-02 12:15:32 +0900'}
-test2:
-    - {fileName: default-post, updated: '2017-04-02 12:15:32 +0900'}
+    - {fileName: 2017-09-20-regex-prime}
+sql:
+    - {fileName: 2018-02-26-sql-char-comparison}
 google:
-    - {fileName: google-search-console-remove-outdated-content, updated: '2017-11-28 08:50:10 +0900'}
+    - {fileName: google-search-console-remove-outdated-content}
+gradle:
+    - {fileName: Gradle}
+tool:
+    - {fileName: Gradle}
+language:
+    - {fileName: groovy}
+    - {fileName: programming-language}
+jvm-lang:
+    - {fileName: groovy}
+groovy:
+    - {fileName: groovy}
+how-to:
+    - {fileName: how-to}
 index:
-    - {fileName: index, updated: '2017-11-29 21:37:03 +0900'}
+    - {fileName: index}
 latex:
-    - {fileName: mathjax-latex, updated: '2017-11-28 22:56:29 +0900'}
-test:
-    - {fileName: test, updated: '2017-11-26 21:39:45 +0900'}
-wiki:
-    - {fileName: test, updated: '2017-11-26 21:39:45 +0900'}
+    - {fileName: mathjax-latex}
+programming:
+    - {fileName: programming-language}
+tools:
+    - {fileName: tools}
 trouble-shooting:
-    - {fileName: vim-conceallevel, updated: '2017-11-29 17:47:59 +0900'}
+    - {fileName: vim-conceallevel}
+yaml:
+    - {fileName: yaml}
+data-format:
+    - {fileName: yaml}

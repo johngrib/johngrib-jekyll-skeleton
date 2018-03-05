@@ -6,6 +6,14 @@
     }
 }
 
+@media (min-width: 800px) {
+  body {
+    width: 800px;
+    margin: auto;
+    border: 1px solid #d0d0d0;
+  }
+}
+
 div.gsc-control-cse {
     padding: 0;
 }
@@ -71,7 +79,7 @@ table.gsc-search-box {
         border-color: #000000;
 
         td, th {
-            border: 1px solid #000000;
+            border: 1px solid $third-font-color;
             padding: 5px 5px;
         }
         th {
@@ -86,6 +94,10 @@ table.gsc-search-box {
 }
 .toc {
     background: #EEE;
+}
+.post-tag a {
+    color: #888888;
+    text-decoration: none;
 }
 @media (max-width: 1120px) {
     .page-content .wrapper:before {
@@ -230,4 +242,8 @@ ul.tag-list {
     p {
         margin: 0;
     }
+}
+
+.post-excerpt {
+    color: $forth-font-color;
 }

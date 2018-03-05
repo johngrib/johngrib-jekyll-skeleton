@@ -1,0 +1,45 @@
+---
+layout: home
+adsense: false
+---
+
+{% raw %}
+<div id="app">
+    <H3>최근 변경된 문서</H3>
+    <template>
+    <ul class="post-list">
+        <li v-for="doc in list">
+            <div>
+                <a class="post-link" v-bind="{ href: doc.url }">
+                    <div class="post-meta">{{ doc.updated }} - {{ doc.title }}</div>
+                    <div class="post-excerpt">{{ doc.summary }}</div>
+                    <ul class="tag-list" v-if="doc.tag">
+                        <li class="post-tag" v-for="tagName in doc.tag">
+                            <a v-bind="{ href: '/tag/#' + tagName }">#{{tagName}}</a>
+                        </li>
+                    </ul>
+                </a>
+            </div>
+        </li>
+    </ul>
+    </template>
+</div>
+{% endraw %}
+<script src="/js/vue.js"></script>
+<script>
+{% assign documents = site.wiki | sort: 'updated' | reverse %}
+var app = new Vue({
+    el: '#app',
+    data: {
+        list: [ {% for doc in documents %} {% if doc.public != false and doc.title != 'wiki' %}
+            {
+                title: "{{ doc.title }}",
+                url: "{{ doc.url }}",
+                updated: "{{ doc.updated | date: "%Y.%m.%d" }}",
+                tag: [{% for tag in doc.tags %}"{{ tag }}"{% unless forloop.last %},{% endunless %}{% endfor %}],
+                summary: "{{ doc.summary }}"
+            }{% unless forloop.last %},{% endunless %}{% endif %}{% endfor %}
+        ]
+    }
+})
+</script>
