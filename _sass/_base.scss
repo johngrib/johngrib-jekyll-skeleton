@@ -6,7 +6,7 @@ body, th, td, div, p, li {
     font-family: "Open Sans", arial, "Apple SD Gothic Neo", "Noto Sans CJK KR", 본고딕, "KoPubDotum Medium", 나눔바른고딕, 나눔고딕, NanumGothic, 맑은고딕, "Malgun Gothic", sans-serif;
     font-size: 0.9rem;
     line-height: 1.5;
-    color: $default-font-color;
+    word-break: break-all;
 }
 
 a:link {
@@ -72,6 +72,9 @@ h1,h2,h3,h4,h5,h6{
 h1 {
     font-size: 2.2rem;
     margin: 0px;
+}
+.post-content h1 {
+    border-bottom: 3px solid $theme-color;
 }
 h2 {
     font-size: 1.8em;
