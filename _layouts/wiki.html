@@ -3,7 +3,7 @@ layout: document
 ---
 
 {% assign thisName = page.id | remove: '/wiki/' %}
-
+<input type="hidden" id="thisName" value="{{ thisName }}"/>
 <div class="post">
     <header class="post-header">
         <h1 class="post-title">{{ page.title }}</h1>
@@ -14,32 +14,16 @@ layout: document
         <p class="edit-date"><a href="{{ site.blame }}/{{ thisName }}.md" target="_blank">created: {{ page.date | date: '%Y.%m.%d' }}</a></p>
         <p class="edit-date"><a href="{{ site.blame }}/{{ thisName }}.md" target="_blank">updated: {{ page.updated | date: '%Y.%m.%d' }}</a></p>
 
-{% if page.parent %}
-
-    {% assign plist = page.parent | split: "," %}
-    {% assign loop = "1234567890" | split: "" %}
-    {% assign pid = page.parent %}
-    {% for item in loop %}
-
-        {% if site.data.pageMap[pid] %}
-            {% assign ancestor = site.data.pageMap[pid] %}
-            {% assign pid = ancestor.parent %}
-            {% assign plist = plist | push: pid %}
-        {% endif %}
-
-        {% if pid == 'index' %}
-            {% break %}
-        {% endif %}
-    {% endfor %}
-
-    {% assign plist = plist | reverse %}
-        <p> 상위 문서:
-    {% for item in plist %}
-        {% assign p = site.data.pageMap[item] %}
-            <a href="{{ p.url }}">{{ p.title }}</a>{% unless forloop.last %} - {% endunless %}
-    {% endfor %}
-        </p>
-{% endif %}
+{% raw %}
+        <div id="parent-list">
+            <p v-if="list.length > 0">상위 문서:
+                <span v-for="(item, ind) in list">
+                    <a v-bind="{ href : item.parentUrl }">{{ item.parentTitle }}</a>
+                    <span v-if="ind < list.length - 1"> - </span>
+                </span>
+            </p>
+        </div>
+{% endraw %}
 
 {% if page.tags %}
     {% include post-tags.html %}
@@ -61,3 +45,6 @@ layout: document
 </div>
 {% include createLink.html %}
 
+<script src="/js/vue.js"></script>
+<script src="/js/axios.min.js"></script>
+<script src="/js/parent.js"></script>
