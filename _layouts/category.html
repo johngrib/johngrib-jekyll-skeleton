@@ -30,9 +30,9 @@ layout: document
     <article class="post-content">
         {{ content }}
 {% raw %}
-        <div id="app">
+        <div id="document-list">
             <template>
-                <ul class="post-list" v-for="item in getList">
+                <ul class="post-list" v-for="item in list">
                         <li>
                             <a class="post-link" v-bind="{ href: item.url }">
                                 <span>{{ item.title }}</span>
@@ -49,42 +49,13 @@ layout: document
         </div>
 {% endraw %}
     </article>
-<script src="/js/vue.js"></script>
-{% assign list = site.data.pageMap[thisName].children %}
-<script>
-var app = new Vue({
-    el: '#app',
-    data: {
-        list: [
-{% for postObj in list %}
-    {% assign post = site.data.pageMap[postObj] %}
-    {% if post.public != false %}
-            {
-                title: "{{ post.title }}",
-                url: "{{ post.url }}",
-                updated: "{{ post.updated | date: "%Y.%m.%d" }}",
-                summary: "{{ post.summary }}"
-            }
-    {% endif %}
-            {% unless forloop.last %},{% endunless %}
-{% endfor %}
-        ].sort(function sortByFileName(a, b) { return a.title.toLowerCase().localeCompare(b.title.toLowerCase()); })
-    },
-    computed: {
-        getList: function() {
-            return this.list;
-        }
-    }
-})
-</script>
-
 {% if page.comment != false %}
     {% include comment.html %}
 {% endif%}
-
 </div>
 {% include createLink.html %}
 
 <script src="/js/vue.js"></script>
 <script src="/js/axios.min.js"></script>
-<script src="/js/parent.js"></script>
+<script async src="/js/parent.js"></script>
+<script async src="/js/category.js"></script>
