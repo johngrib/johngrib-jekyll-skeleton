@@ -1,0 +1,11 @@
+---
+---
+{% assign documents = site.wiki | sort: 'url' %}
+{
+{% for doc in documents %}{% if doc.public == true and doc.title != 'wiki'%}{% assign url = doc.url | append: '\$\$' | remove: '/wiki/' | remove: '/\$\$' %}
+"{{ url }}":{
+"title":"{{ doc.title }}",{% if doc.summary %}"summary":"{{ doc.summary }}",{% endif %}
+"updated":"{{ doc.updated }}",
+"parent":"{{ doc.parent }}"},{% endif %}{% endfor %}
+"":{}
+}

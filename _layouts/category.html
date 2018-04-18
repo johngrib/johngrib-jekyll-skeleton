@@ -13,7 +13,7 @@ layout: document
         <div id="parent-list">
             <p v-if="list.length > 0">상위 문서:
                 <span v-for="(item, ind) in list">
-                    <a v-bind="{ href : item.parentUrl }">{{ item.parentTitle }}</a>
+                    <a v-bind="{ href : item.url }">{{ item.title }}</a>
                     <span v-if="ind < list.length - 1"> - </span>
                 </span>
             </p>

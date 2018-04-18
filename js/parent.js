@@ -5,44 +5,35 @@ new Vue({
     },
     created: function() {
 
-        const thisName = document.getElementById('thisName').value;
+        var thisName = document.getElementById('thisName').value;
         var _this = this;
 
         axios
-            .get('/parent.txt', {})
+            .get('/wikilist.json', {})
             .then(function(resp) {
 
                 if (resp.data == null) {
                     return;
                 }
-
-                var data = {};
-
-                resp.data
-                    .split('\n')
-                    .forEach(function(row) {
-                        var list = row.split('\t');
-                        data[list[0]] = {
-                            parentName: list[1],
-                            parentUrl: '/wiki/' + list[1],
-                            parentTitle: list[2]
-                        };
-                    });
-
+                var data = resp.data;
                 var plist = [];
-                var target = thisName;
+                var target = encodeURI(thisName);
                 for(var i = 0; i < 100; i++) {
-                    var next = data[target];
-
-                    if (!next) {
+                    if (target == 'index') {
                         break;
                     }
-
+                    var next = data[target];
+                    if (!next || !next['parent'] || next['parent'].length < 1) {
+                        break;
+                    }
+                    next['url'] = '/wiki/'.concat(target)
                     plist.unshift(next);
-                    target = next.parentName;
+                    target = encodeURI(next['parent']);
                 }
-
+                plist.pop();
                 _this.list = plist;
+                window.list = plist;
+                return;
             });
     }
 });
