@@ -1,0 +1,69 @@
+<script src="/js/chartist.min.js"></script>
+<script>
+(function() {
+    var els = document.querySelectorAll('.language-line-chart')
+
+    for (var i = 0; i < els.length; i++) {
+        var csv = els[i].innerText.split('\n');
+        csv.pop();
+
+        var type = csv.shift().split(',').map(trim);
+        var label = csv.shift().split(',').map(trim);
+        var caster = getCaster(type);
+        var dataList = getDataList(csv, caster);
+        var data = {
+            labels: dataList[0],
+            series: dataList.slice(1)
+        };
+        var options = {
+            showPoint: false,
+            width: 300,
+            height: 200
+        };
+
+        var newElement = document.createElement('div');
+        new Chartist.Line(newElement, data);
+
+        els[i].parentNode.parentNode.insertBefore(newElement, els[i].parentNode);
+        els[i].parentNode.remove();
+    }
+
+    function getDataList(csv, caster) {
+
+        var result = [];
+
+        for (var i = 0; i < csv.length; i++) {
+            var row = csv[i].split(',');
+
+            for (var j = 0; j < row.length; j++) {
+                if (!result[j]) {
+                    result[j] = [];
+                }
+                var value = caster[j](row[j]);
+                result[j].push(value);
+            }
+        }
+        return result;
+    }
+
+    function getCaster(type) {
+        return type.map(function(t) {
+            if (t == 'int') {
+                return function(v) { return parseInt(v, 10); };
+            }
+            if (t == 'float') {
+                return parseFloat;
+            }
+            return function(v) { return v; };
+        });
+    }
+
+    function trim(str) {
+        return str.trim();
+    }
+
+    function getParser(typeList) {
+        typeList.map();
+    }
+})();
+</script>
