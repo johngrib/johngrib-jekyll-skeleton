@@ -1,9 +1,28 @@
 <script>
     ;(function() {
-        var content = document.querySelector('article.post-content');
-        content.innerHTML = content.innerHTML.replace(/\\\[\[(.+?)\]\]/g, '\\[\\[$1\\]\\]');
-        content.innerHTML = content.innerHTML.replace(/\[\[(.+?)\]\]\{(.+?)\}/g, '<a href="../$1">$2</a>');
-        content.innerHTML = content.innerHTML.replace(/\[\[(.+?)\]\]/g, '<a href="../$1">$1</a>');
-        content.innerHTML = content.innerHTML.replace(/\\\[\\\[(.+?)\\\]\\\]/g, '[[$1]]');
+        var post = document.querySelector('article.post-content');
+
+        window.n = [];
+        (function iterate_node(node) {
+
+            if (/^(?:p|ul|h\d|table)$/i.test(node.tagName)) {
+
+                node.innerHTML = link(node.innerHTML);
+
+            } else { // Node.ELEMENT_NODE
+                for (var i = 0; i < node.childNodes.length; i++) {
+                    iterate_node(node.childNodes[i]);
+                }
+            }
+        })(post);
+
+        function link(content) {
+            content = content.replace(/\\\[\[(.+?)\]\]/g, '\\[\\[$1\\]\\]');
+            content = content.replace(/\[\[(.+?)\]\]\{(.+?)\}/g, '<a href="../$1">$2</a>');
+            content = content.replace(/\[\[(.+?)\]\]/g, '<a href="../$1">$1</a>');
+            content = content.replace(/\\\[\\\[(.+?)\\\]\\\]/g, '[[$1]]');
+            return content;
+        }
+
     })();
 </script>
