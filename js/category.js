@@ -9,7 +9,7 @@ new Vue({
         var _this = this;
 
         axios
-            .get('/wikilist.json', {})
+            .get('/data/wikilist.json', {})
             .then(function(resp) {
 
                 if (resp.data == null) {
