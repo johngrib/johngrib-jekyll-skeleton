@@ -49,13 +49,10 @@ adsense: false
                         {{ doc.title }}
                     </div>
                     <div class="post-excerpt">{{ doc.summary }}</div>
-
                     <ul class="tag-list">
-        {% for tag in doc.tags %}
                         <li class="post-tag">
-                            <a href="/tag/#{{tag}}" >#{{tag}}</a>
+                            {{ doc. tag }}
                         </li>
-        {% endfor %}
                     </ul>
                 </a>
             </div>
@@ -67,3 +64,4 @@ adsense: false
         <a href="/recent/">최근 변경된 문서 전체 리스트 보기</a>
     </h4>
 </div>
+{% include createLink.html %}

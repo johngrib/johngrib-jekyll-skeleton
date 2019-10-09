@@ -6,7 +6,7 @@ body, th, td, div, p, li {
     font-family: "Open Sans", arial, "Apple SD Gothic Neo", "Noto Sans CJK KR", 본고딕, "KoPubDotum Medium", 나눔바른고딕, 나눔고딕, NanumGothic, 맑은고딕, "Malgun Gothic", sans-serif;
     font-size: 0.9rem;
     line-height: 1.5;
-    word-break: break-all;
+    word-break: keep-all;
 }
 
 a:link {
@@ -33,10 +33,10 @@ code,pre {
     font-family:  $coding-font;
 }
 code {
-    color: #850085;
-    background-color: #e7e9ee;
-    padding: 2px 5px;
-    border-radius: 5px;
+    color: $theme-color;
+    background-color: #e7e9ee80;
+    padding: 1px 3px;
+    border-radius: 3px;
 }
 pre {
     overflow-x: auto;

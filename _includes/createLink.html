@@ -1,8 +1,34 @@
 <script>
     ;(function() {
+        var tags = document.querySelectorAll('.post-tag');
+        if(tags == null || tags.length < 1) {
+            return;
+        }
+
+        for (var i = 0; i < tags.length; i++) {
+            var item = tags[i];
+            var tagList = item.innerHTML.trim();
+
+            if(/^\s*$/.test(tagList)) {
+                continue;
+            }
+            tagList = tagList.split(/\s+/)
+                .map(function(tag) {
+                    return `<a href="/tag/#${tag}">#${tag}</a>`;
+                })
+                .join(' ');
+            console.log(tagList);
+            tags[i].innerHTML = tagList;
+        }
+        return;
+    })();
+    ;(function() {
         var post = document.querySelector('article.post-content');
 
-        window.n = [];
+        if(post == null) {
+            return;
+        }
+
         (function iterate_node(node) {
 
             if (/^(?:p|ul|h\d|table)$/i.test(node.tagName)) {
