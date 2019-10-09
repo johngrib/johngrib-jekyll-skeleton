@@ -2,7 +2,8 @@
 code {
     font-family: Consolas, "Courier New", Courier;
     a {
-        color: #d0d0d0
+        color: inherit;
+        text-decoration: none;
     }
 }
 .highlight {
@@ -14,7 +15,7 @@ code {
     .n { color: #f8f8f2 } /* Name */
     .o { color: #cc7832 } /* Operator */
     .p { color: #f8f8f2 } /* Punctuation */
-    .cm { color: #acca8b } /* Comment.Multiline */
+    .cm { color: #fcba03 } /* Comment.Multiline */
     .cp { color: #75715e } /* Comment.Preproc */
     .c1 { color: #acca8b } /* Comment.Single */
     .cs { color: #75715e } /* Comment.Special */
@@ -71,4 +72,11 @@ code {
     .gd { color: #f92672; } /* Generic.Deleted & Diff Deleted */
     .gi { color: #a6e22e; } /* Generic.Inserted & Diff Inserted */
     .lineno { color: #ffe5a0; }
+}
+
+.language-ascii-art {
+    display: inline-block;
+    font-family: monospace, Monaco, "Lucida Console";
+    letter-spacing: -0.1em;
+    line-height: 1.0em;
 }
