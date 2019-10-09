@@ -334,12 +334,12 @@ Gradle:
     url: /wiki/Gradle
     updated: '2017-12-08 23:17:46 +0900'
     children: []
-groovy:
+Groovy:
     type: wiki
     title: Groovy
     summary: 'A multi-faceted language for the Java platform'
     parent: programming-language
-    url: /wiki/groovy
+    url: /wiki/Groovy
     updated: '2017-12-03 15:01:36 +0900'
     children: []
 how-to:
@@ -373,7 +373,7 @@ programming-language:
     parent: index
     url: /wiki/programming-language
     updated: '2017-12-03 15:01:36 +0900'
-    children: [groovy]
+    children: [Groovy]
 tools:
     type: wiki
     title: tools
@@ -406,11 +406,11 @@ vim-conceallevel:
     url: /wiki/vim-conceallevel
     updated: '2017-12-20 13:13:32 +0900'
     children: []
-yaml:
+YAML:
     type: wiki
     title: YAML
     summary: 'YAML Ain''t Markup Language'
     parent: index
-    url: /wiki/yaml
+    url: /wiki/YAML
     updated: '2017-12-02 16:45:25 +0900'
     children: []
