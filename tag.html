@@ -36,7 +36,7 @@ public: true
                     <div class="post-meta" style="float: right;">
                         {{ post.updated | date: "%Y.%m.%d" }}
                     </div>
-            {% if post.summary %}
+            {% if post.summary != empty and post.summary != undefined %}
                         <div class="post-excerpt">
                             - {{ post.summary }}
                         </div>
@@ -67,7 +67,7 @@ public: true
         const url = window.location.href;
         const req = /#([^\s]+)$/.exec(url);
         if(Array.isArray(req)) {
-            var selector = '#' + req.pop();
+            var selector = '#' + decodeURI(req.pop());
             showTag(selector);
         }
     })();
