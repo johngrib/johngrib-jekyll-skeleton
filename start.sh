@@ -1,10 +1,5 @@
-# gem install github-pages
-bundle install
-# bundle exec jekyll serve --watch
+bundle update && bundle install
 ./generateData.js
 
-if [ $1 = "-I" ]; then
-    bundle exec jekyll server --watch -I
-else
-    bundle exec jekyll server --watch
-fi
+# bundle exec jekyll server --watch
+docker-compose up
