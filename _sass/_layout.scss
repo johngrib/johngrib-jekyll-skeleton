@@ -18,10 +18,6 @@ div.gsc-control-cse {
     padding: 0;
 }
 
-div.search {
-    width: 100%;
-    position: relative;
-}
 .search form.gsc-search-box {
     margin: 0;
 }
@@ -208,19 +204,26 @@ ul.tag-list {
     background-color: #FFFFFF;
 }
 
-.searchInput {
+div.search {
     background-color: #f6f5ea;
-    z-index: 1;
     width: 100%;
-    height: 1.5em;
+    position: relative;
+    height: 1.3em;
+    border-bottom: 1px solid $theme-color;
+}
+.searchInput {
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    top: 0;
     position: relative;
     padding: 0px;
+    padding-left: 5px;
     border: 0px;
     margin: 0px;
     font-size: 13px;
     direction: ltr;
     -webkit-appearance: textfield;
-    border-bottom: 1px solid $theme-color;
     border-radius: 0px;
 }
 
