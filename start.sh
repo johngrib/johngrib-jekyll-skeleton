@@ -1,5 +1,10 @@
 bundle update && bundle install
 ./generateData.js
 
-# bundle exec jekyll server --watch
-docker-compose up
+if [[ $1 = "docker" ]]; then
+    docker-compose up
+elif [[ $1 = "watch" ]]; then
+    bundle exec jekyll server --watch
+elif [[ $1 = "inc" ]]; then
+    bundle exec jekyll server --incremental
+fi
