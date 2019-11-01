@@ -7,13 +7,18 @@ layout: document
 <div class="post">
     <header class="post-header">
         <h1 class="post-title">{{ page.title }}</h1>
-        <p>
-            <a href="{{ site.edit }}/{{ thisName }}.md">편집하기</a>
-            <a href="{{ site.issue }}?title={{ page.title | url_encode }}&body=의견을%20남겨주세요">의견 남기기</a>
-        </p>
-        <p class="edit-date"><a href="{{ site.blame }}/{{ thisName }}.md" target="_blank">created: {{ page.date | date: '%Y.%m.%d' }}</a></p>
-        <p class="edit-date"><a href="{{ site.blame }}/{{ thisName }}.md" target="_blank">updated: {{ page.updated | date: '%Y.%m.%d' }}</a></p>
-
+    {% if page.summary %}
+        <p class="title-summary">{{ page.summary }}</p>
+    {% endif %}
+        <div class="history-button">
+            <p><a href="{{ site.blame }}/{{ thisName }}.md" target="_blank">created: {{ page.date | date: '%Y.%m.%d' }}</a></p>
+            <p><a href="{{ site.blame }}/{{ thisName }}.md" target="_blank">updated: {{ page.updated | date: '%Y.%m.%d' }}</a></p>
+            <p>
+                <a href="{{ site.edit }}/{{ thisName }}.md">편집하기</a>
+                /
+                <a href="{{ site.issue }}?title={{ page.title | url_encode }}&body=의견을%20남겨주세요">의견 남기기</a>
+            </p>
+        </div>
 {% raw %}
         <div id="parent-list">
             <p v-if="list.length > 0">상위 문서:
@@ -29,9 +34,6 @@ layout: document
     {% include post-tags.html %}
 {% endif %}
 
-{% if page.summary %}
-        <h2>{{ page.summary }}</h2>
-{% endif %}
 
     </header>
     <article class="post-content">
