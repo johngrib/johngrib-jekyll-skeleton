@@ -11,7 +11,7 @@ author: 기계인간 John Grib
 profile: 유물론자
 twitter_username: John_Grib
 github_username: johngrib
-disqus_shortname: johngrib
+comment-support: utterances
 
 # Build settings
 plugins:
@@ -40,6 +40,11 @@ collections:
 disqus:
   id: johngrib
   shortname: johngrib
+utterances:
+  repo: johngrib/johngrib.github.io
+  issue-term: pathname
+  label: Comment
+  branch: master
 
 google_analytics:
   ua: UA-110224147-1

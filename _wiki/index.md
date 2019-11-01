@@ -2,14 +2,13 @@
 layout  : wikiindex
 title   : wiki
 date    : 2017-11-26 21:38:36 +0900
-updated : 2018-03-05 22:57:44 +0900
+updated : 2019-10-30 08:36:56 +0900
 tags    : index
 toc     : true
 public  : true
 comment : false
 ---
 
-* [[Gradle]]
 * [[tools]]
     * [[useful-site]]
         * [[google-search-console-remove-outdated-content]]{구글 웹 도구 - 오래된 콘텐츠 삭제}
@@ -18,6 +17,7 @@ comment : false
 * [[how-to]]
     * [[mathjax-latex]]
 * [[Vim]]
+    * [[my-wiki]]
     * [[vim-conceallevel]]{conceallevel (Vim)}
 * [[YAML]]
 
