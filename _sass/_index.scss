@@ -1,0 +1,25 @@
+.blog-face {
+    text-align: center;
+}
+
+.indent {
+    margin-left: 30px;
+}
+
+.contact {
+    margin-top: 10px;
+    text-align: center;
+    a {
+        background: $theme-color;
+        color: #FFFFFF;
+        padding: 5px 10px;
+        text-decoration: none;
+        border-radius: 8px;
+        white-space: nowrap;
+
+        &:hover {
+            transition: background 0.3s ease;
+            background: #666;
+        }
+    }
+}
