@@ -1,0 +1,19 @@
+@media (min-width: 1700px) {
+    ul#markdown-toc {
+        position: fixed;
+        top: 0;
+        left: calc(50vw + 410px);
+        width: 380px;
+        background-color: white;
+        z-index: 9999;
+        font-size: 0.8em;
+    }
+}
+
+#markdown-toc {
+    border: 1px solid;
+    padding: 10px;
+    padding-left: 30px;
+    background-color: #FFFFFF;
+}
+
