@@ -1,9 +1,10 @@
 ---
 layout: home
 adsense: false
+regenerate: true
 ---
 
-<div class="home">
+<div class="blog-face">
     <div>
         <H3>
             <a href="https://github.com/vimwiki/vimwiki">Vimwiki</a>
@@ -35,7 +36,7 @@ adsense: false
     </div>
 </div>
 <div>
-    <H3>최근 변경된 문서</H3>
+    <H3 class="indent">최근 변경된 문서</H3>
     <ul class="post-list">
 {% assign documents = site.wiki | sort: 'updated' | reverse %}
 {% for doc in documents limit: 30 %}

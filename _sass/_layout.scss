@@ -39,15 +39,17 @@ table.gsc-search-box {
         float: left;
         text-decoration: none;
         color: #FFFFFF;
-        line-height: 1.5;
+        line-height: 1.3;
         padding-left: 10px;
+        font-style: italic;
     }
     .site-title-right {
         float: right;
         text-decoration: none;
         color: #FFFFFF;
-        line-height: 1.5;
+        line-height: 1.3;
         padding-right: 10px;
+        font-style: italic;
     }
 }
 
@@ -58,10 +60,6 @@ table.gsc-search-box {
     img {
         max-width:100%;
     }
-}
-
-.home {
-    text-align: center;
 }
 
 .post {
@@ -98,23 +96,6 @@ table.gsc-search-box {
 @media (max-width: 1120px) {
     .page-content .wrapper:before {
         display: none;
-    }
-}
-.contact {
-    margin-top: 10px;
-    text-align: center;
-    a {
-        background: $theme-color;
-        color: #FFFFFF;
-        padding: 5px 10px;
-        text-decoration: none;
-        border-radius: 8px;
-        white-space: nowrap;
-
-        &:hover {
-            transition: background 0.3s ease;
-            background: #666;
-        }
     }
 }
 
@@ -157,8 +138,15 @@ ul.tag-list {
   border-radius: 3px;
 }
 
-.edit-date {
+.history-button {
     text-align: right;
+    font-size: 0.8em;
+}
+
+.title-summary {
+    font-size: 1.6em;
+    font-style: italic;
+    color: gray;
 }
 
 .visible {
@@ -201,8 +189,8 @@ div.search {
     background-color: #f6f5ea;
     width: 100%;
     position: relative;
-    height: 1.3em;
     border-bottom: 1px solid $theme-color;
+    line-height: 1;
 }
 .searchInput {
     background-color: transparent;
