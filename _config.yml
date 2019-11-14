@@ -57,3 +57,7 @@ edit: "https://github.com/johngrib/johngrib.github.io/edit/master/_wiki"
 issue: "https://github.com/johngrib/johngrib.github.io/issues/new"
 
 timezone: "Asia/Seoul"
+
+# https://kramdown.gettalong.org/rdoc/Kramdown/Options.html - smart_quotes
+kramdown:
+    smart_quotes: ["apos", "apos", "quot", "quot"]
