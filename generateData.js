@@ -133,7 +133,7 @@ function parseInfo(file, info) {
         }
 
         const key = result[1].trim();
-        const val = result[2].trim();
+        const val = result[2].trim().replace(/\[{2}|\]{2}/g, '');
 
         obj[key] = val;
     });
