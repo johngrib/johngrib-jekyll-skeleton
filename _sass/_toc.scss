@@ -2,11 +2,15 @@
     ul#markdown-toc {
         position: fixed;
         top: 0;
+        bottom: 0;
         left: calc(50vw + 410px);
         width: 380px;
         background-color: white;
         z-index: 9999;
         font-size: 0.8em;
+        overflow-y:scroll;
+        overflow-x:hidden;
+        border: 0px solid;
     }
 }
 
