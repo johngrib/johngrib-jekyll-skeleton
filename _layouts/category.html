@@ -21,25 +21,7 @@ layout: document
     </header>
     <article class="post-content">
         {{ content }}
-{% raw %}
-        <div id="document-list">
-            <template>
-                <ul class="post-list" v-for="item in list">
-                        <li>
-                            <a class="post-link" v-bind="{ href: item.url }">
-                                <span>{{ item.title }}</span>
-                                <div class="post-meta" style="float: right;">
-                                    {{ item.updated }}
-                                </div>
-                                <div class="post-excerpt" v-if="item.summary">
-                                    - {{ item.summary }}
-                                </div>
-                            </a>
-                        </li>
-                </ul>
-            </template>
-        </div>
-{% endraw %}
+        <div id="document-list"></div>
     </article>
 {% if page.comment != false %}
     {% include comment.html %}
@@ -47,7 +29,6 @@ layout: document
 </div>
 {% include createLink.html %}
 
-<script src="/js/vue.js"></script>
 <script src="/js/axios.min.js"></script>
 <script async src="/js/parent.js"></script>
 <script async src="/js/category.js"></script>
