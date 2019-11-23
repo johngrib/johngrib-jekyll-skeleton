@@ -20,14 +20,7 @@ layout: document
             </p>
         </div>
 {% raw %}
-        <div id="parent-list">
-            <p v-if="list.length > 0">상위 문서:
-                <span v-for="(item, ind) in list">
-                    <a v-bind="{ href : item.url }">{{ item.title }}</a>
-                    <span v-if="ind < list.length - 1"> - </span>
-                </span>
-            </p>
-        </div>
+        <div id="parent-list"></div>
 {% endraw %}
 
 {% if page.tags %}
@@ -47,6 +40,5 @@ layout: document
 </div>
 {% include createLink.html %}
 
-<script src="/js/vue.js"></script>
 <script src="/js/axios.min.js"></script>
 <script async src="/js/parent.js"></script>
