@@ -3,20 +3,30 @@ layout: document
 ---
 
 {% assign thisName = page.id | remove: '/wiki/' %}
-
 <input type="hidden" id="thisName" value="{{ thisName }}"/>
 <div class="post">
     <header class="post-header">
         <h1 class="post-title">{{ page.title }}</h1>
-
+    {% if page.summary %}
+        <p class="title-summary">{{ page.summary }}</p>
+    {% endif %}
+        <div class="history-button">
+            <p><a href="{{ site.blame }}/{{ thisName }}.md" target="_blank">created: {{ page.date | date: '%Y.%m.%d' }}</a></p>
+            <p><a href="{{ site.blame }}/{{ thisName }}.md" target="_blank">updated: {{ page.updated | date: '%Y.%m.%d' }}</a></p>
+            <p>
+                <a href="{{ site.edit }}/{{ thisName }}.md">편집하기</a>
+                /
+                <a href="{{ site.issue }}?title={{ page.title | url_encode }}&body=의견을%20남겨주세요">의견 남기기</a>
+            </p>
+        </div>
 {% raw %}
         <div id="parent-list"></div>
 {% endraw %}
+
 {% if page.tags %}
     {% include post-tags.html %}
 {% endif %}
 
-        <h2>{{ page.summary }}</h2>
 
     </header>
     <article class="post-content">
