@@ -26,3 +26,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'jekyll-paginate'
 gem 'jekyll-gist'
+
+# On Windows, you need to install 'wdm' , to avoid polling for changes
+# For more details, please check  https://jekyllrb.com/docs/installation/windows/#auto-regeneration
+gem 'wdm', '>= 0.1.0' if Gem.win_platform?
