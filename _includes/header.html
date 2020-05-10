@@ -51,9 +51,16 @@
         <a class="site-title-right" href="/about/">me</a>
     </div>
     <div>
-        <a class="site-title-right" href="/wiki/index/#random" onClick="if(typeof random === 'function')random()">random</a>
+        <a id="random-button" class="site-title-right" href="/wiki/index/#random" onClick="if(typeof random === 'function')random()">random</a>
     </div>
     <div>
         <a class="site-title-right" href="/wiki/index/">wiki</a>
     </div>
 </header>
+<script>
+    document.onkeydown = function(e) {
+        if (e.key == "r") {
+            document.getElementById("random-button").click();
+        }
+    };
+</script>
