@@ -1,14 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400&display=swap');
+
 body {
     margin: 0;
     height: 100%;
 }
+
+body {
+  font: 400 16px 'Roboto Slab',AppleSDGothicNeo,sans-serif;
+  color: rgba(0, 0, 0, 0.84);
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-feature-settings: "kern" 1;
+  -moz-font-feature-settings: "kern" 1;
+  -o-font-feature-settings: "kern" 1;
+  font-feature-settings: "kern" 1;
+  font-kerning: normal;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
 body, th, td, div, p, li {
-    font-family: "Open Sans", arial, "Apple SD Gothic Neo", "Noto Sans CJK KR", 본고딕, "KoPubDotum Medium", 나눔바른고딕, 나눔고딕, NanumGothic, 맑은고딕, "Malgun Gothic", sans-serif;
     word-break: keep-all;
 }
 
+$main-font-color: #4D5667;
+
 p, li {
-    color: #404040;
+    color: $main-font-color;
 }
 
 a:link {
@@ -22,6 +41,7 @@ a:visited {
 }
 
 blockquote {
+    font-family: 'Noto Serif KR', serif;
     background: #FFFFFF;
     margin:0;
     padding: 1px 0px 1px 8px;
@@ -68,9 +88,14 @@ pre code {
 
 }
 
-h1,h2,h3,h4,h5,h6{
+h1 {
     font-weight: normal;
 }
+h2,h3,h4,h5,h6 {
+    font-weight: normal;
+    color: $main-font-color;
+}
+
 .post-content h1,h2,h3,h4,h5,h6 {
     &:before { color:$theme-color; }
 }
