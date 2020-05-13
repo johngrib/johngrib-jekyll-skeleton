@@ -287,7 +287,7 @@ blame: "https://github.com/johngrib/johngrib.github.io/blame/master/_wiki"
 
 <div class="post">
     <header class="post-header">
-        <h1 class="post-title">{{ page.title }}</h1>
+        <h1 class="page-title">{{ page.title }}</h1>
         <p class="edit-date"><a href="{{ site.blame }}/{{ thisName }}.md" target="_blank">updated: {{ page.updated | date: '%Y.%m.%d' }}</a></p>
 ...
 {% endraw %}
