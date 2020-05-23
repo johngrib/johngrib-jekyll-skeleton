@@ -3,7 +3,7 @@ layout  : post
 title   : emacs 사용 시작!
 summary : 하지만 Vim은 포기하지 않는다.
 date    : 2017-04-03 16:33:24 +0900
-tags    : emacs evil
+tag     : emacs evil
 toc     : true
 comment : true
 public  : true

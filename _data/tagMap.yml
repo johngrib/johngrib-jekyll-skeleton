@@ -1,8 +1,0 @@
-wiki:
-    - {fileName: my-wiki}
-vimwiki:
-    - {fileName: my-wiki}
-jekyll:
-    - {fileName: my-wiki}
-blog:
-    - {fileName: my-wiki}

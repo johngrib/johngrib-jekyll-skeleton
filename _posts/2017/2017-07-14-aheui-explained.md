@@ -3,7 +3,7 @@ layout  : post
 title   : 아희 'Hello, World!'에 코멘트를 달아 보았다.
 summary : 아희 재밌네
 date    : 2017-07-14 23:00:17 +0900
-tags    : aheui
+tag     : aheui
 toc     : true
 comment : true
 public  : true

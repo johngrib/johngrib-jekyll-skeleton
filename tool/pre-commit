@@ -1,0 +1,5 @@
+#!/bin/sh
+
+./generateData.js
+./tool/save-images.sh
+git add _data
