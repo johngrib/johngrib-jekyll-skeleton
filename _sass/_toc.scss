@@ -23,3 +23,10 @@
     line-height: 1.5;
 }
 
+$active-color: red;
+.active-toc {
+  color: $active-color;
+}
+.active-toc:visited {
+  color: $active-color;
+}
