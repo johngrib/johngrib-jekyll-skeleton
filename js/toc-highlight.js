@@ -47,6 +47,9 @@
         for (let i = 0; i < headings.length; i++) {
             const y = headings[i].getBoundingClientRect().top - 35;
 
+            if (y > 0) {
+                break;
+            }
             if (y <= 0 && y > currentHeading.getBoundingClientRect().top) {
                 currentHeading = headings[i];
             }
@@ -54,10 +57,16 @@
         return currentHeading;
     }
 
+    let activeHeadingId = null;
     document.body.onscroll = function() {
-        deActivate();
         const currentHeading = findCurrentHeading(headings);
-        console.log(currentHeading)
+
+        if (currentHeading.id == activeHeadingId) {
+            return;
+        }
+        // console.log(currentHeading)
+        deActivate();
         activate(tocMap[currentHeading.id]);
+        activeHeadingId = currentHeading.id;
     }
 })();
