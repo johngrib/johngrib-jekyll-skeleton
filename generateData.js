@@ -51,13 +51,6 @@ for (tag in tagMap) {
 }
 saveTagMap(tagMap);
 
-
-const tagList = Object.keys(tagMap).sort(function sortByTagName(a, b) {
-    return a.toLowerCase().localeCompare(b.toLowerCase());
-});
-
-saveTagList(tagList)
-
 const pageMap = {};
 dataList.sort(function(a, b) {
     return a.url.toLowerCase().localeCompare(b.url.toLowerCase());
@@ -88,6 +81,10 @@ dataList.forEach(function(page) {
 
 savePageList(pageMap);
 
+saveTagFiles(tagMap, pageMap);
+
+saveTagCount(tagMap);
+
 function saveTagMap(tagMap) {
     fs.writeFile("./_data/tagMap.yml", YAML.stringify(tagMap), function(err) {
         if (err) {
@@ -97,12 +94,83 @@ function saveTagMap(tagMap) {
     });
 }
 
-function saveTagList(tagList) {
-    fs.writeFile("./_data/tagList.yml", YAML.stringify(tagList), function(err) {
+/**
+ * tag 하나의 정보 파일을 만든다.
+ * 각 태그 하나는 하나의 json 파일을 갖게 된다.
+ * 예를 들어 math 라는 태그가 있다면 ./data/tag/math.json 파일이 만들어진다.
+ * json 파일의 내용은 fileName과 collection으로 구성된다.
+ * 다음은 GNU.json 파일의 예이다.
+ *
+{
+  "fileName": "agile",
+  "collection": {
+    "agile": {
+      "type": "wiki",
+      "title": "애자일(agile)에 대한 토막글 모음",
+      "summary": "",
+      "parent": "software-engineering",
+      "url": "/wiki/agile",
+      "updated": "2020-01-20 21:57:44 +0900",
+      "children": []
+    },
+    "Tompson-s-rule-for-first-time-telescope-makers": {
+      "type": "wiki",
+      "title": "망원경 규칙 (Telescope Rule)",
+      "summary": "4인치 반사경을 만든 다음에 6인치 반사경을 만드는 것이, 6인치 반사경 하나 만드는 것보다 더 빠르다",
+      "parent": "proverb",
+      "url": "/wiki/Tompson-s-rule-for-first-time-telescope-makers",
+      "updated": "2019-11-24 09:36:53 +0900",
+      "children": []
+    }
+  }
+}
+ */
+function saveTagFiles(tagMap, pageMap) {
+    for (let tag in tagMap) {
+        var map = {
+            fileName: tag,
+            collection: {}
+        };
+        var tagData = tagMap[tag];
+        for (var i in tagData) {
+            var fileName = tagData[i].fileName;
+            map.collection[fileName] = pageMap[fileName]
+        }
+
+        fs.writeFile("./data/tag/" + tag + ".json", JSON.stringify(map), function(err) {
+            if (err) {
+                return console.log(err);
+            }
+        });
+    }
+}
+
+/**
+ * 태그 하나가 갖는 자식 문서의 수를 ./_data/tagCount.yml 파일로 저장한다.
+ * 만약 ACM 태그가 달린 문서가 1개 있고, agile 태그가 달린 문서가 5개 있다면 tagCount.yml 파일은 다음과 같은 내용을 갖게 된다.
+-
+    name: ACM
+    size: 1
+-
+    name: agile
+    size: 5
+ */
+function saveTagCount(tagMap) {
+    var list = [];
+    for (var tag in tagMap) {
+        list.push({
+            name: tag,
+            size: tagMap[tag].length
+        });
+    }
+    var sortedList = list.sort((a, b) =>
+        a.name.toLowerCase().localeCompare(b.name.toLowerCase()));
+
+    fs.writeFile("./_data/tagCount.yml", YAML.stringify(sortedList), function(err) {
         if (err) {
             return console.log(err);
         }
-        console.log("tagList saved.");
+        console.log("tagCount saved.");
     });
 }
 
