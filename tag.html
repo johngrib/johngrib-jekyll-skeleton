@@ -5,69 +5,55 @@ permalink: /tag/
 public: true
 ---
 
-{% assign tagMap = site.data.tagMap %}
-{% assign tagList = site.data.tagList %}
+{% assign tagCount = site.data.tagCount %}
 <div>
     <ul class="tag-list">
-{% for tag in tagList %}
+{% for tag in tagCount %}
         <li>
-            <a href="#{{tag}}" onclick="showTag('#{{tag}}')">
-                {{tag}}<sup>{{ tagMap[tag] | size }}</sup>
+            <a href="#{{tag.name}}" onclick="showTag('{{tag.name}}')">
+                {{tag.name}}<sup>{{ tag.size }}</sup>
             </a>
         </li>
 {% endfor %}
     </ul>
 </div>
 
-<div>
-{% for tag in tagList %}
-    <div class="archive-group invisible" id="{{tag}}">
+<div id="tag-collection"></div>
 
-        <h3 id="{{tag}}">{{ tag }}</h3>
-
-        <ul class="post-list">
-    {% assign list = tagMap[tag]  %}
-    {% for postObj in list %}
-        {% assign post = site.data.pageMap[postObj.fileName] %}
-        {% if post.public != false %}
-            <li>
-                <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
-                    <span>{{ post.title }}</span>
-                    <div class="post-meta" style="float: right;">
-                        {{ post.updated | date: "%Y.%m.%d" }}
-                    </div>
-            {% if post.summary != empty and post.summary != undefined %}
-                        <div class="post-excerpt">
-                            - {{ post.summary }}
-                        </div>
-            {% endif %}
-                </a>
-            </li>
-        {% endif %}
-    {% endfor %}
-        </ul>
-    </div>
-{% endfor %}
-</div>
+<script src="/js/axios.min.js"></script>
 <script>
     function showTag(selector) {
+        axios.get(`/data/tag/${selector}.json`, {})
+            .then((resp) => createLinks(resp, selector));
+    }
 
-        document.querySelectorAll('.visible')
-            .forEach(function(el) {
-                el.classList.remove('visible');
-                el.classList.add('invisible');
-            })
+    function createLinks(resp, selector) {
+        if (resp.data == null) {
+            return;
+        }
 
-        var list = document.querySelector(selector);
-        list.classList.add('visible');
-        list.classList.remove('invisible');
+        let template = `<h3>${selector}</h3><ul class="post-list">`;
+        for (var item in resp.data.collection) {
+            var d = resp.data.collection[item];
+
+            var summary = (d.summary == null || /^\s*$/.test(d.summary)) ? '' : `<div class="post-excerpt">- ${d.summary}</div>`;
+            var updated = d.updated != null ? `<div class="post-meta" style="float: right;">${d.updated}</div>` : '';
+            var title = d.title != null ? `<span>${d.title}</span>` : '';
+
+            var link = `<li><a class="post-link" href="${d.url}"> ${title} ${updated} ${summary} </a></li>`;
+
+            template += link;
+        }
+        template += `</ul>`
+
+        document.getElementById('tag-collection').innerHTML = template;
     }
 
     ;(function showInitTag() {
         const url = window.location.href;
         const req = /#([^\s]+)$/.exec(url);
         if(Array.isArray(req)) {
-            var selector = '#' + decodeURI(req.pop());
+            var selector = decodeURI(req.pop());
             showTag(selector);
         }
     })();
