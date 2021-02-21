@@ -1,0 +1,28 @@
+summary {
+    color: gray;
+}
+
+details {
+    border: 1px dashed gray;
+    padding: 2px;
+    margin-bottom:5px;
+}
+
+details[open] > div {
+    opacity: 0;
+    animation-name: slideDown;
+    animation-duration: 0.5s;
+    animation-delay: 0.2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
