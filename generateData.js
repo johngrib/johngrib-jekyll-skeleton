@@ -75,10 +75,37 @@ function saveTagMap(tagMap) {
     });
 }
 
-function collectData(file) {
-    const data = fs.readFileSync(file.path, 'utf8');
-    return parseInfo(file, data.split('---')[1]);
+/**
+ * tag 하나의 정보 파일을 만든다.
+ * 각 태그 하나는 하나의 json 파일을 갖게 된다.
+ * 예를 들어 math 라는 태그가 있다면 ./data/tag/math.json 파일이 만들어진다.
+ * json 파일의 내용은 fileName과 collection으로 구성된다.
+ * 다음은 GNU.json 파일의 예이다.
+ *
+{
+  "fileName": "agile",
+  "collection": {
+    "agile": {
+      "type": "wiki",
+      "title": "애자일(agile)에 대한 토막글 모음",
+      "summary": "",
+      "parent": "software-engineering",
+      "url": "/wiki/agile",
+      "updated": "2020-01-20 21:57:44 +0900",
+      "children": []
+    },
+    "Tompson-s-rule-for-first-time-telescope-makers": {
+      "type": "wiki",
+      "title": "망원경 규칙 (Telescope Rule)",
+      "summary": "4인치 반사경을 만든 다음에 6인치 반사경을 만드는 것이, 6인치 반사경 하나 만드는 것보다 더 빠르다",
+      "parent": "proverb",
+      "url": "/wiki/Tompson-s-rule-for-first-time-telescope-makers",
+      "updated": "2019-11-24 09:36:53 +0900",
+      "children": []
+    }
+  }
 }
+ */
 
 function saveTagFiles(tagMap, pageMap) {
     for (const tag in tagMap) {
@@ -98,6 +125,16 @@ function saveTagFiles(tagMap, pageMap) {
     }
 }
 
+/**
+ * 태그 하나가 갖는 자식 문서의 수를 ./_data/tagCount.yml 파일로 저장한다.
+ * 만약 ACM 태그가 달린 문서가 1개 있고, agile 태그가 달린 문서가 5개 있다면 tagCount.yml 파일은 다음과 같은 내용을 갖게 된다.
+-
+    name: ACM
+    size: 1
+-
+    name: agile
+    size: 5
+ */
 function saveTagCount(tagMap) {
     const list = [];
     for (const tag in tagMap) {
@@ -187,4 +224,9 @@ function getFiles(path, type, array, testFileList = null) {
             return array.push(obj);
         }
     });
+}
+
+function collectData(file) {
+    const data = fs.readFileSync(file.path, 'utf8');
+    return parseInfo(file, data.split('---')[1]);
 }
