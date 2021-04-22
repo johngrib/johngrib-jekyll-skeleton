@@ -121,7 +121,7 @@ function saveTagFiles(tagMap, pageMap) {
             map.collection[fileName] = pageMap[fileName]
         }
 
-        fs.writeFile("./data/tag/" + tag + ".json", JSON.stringify(map), err => {
+        fs.writeFile(`./data/tag/${tag}.json`, JSON.stringify(map), err => {
             if (err) return console.log(err);
         });
     }
@@ -184,7 +184,7 @@ function parseInfo(file, info) {
         obj.url = '/blog/' + obj.date.replace(/^(\d{4})-(\d{2})-(\d{2}).*$/, '$1/$2/$3/');
         obj.url += obj.fileName.replace(/^(\d{4}-\d{2}-\d{2}-)?(.*)$/, '$2');
     } else if (file.type === 'wiki') {
-        obj.url = '/wiki/' + obj.fileName;
+        obj.url = `/wiki/${obj.fileName}`;
     }
 
     if (obj.tag) {
@@ -209,7 +209,7 @@ function getFiles(path, type, array, testFileList = null) {
 
     fs.readdirSync(path).forEach(fileName => {
 
-        const subPath = path + '/' + fileName;
+        const subPath = `${path}/${fileName}`;
 
         if (isDirectory(subPath)) {
             return getFiles(subPath, type, array, testFileList);
@@ -218,7 +218,7 @@ function getFiles(path, type, array, testFileList = null) {
             if(testFileList && !testFileList.includes(fileName)) return;
 
             const obj = {
-                'path': path + '/' + fileName,
+                'path': `${path}/${fileName}`,
                 'type': type,
                 'name': fileName,
                 'children': [],
