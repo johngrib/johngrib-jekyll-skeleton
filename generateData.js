@@ -115,9 +115,9 @@ function saveTagFiles(tagMap, pageMap) {
             fileName: tag,
             collection: {}
         };
-        const tagData = tagMap[tag];
-        for (const i in tagData) {
-            const fileName = tagData[i].fileName;
+        const tagDatas = tagMap[tag];
+        for (const tagData of tagDatas) {
+            const fileName = tagData.fileName;
             map.collection[fileName] = pageMap[fileName]
         }
 
