@@ -16,7 +16,9 @@ const dataList = list.map(file => collectData(file))
 
 
 dataList.forEach(function collectTagMap(data) {
-    if (!data.tag) return;
+    if (!data.tag) {
+        return;
+    }
     
     data.tag.forEach(tag => {
         if (!tagMap[tag]) {
@@ -122,7 +124,9 @@ function saveTagFiles(tagMap, pageMap) {
         }
 
         fs.writeFile(`./data/tag/${tag}.json`, JSON.stringify(map), err => {
-            if (err) return console.log(err);
+            if (err) {
+                return console.log(err);
+            }
         });
     }
 }
@@ -148,20 +152,26 @@ function saveTagCount(tagMap) {
     const sortedList = list.sort((lexicalOrderingBy('name')));
 
     fs.writeFile("./_data/tagCount.yml", YAML.stringify(sortedList), function(err) {
-        if (err) return console.log(err);
+        if (err) {
+            return console.log(err);
+        }
         console.log("tagCount saved.");
     });
 }
 
 function savePageList(pageMap) {
     fs.writeFile("./_data/pageMap.yml", YAML.stringify(pageMap), err => {
-        if (err) return console.log(err);
+        if (err) {
+            return console.log(err);
+        }
         console.log("pageMap saved.");
     });
 }
 
 function parseInfo(file, info) {
-    if (info === null) return undefined;
+    if (info === null) {
+        return undefined;
+    }
     
     const obj = {};
     obj.fileName = file.name.replace(/\.md$/, '');
@@ -172,7 +182,9 @@ function parseInfo(file, info) {
     rawData.forEach(str => {
         const result = /^\s*([^:]+):\s*(.+)\s*$/.exec(str);
 
-        if (result == null) return;
+        if (result == null) {
+            return;
+        }
         
         const key = result[1].trim();
         const val = result[2].trim().replace(/\[{2}|\]{2}/g, '');
@@ -215,7 +227,9 @@ function getFiles(path, type, array, testFileList = null) {
             return getFiles(subPath, type, array, testFileList);
         }
         if (isMarkdown(fileName)) {
-            if(testFileList && !testFileList.includes(fileName)) return;
+            if(testFileList && !testFileList.includes(fileName)) {
+                return;
+            }
 
             const obj = {
                 'path': `${path}/${fileName}`,
