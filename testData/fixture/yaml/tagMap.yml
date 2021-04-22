@@ -1,0 +1,101 @@
+ideavim:
+    - {fileName: 2017-01-30-ideavim-build}
+open-source:
+    - {fileName: 2017-01-30-ideavim-build}
+jetBrains:
+    - {fileName: 2017-01-30-ideavim-build}
+intelliJ:
+    - {fileName: 2017-01-30-ideavim-build}
+삽질:
+    - {fileName: 2017-01-30-ideavim-build}
+node-js:
+    - {fileName: 2017-03-12-telegram-bot}
+telegram:
+    - {fileName: 2017-03-12-telegram-bot}
+heroku:
+    - {fileName: 2017-03-12-telegram-bot}
+chatbot:
+    - {fileName: 2017-03-12-telegram-bot}
+bot:
+    - {fileName: 2017-03-12-telegram-bot}
+study:
+    - {fileName: 2017-04-02-jwp-00-prepare}
+    - {fileName: 2017-04-03-jwp-01}
+    - {fileName: 2017-04-08-jwp-02}
+    - {fileName: 2017-04-10-jwp-03}
+    - {fileName: 2017-04-13-jwp-04}
+    - {fileName: 2017-04-17-jwp-05}
+    - {fileName: 2017-04-20-jwp-06}
+    - {fileName: 2017-04-25-jwp-07}
+    - {fileName: 2017-05-01-jwp-08}
+    - {fileName: 2017-05-09-jwp-09}
+    - {fileName: 2017-05-14-jwp-10}
+    - {fileName: 2017-05-16-jwp-11}
+    - {fileName: 2017-05-20-jwp-12}
+    - {fileName: 2017-05-23-jwp-13}
+    - {fileName: 2017-05-27-jwp-14}
+    - {fileName: 2017-05-29-jwp-15}
+    - {fileName: 2017-06-01-jwp-16}
+jwp:
+    - {fileName: 2017-04-02-jwp-00-prepare}
+    - {fileName: 2017-04-03-jwp-01}
+    - {fileName: 2017-04-08-jwp-02}
+    - {fileName: 2017-04-10-jwp-03}
+    - {fileName: 2017-04-13-jwp-04}
+    - {fileName: 2017-04-17-jwp-05}
+    - {fileName: 2017-04-20-jwp-06}
+    - {fileName: 2017-04-25-jwp-07}
+    - {fileName: 2017-05-01-jwp-08}
+    - {fileName: 2017-05-09-jwp-09}
+    - {fileName: 2017-05-14-jwp-10}
+    - {fileName: 2017-05-16-jwp-11}
+    - {fileName: 2017-05-20-jwp-12}
+    - {fileName: 2017-05-23-jwp-13}
+    - {fileName: 2017-05-27-jwp-14}
+    - {fileName: 2017-05-29-jwp-15}
+    - {fileName: 2017-06-01-jwp-16}
+aws:
+    - {fileName: 2017-04-02-jwp-00-prepare}
+emacs:
+    - {fileName: 2017-04-03-emacs-start}
+evil:
+    - {fileName: 2017-04-03-emacs-start}
+소트웍스-앤솔러지:
+    - {fileName: 2017-04-08-jwp-02}
+Martin-Fowler:
+    - {fileName: 2017-04-08-jwp-02}
+OOP:
+    - {fileName: 2017-04-08-jwp-02}
+개발자:
+    - {fileName: 2017-04-10-jwp-03}
+프로그래밍-심리학:
+    - {fileName: 2017-04-10-jwp-03}
+Gerald-Weinberg:
+    - {fileName: 2017-04-10-jwp-03}
+AWS:
+    - {fileName: 2017-04-13-jwp-04}
+vim:
+    - {fileName: 2017-05-04-input-source}
+    - {fileName: 2017-07-09-vim-game-code-break}
+구름입력기:
+    - {fileName: 2017-05-04-input-source}
+hammerspoon:
+    - {fileName: 2017-05-04-input-source}
+karabiner:
+    - {fileName: 2017-05-04-input-source}
+input-source:
+    - {fileName: 2017-05-04-input-source}
+mockito:
+    - {fileName: 2017-05-16-jwp-11}
+DI:
+    - {fileName: 2017-05-16-jwp-11}
+game:
+    - {fileName: 2017-07-09-vim-game-code-break}
+aheui:
+    - {fileName: 2017-07-14-aheui-explained}
+TIL:
+    - {fileName: 2017-08-23-0.30000000000000004}
+how-to:
+    - {fileName: how-to}
+latex:
+    - {fileName: mathjax-latex}
