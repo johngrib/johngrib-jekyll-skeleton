@@ -70,7 +70,9 @@ function lexicalOrderingBy(property) {
 
 function saveTagMap(tagMap) {
     fs.writeFile("./_data/tagMap.yml", YAML.stringify(tagMap), err => {
-        if (err) return console.log(err);
+        if (err) {
+            return console.log(err);
+        }
         console.log("tagMap saved.");
     });
 }
@@ -115,7 +117,7 @@ function saveTagFiles(tagMap, pageMap) {
         };
         const tagData = tagMap[tag];
         for (const i in tagData) {
-            var fileName = tagData[i].fileName;
+            const fileName = tagData[i].fileName;
             map.collection[fileName] = pageMap[fileName]
         }
 
