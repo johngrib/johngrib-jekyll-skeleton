@@ -64,6 +64,7 @@ dataList.forEach(page => {
 savePageList(pageMap);
 saveTagFiles(tagMap, pageMap);
 saveTagCount(tagMap);
+saveMetaDataFiles(pageMap);
 
 function lexicalOrderingBy(property) {
     return (a, b) => a[property].toLowerCase()
@@ -132,6 +133,34 @@ function saveTagFiles(tagMap, pageMap) {
 }
 
 /**
+ * 파일 하나의 정보 파일을 만든다.
+ * 각 파일 하나는 자신만의 정보를 갖는 json 파일을 갖게 된다.
+ * 예를 들어 math.md 라는 파일이 있다면 ./data/metadata/math.json 파일이 만들어진다.
+ * json 파일의 내용은 자신의 metadata와 자식 문서들의 목록이 된다.
+ */
+function saveMetaDataFiles(pageMap) {
+    for (const page in pageMap) {
+        const data = pageMap[page];
+        const fileName = data.url.replace(/^[/]wiki[/]/, '');
+        const dirName = `./data/metadata/${fileName}`
+            .replace(/(\/\/)/g, '/')
+            .replace(/[/][^/]*$/, '');
+
+        fs.mkdirSync(dirName, { recursive: true }, (err) => {
+            if (err) {
+                return console.log(err);
+            }
+        })
+
+        fs.writeFile(`./data/metadata/${fileName}.json`, JSON.stringify(data), err => {
+            if (err) {
+                return console.log(err);
+            }
+        })
+    }
+}
+
+/**
  * 태그 하나가 갖는 자식 문서의 수를 ./_data/tagCount.yml 파일로 저장한다.
  * 만약 ACM 태그가 달린 문서가 1개 있고, agile 태그가 달린 문서가 5개 있다면 tagCount.yml 파일은 다음과 같은 내용을 갖게 된다.
 -
@@ -172,10 +201,13 @@ function parseInfo(file, info) {
     if (info === null) {
         return undefined;
     }
-    
-    const obj = {};
-    obj.fileName = file.name.replace(/\.md$/, '');
-    obj.type = file.type;
+
+    const obj = {
+        fileName: file.path.replace(/^\.\/_wiki\/(.+)?\.md$/, '$1'),
+        type: file.type,
+        url: '',
+        modified: fs.statSync(file.path).mtime
+    };
 
     const rawData = info.split('\n');
 
@@ -185,9 +217,11 @@ function parseInfo(file, info) {
         if (result == null) {
             return;
         }
-        
+
         const key = result[1].trim();
-        const val = result[2].trim().replace(/\[{2}|\]{2}/g, '');
+        const val = result[2].trim()
+            .replace(/\[{2}\/?|\]{2}/g, '')    // 문서 이름 앞뒤의 [[  ]], [[/ ]] 를 제거한다.
+        ;
 
         obj[key] = val;
     });
@@ -204,10 +238,6 @@ function parseInfo(file, info) {
     if (obj.tag) {
         obj.tag = obj.tag.split(/\s+/);
     }
-
-    const mtime = fs.statSync(file.path).mtime;
-    obj.modified = mtime;
-
     return obj;
 }
 
