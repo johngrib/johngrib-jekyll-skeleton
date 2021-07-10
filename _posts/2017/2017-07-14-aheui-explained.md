@@ -11,7 +11,7 @@ public  : true
 * TOC
 {:toc}
 
-# 아희 "Hello, World!"에 코멘트를 달아 보았다.
+## 아희 "Hello, World!"에 코멘트를 달아 보았다.
 
 다음은 [아희 사이트](https://github.com/aheui/aheui.github.io/blob/master/_posts/2006-10-27-specification.ko.markdown#예제)에서 복사해 온 "Hello, World!"소스 코드이다.
 
@@ -26,7 +26,7 @@ public  : true
 뽀덩벐멓뻐덕더벅
 ```
 
-# 주석
+## 주석
 
 * 심심해서 아래와 같이 주석을 달아 보았다.
 * meaning의 push, dup, pop 등의 용어들은 내가 이 글을 쓰면서 임의로 선택한 키워드다.
@@ -99,7 +99,8 @@ ind | code | meaning | stack                   | comment
 62  | `멓`   | pop     | [ ]                     | linefeed (10) 출력
 63  | `희`   | end     | [ ]                     | `ㅎ`은 끝
 
-# Links
+## Links
 
 * [아희 specification](https://github.com/aheui/aheui.github.io/blob/master/_posts/2006-10-27-specification.ko.markdown)
 * [아희 사이트: Hello, World! 예제](https://github.com/aheui/aheui.github.io/blob/master/_posts/2006-10-27-specification.ko.markdown#예제)
+

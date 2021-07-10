@@ -6,5 +6,5 @@ if [[ $1 = "docker" ]]; then
 elif [[ $1 = "watch" ]]; then
     bundle exec jekyll server --watch
 elif [[ $1 = "inc" ]]; then
-    bundle exec jekyll server --incremental
+    bundle exec jekyll server --incremental --trace
 fi

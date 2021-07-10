@@ -4,4 +4,7 @@
         <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 {% endif %}
     </div>
+{% if site.google_adsense.client %}
+    <script data-ad-client="{{ site.google_adsense.client }}" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+{% endif %}
 </footer>
