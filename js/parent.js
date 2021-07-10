@@ -17,6 +17,8 @@
                 break;
             }
             next['url'] = '/wiki/'.concat(target)
+            // 1레벨 상위 부모 문서의 주소
+            next['parent'] = next['parent'].replace(/^[/]/, '');
             plist.unshift(next);
             target = encodeURI(next['parent']);
         }
