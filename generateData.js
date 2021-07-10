@@ -10,16 +10,16 @@ getFiles('./_wiki', 'wiki', list);
 getFiles('./_posts', 'blog', list);
 
 const dataList = list.map(file => collectData(file))
-                     .filter((row) => row != null)
-                     .filter((row) => row.public != 'false')
-                     .sort(lexicalOrderingBy('fileName'))
+    .filter((row) => row != null)
+    .filter((row) => row.public != 'false')
+    .sort(lexicalOrderingBy('fileName'))
 
 
 dataList.forEach(function collectTagMap(data) {
     if (!data.tag) {
         return;
     }
-    
+
     data.tag.forEach(tag => {
         if (!tagMap[tag]) {
             tagMap[tag] = [];
@@ -37,18 +37,18 @@ for (const tag in tagMap) {
 saveTagMap(tagMap);
 
 dataList.sort(lexicalOrderingBy('fileName'))
-        .forEach((page) => { 
-            pageMap[page.fileName] = 
-                        {
-                            type: page.type,
-                            title: page.title,
-                            summary: page.summary,
-                            parent: page.parent,
-                            url: page.url,
-                            updated: page.updated || page.date,
-                            children: [],
-                        };
-        });
+    .forEach((page) => {
+        pageMap[page.fileName] =
+            {
+                type: page.type,
+                title: page.title,
+                summary: page.summary,
+                parent: page.parent,
+                url: page.url,
+                updated: page.updated || page.date,
+                children: [],
+            };
+    });
 
 dataList.forEach(page => {
     if (page.parent && page.parent != 'index') {
@@ -67,7 +67,7 @@ saveMetaDataFiles(pageMap);
 
 function lexicalOrderingBy(property) {
     return (a, b) => a[property].toLowerCase()
-                        .localeCompare(b[property].toLowerCase())
+        .localeCompare(b[property].toLowerCase())
 }
 
 function saveTagMap(tagMap) {
@@ -109,7 +109,7 @@ function saveTagMap(tagMap) {
     }
   }
 }
- */
+*/
 
 function saveTagFiles(tagMap, pageMap) {
     for (const tag in tagMap) {
@@ -173,7 +173,7 @@ function saveMetaDataFiles(pageMap) {
 -
     name: agile
     size: 5
- */
+    */
 function saveTagCount(tagMap) {
     const list = [];
     for (const tag in tagMap) {
