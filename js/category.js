@@ -4,70 +4,60 @@
         return thisName;
     }
 
-    /**
-     * 자식 문서들의 데이터를 받아, 자식 문서들의 데이터 list로 리턴합니다.
-     */
-    function getChildren(data) {
-        var thisName = getTarget();
-        var list = [];
-
-        Object.keys(data)
-            .forEach(function(key) {
-                var item = data[key];
-                if (item.parent == thisName) {
-                    item.url = '/wiki/'.concat(key);
-                    item.updated = item.updated.replace(/(^\d{4}.\d{2}.\d{2}).*/, '$1');
-                    list.push(item);
-                }
-            });
-
-        list.sort(function(a, b) {
-            return a.title.toLowerCase()
-                .localeCompare(b.title.toLowerCase());
-        });
-        return list;
-    }
-
-    /**
-     * 자식 문서들의 list를 받아, 링크를 만들어 html 문자열로 리턴합니다.
-     */
-    function makeCategoryChildrenLinks(list) {
-            /* 생성된 html 문자열 예
-            <li>
-                <a href="/wiki/bash-history" class="post-link">
-                    <span>bash history 다루기</span>
-                    <div class="post-meta" style="float: right;">2019-12-21</div>
-                    <div class="post-excerpt"> - 사용법 및 잡다한 팁 요약</div>
-                </a>
-            </li>
-            <li>
-                ...
-            </li>
-             */
-        var children = '';
-        for (var i = 0; i < list.length; i++) {
-            var url = list[i].url;
-            var title = `<span>${list[i].title}</span>`
-            var date = `<div class="post-meta" style="float: right;">${list[i].updated}</div>`;
-            var summary = (list[i].summary) ? `<div class="post-excerpt"> - ${list[i].summary}</div>` : '';
-            children += `<li><a href="${url}" class="post-link">${title}${date}${summary}</a></li>`;
-        }
-        return children;
-    }
-
     /*
      * category 타입의 문서 내부에 하위 문서 목록을 만들어 줍니다.
      */
+    const target = getTarget();
     axios
-        .get('/data/wikilist.json', {})
+        .get(`/data/metadata/${target}.json`, {})
         .then(function(resp) {
             if (resp.data == null) {
                 return;
             }
-            var list = getChildren(resp.data);
-            var html = makeCategoryChildrenLinks(list);
+
+            const data = resp.data;
+            const children = data.children;
+
+            var html = '';
+            for (var i = 0; i < children.length; i++) {
+                html += `<li id="child-document-${i}">${i}</li>`
+            }
             document.getElementById('document-list').innerHTML = `<ul class="post-list">${html}</ul>`
 
+            if (data.children && data.children.sort) {
+                insertChildren(data.children.sort());
+            }
             return;
         });
+
+    /**
+     * 자식 문서들의 목록을 받아, 자식 문서 하나 하나의 링크를 만들어 삽입합니다.
+     */
+    function insertChildren(children) {
+        for (let i = 0; i < children.length; i++) {
+            const target = children[i];
+            axios
+                .get(`/data/metadata/${target}.json`, {})
+                .then(function(resp) {
+                    if (resp.data == null) {
+                        return;
+                    }
+
+                    const data = resp.data;
+                    const updated = data.updated.replace(/^(\d{4}-\d{2}-\d{2}).*/, '$1');
+                    const title = `<span>${data.title}</span>`
+                    const date = `<div class="post-meta" style="float: right;">${updated}</div>`;
+                    const summary = (data.summary) ? `<div class="post-excerpt"> - ${data.summary}</div>` : '';
+
+                    // 서브 문서들의 정보
+                    const subDoc = (data.children && data.children.length > 0) ? `<div class="post-sub-document"> - 서브 문서: ${data.children.length} 개</div>` : '';
+
+                    const html = `<a href="${data.url}" class="post-link">${title}${date}${summary}${subDoc}</a>`;
+                    document.getElementById(`child-document-${i}`).innerHTML = html;
+
+                    return;
+                });
+
+        }
+    }
 })();
