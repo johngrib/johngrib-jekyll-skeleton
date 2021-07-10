@@ -10,16 +10,16 @@ getFiles('./_wiki', 'wiki', list);
 getFiles('./_posts', 'blog', list);
 
 const dataList = list.map(file => collectData(file))
-                     .filter((row) => row != null)
-                     .filter((row) => row.public != 'false')
-                     .sort(lexicalOrderingBy('fileName'))
+    .filter((row) => row != null)
+    .filter((row) => row.public != 'false')
+    .sort(lexicalOrderingBy('fileName'))
 
 
 dataList.forEach(function collectTagMap(data) {
     if (!data.tag) {
         return;
     }
-    
+
     data.tag.forEach(tag => {
         if (!tagMap[tag]) {
             tagMap[tag] = [];
@@ -37,18 +37,18 @@ for (const tag in tagMap) {
 saveTagMap(tagMap);
 
 dataList.sort(lexicalOrderingBy('fileName'))
-        .forEach((page) => { 
-            pageMap[page.fileName] = 
-                        {
-                            type: page.type,
-                            title: page.title,
-                            summary: page.summary,
-                            parent: page.parent,
-                            url: page.url,
-                            updated: page.updated || page.date,
-                            children: [],
-                        };
-        });
+    .forEach((page) => {
+        pageMap[page.fileName] =
+            {
+                type: page.type,
+                title: page.title,
+                summary: page.summary,
+                parent: page.parent,
+                url: page.url,
+                updated: page.updated || page.date,
+                children: [],
+            };
+    });
 
 dataList.forEach(page => {
     if (page.parent && page.parent != 'index') {
@@ -61,13 +61,13 @@ dataList.forEach(page => {
     }
 });
 
-savePageList(pageMap);
 saveTagFiles(tagMap, pageMap);
 saveTagCount(tagMap);
+saveMetaDataFiles(pageMap);
 
 function lexicalOrderingBy(property) {
     return (a, b) => a[property].toLowerCase()
-                        .localeCompare(b[property].toLowerCase())
+        .localeCompare(b[property].toLowerCase())
 }
 
 function saveTagMap(tagMap) {
@@ -109,7 +109,7 @@ function saveTagMap(tagMap) {
     }
   }
 }
- */
+*/
 
 function saveTagFiles(tagMap, pageMap) {
     for (const tag in tagMap) {
@@ -122,12 +122,45 @@ function saveTagFiles(tagMap, pageMap) {
             const fileName = tagData.fileName;
             map.collection[fileName] = pageMap[fileName]
         }
+        fs.mkdirSync('./data/tag', { recursive: true }, (err) => {
+            if (err) {
+                return console.log(err);
+            }
+        })
 
         fs.writeFile(`./data/tag/${tag}.json`, JSON.stringify(map), err => {
             if (err) {
                 return console.log(err);
             }
         });
+    }
+}
+
+/**
+ * 파일 하나의 정보 파일을 만든다.
+ * 각 파일 하나는 자신만의 정보를 갖는 json 파일을 갖게 된다.
+ * 예를 들어 math.md 라는 파일이 있다면 ./data/metadata/math.json 파일이 만들어진다.
+ * json 파일의 내용은 자신의 metadata와 자식 문서들의 목록이 된다.
+ */
+function saveMetaDataFiles(pageMap) {
+    for (const page in pageMap) {
+        const data = pageMap[page];
+        const fileName = data.url.replace(/^[/]wiki[/]/, '');
+        const dirName = `./data/metadata/${fileName}`
+            .replace(/(\/\/)/g, '/')
+            .replace(/[/][^/]*$/, '');
+
+        fs.mkdirSync(dirName, { recursive: true }, (err) => {
+            if (err) {
+                return console.log(err);
+            }
+        })
+
+        fs.writeFile(`./data/metadata/${fileName}.json`, JSON.stringify(data), err => {
+            if (err) {
+                return console.log(err);
+            }
+        })
     }
 }
 
@@ -140,7 +173,7 @@ function saveTagFiles(tagMap, pageMap) {
 -
     name: agile
     size: 5
- */
+    */
 function saveTagCount(tagMap) {
     const list = [];
     for (const tag in tagMap) {
@@ -159,23 +192,17 @@ function saveTagCount(tagMap) {
     });
 }
 
-function savePageList(pageMap) {
-    fs.writeFile("./_data/pageMap.yml", YAML.stringify(pageMap), err => {
-        if (err) {
-            return console.log(err);
-        }
-        console.log("pageMap saved.");
-    });
-}
-
 function parseInfo(file, info) {
     if (info === null) {
         return undefined;
     }
-    
-    const obj = {};
-    obj.fileName = file.name.replace(/\.md$/, '');
-    obj.type = file.type;
+
+    const obj = {
+        fileName: file.path.replace(/^\.\/_wiki\/(.+)?\.md$/, '$1'),
+        type: file.type,
+        url: '',
+        modified: fs.statSync(file.path).mtime
+    };
 
     const rawData = info.split('\n');
 
@@ -185,9 +212,11 @@ function parseInfo(file, info) {
         if (result == null) {
             return;
         }
-        
+
         const key = result[1].trim();
-        const val = result[2].trim().replace(/\[{2}|\]{2}/g, '');
+        const val = result[2].trim()
+            .replace(/\[{2}\/?|\]{2}/g, '')    // 문서 이름 앞뒤의 [[  ]], [[/ ]] 를 제거한다.
+        ;
 
         obj[key] = val;
     });
@@ -204,10 +233,6 @@ function parseInfo(file, info) {
     if (obj.tag) {
         obj.tag = obj.tag.split(/\s+/);
     }
-
-    const mtime = fs.statSync(file.path).mtime;
-    obj.modified = mtime;
-
     return obj;
 }
 
