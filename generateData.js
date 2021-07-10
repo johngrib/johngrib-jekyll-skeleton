@@ -123,6 +123,11 @@ function saveTagFiles(tagMap, pageMap) {
             const fileName = tagData.fileName;
             map.collection[fileName] = pageMap[fileName]
         }
+        fs.mkdirSync('./data/tag', { recursive: true }, (err) => {
+            if (err) {
+                return console.log(err);
+            }
+        })
 
         fs.writeFile(`./data/tag/${tag}.json`, JSON.stringify(map), err => {
             if (err) {
