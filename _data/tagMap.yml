@@ -1,0 +1,99 @@
+ideavim:
+    - {fileName: ./_posts/2017/2017-01-30-ideavim-build.md}
+open-source:
+    - {fileName: ./_posts/2017/2017-01-30-ideavim-build.md}
+jetBrains:
+    - {fileName: ./_posts/2017/2017-01-30-ideavim-build.md}
+intelliJ:
+    - {fileName: ./_posts/2017/2017-01-30-ideavim-build.md}
+삽질:
+    - {fileName: ./_posts/2017/2017-01-30-ideavim-build.md}
+node-js:
+    - {fileName: ./_posts/2017/2017-03-12-telegram-bot.md}
+telegram:
+    - {fileName: ./_posts/2017/2017-03-12-telegram-bot.md}
+heroku:
+    - {fileName: ./_posts/2017/2017-03-12-telegram-bot.md}
+chatbot:
+    - {fileName: ./_posts/2017/2017-03-12-telegram-bot.md}
+bot:
+    - {fileName: ./_posts/2017/2017-03-12-telegram-bot.md}
+study:
+    - {fileName: ./_posts/2017/2017-04-02-jwp-00-prepare.md}
+    - {fileName: ./_posts/2017/2017-04-03-jwp-01.md}
+    - {fileName: ./_posts/2017/2017-04-08-jwp-02.md}
+    - {fileName: ./_posts/2017/2017-04-10-jwp-03.md}
+    - {fileName: ./_posts/2017/2017-04-13-jwp-04.md}
+    - {fileName: ./_posts/2017/2017-04-17-jwp-05.md}
+    - {fileName: ./_posts/2017/2017-04-20-jwp-06.md}
+    - {fileName: ./_posts/2017/2017-04-25-jwp-07.md}
+    - {fileName: ./_posts/2017/2017-05-01-jwp-08.md}
+    - {fileName: ./_posts/2017/2017-05-09-jwp-09.md}
+    - {fileName: ./_posts/2017/2017-05-14-jwp-10.md}
+    - {fileName: ./_posts/2017/2017-05-16-jwp-11.md}
+    - {fileName: ./_posts/2017/2017-05-20-jwp-12.md}
+    - {fileName: ./_posts/2017/2017-05-23-jwp-13.md}
+    - {fileName: ./_posts/2017/2017-05-27-jwp-14.md}
+    - {fileName: ./_posts/2017/2017-05-29-jwp-15.md}
+    - {fileName: ./_posts/2017/2017-06-01-jwp-16.md}
+jwp:
+    - {fileName: ./_posts/2017/2017-04-02-jwp-00-prepare.md}
+    - {fileName: ./_posts/2017/2017-04-03-jwp-01.md}
+    - {fileName: ./_posts/2017/2017-04-08-jwp-02.md}
+    - {fileName: ./_posts/2017/2017-04-10-jwp-03.md}
+    - {fileName: ./_posts/2017/2017-04-13-jwp-04.md}
+    - {fileName: ./_posts/2017/2017-04-17-jwp-05.md}
+    - {fileName: ./_posts/2017/2017-04-20-jwp-06.md}
+    - {fileName: ./_posts/2017/2017-04-25-jwp-07.md}
+    - {fileName: ./_posts/2017/2017-05-01-jwp-08.md}
+    - {fileName: ./_posts/2017/2017-05-09-jwp-09.md}
+    - {fileName: ./_posts/2017/2017-05-14-jwp-10.md}
+    - {fileName: ./_posts/2017/2017-05-16-jwp-11.md}
+    - {fileName: ./_posts/2017/2017-05-20-jwp-12.md}
+    - {fileName: ./_posts/2017/2017-05-23-jwp-13.md}
+    - {fileName: ./_posts/2017/2017-05-27-jwp-14.md}
+    - {fileName: ./_posts/2017/2017-05-29-jwp-15.md}
+    - {fileName: ./_posts/2017/2017-06-01-jwp-16.md}
+aws:
+    - {fileName: ./_posts/2017/2017-04-02-jwp-00-prepare.md}
+emacs:
+    - {fileName: ./_posts/2017/2017-04-03-emacs-start.md}
+evil:
+    - {fileName: ./_posts/2017/2017-04-03-emacs-start.md}
+소트웍스-앤솔러지:
+    - {fileName: ./_posts/2017/2017-04-08-jwp-02.md}
+Martin-Fowler:
+    - {fileName: ./_posts/2017/2017-04-08-jwp-02.md}
+OOP:
+    - {fileName: ./_posts/2017/2017-04-08-jwp-02.md}
+개발자:
+    - {fileName: ./_posts/2017/2017-04-10-jwp-03.md}
+프로그래밍-심리학:
+    - {fileName: ./_posts/2017/2017-04-10-jwp-03.md}
+Gerald-Weinberg:
+    - {fileName: ./_posts/2017/2017-04-10-jwp-03.md}
+AWS:
+    - {fileName: ./_posts/2017/2017-04-13-jwp-04.md}
+vim:
+    - {fileName: ./_posts/2017/2017-05-04-input-source.md}
+    - {fileName: ./_posts/2017/2017-07-09-vim-game-code-break.md}
+구름입력기:
+    - {fileName: ./_posts/2017/2017-05-04-input-source.md}
+hammerspoon:
+    - {fileName: ./_posts/2017/2017-05-04-input-source.md}
+karabiner:
+    - {fileName: ./_posts/2017/2017-05-04-input-source.md}
+input-source:
+    - {fileName: ./_posts/2017/2017-05-04-input-source.md}
+mockito:
+    - {fileName: ./_posts/2017/2017-05-16-jwp-11.md}
+DI:
+    - {fileName: ./_posts/2017/2017-05-16-jwp-11.md}
+game:
+    - {fileName: ./_posts/2017/2017-07-09-vim-game-code-break.md}
+aheui:
+    - {fileName: ./_posts/2017/2017-07-14-aheui-explained.md}
+how-to:
+    - {fileName: how-to}
+latex:
+    - {fileName: mathjax-latex}
