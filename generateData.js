@@ -112,23 +112,28 @@ function saveTagMap(tagMap) {
 */
 
 function saveTagFiles(tagMap, pageMap) {
-    for (const tag in tagMap) {
-        const map = {
-            fileName: tag,
-            collection: {}
-        };
-        const tagDatas = tagMap[tag];
-        for (const tagData of tagDatas) {
-            const fileName = tagData.fileName;
-            map.collection[fileName] = pageMap[fileName]
+    fs.mkdirSync('./data/tag', { recursive: true }, (err) => {
+        if (err) {
+            return console.log(err);
         }
-        fs.mkdirSync('./data/tag', { recursive: true }, (err) => {
-            if (err) {
-                return console.log(err);
-            }
-        })
+    })
 
-        fs.writeFile(`./data/tag/${tag}.json`, JSON.stringify(map), err => {
+    for (const tag in tagMap) {
+        const collection = [];
+        const tagDatas = tagMap[tag];
+
+        for (const index in tagDatas) {
+            const tagData = tagDatas[index];
+            const data = pageMap[tagData.fileName]
+
+            const documentId = (data.type === 'wiki')
+                ? tagData.fileName
+                : data.url;
+
+            collection.push(documentId);
+        }
+
+        fs.writeFile(`./data/tag/${tag}.json`, JSON.stringify(collection), err => {
             if (err) {
                 return console.log(err);
             }
@@ -223,7 +228,8 @@ function parseInfo(file, info) {
 
     if (file.type === 'blog') {
         obj.url = '/blog/' + obj.date.replace(/^(\d{4})-(\d{2})-(\d{2}).*$/, '$1/$2/$3/');
-        obj.url += obj.fileName.replace(/^(\d{4}-\d{2}-\d{2}-)?(.*)$/, '$2');
+        obj.url += obj.fileName.replace(/^.*[/]\d{4}-\d{2}-\d{2}-([^/]*)\.md$/, '$1');
+
     } else if (file.type === 'wiki') {
         obj.url = file.path
             .replace(/^\.\/_wiki/, '/wiki')

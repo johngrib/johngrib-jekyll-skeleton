@@ -20,7 +20,7 @@
 
             var html = '';
             for (var i = 0; i < children.length; i++) {
-                html += `<li id="child-document-${i}">${i}</li>`
+                html += `<li id="child-document-${i}"></li>`
             }
             document.getElementById('document-list').innerHTML = `<ul class="post-list">${html}</ul>`
 
