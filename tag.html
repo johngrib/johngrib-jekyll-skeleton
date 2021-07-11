@@ -22,39 +22,83 @@ public: true
 
 <script src="/js/axios.min.js"></script>
 <script>
-    function showTag(selector) {
-        axios.get(`/data/tag/${selector}.json`, {})
-            .then((resp) => createLinks(resp, selector));
+    /*
+     * 주어진 태그에 해당하는 모든 문서의 목록을 보여줍니다.
+     */
+    function showTag(tagName) {
+        axios.get(`/data/tag/${tagName}.json`, {})
+            .then((resp) => createLinks(resp, tagName));
     }
 
-    function createLinks(resp, selector) {
+    /*
+     * 주어진 태그에 해당하는 모든 문서의 링크를 만들어 줍니다.
+     */
+    function createLinks(resp, tagName) {
         if (resp.data == null) {
             return;
         }
 
-        let template = `<h3>${selector}</h3><ul class="post-list">`;
-        for (var item in resp.data.collection) {
-            var d = resp.data.collection[item];
+        const data = resp.data;
+        const documents = [];
 
-            var summary = (d.summary == null || /^\s*$/.test(d.summary)) ? '' : `<div class="post-excerpt">- ${d.summary}</div>`;
-            var updated = d.updated != null ? `<div class="post-meta" style="float: right;">${d.updated}</div>` : '';
-            var title = d.title != null ? `<span>${d.title}</span>` : '';
-
-            var link = `<li><a class="post-link" href="${d.url}"> ${title} ${updated} ${summary} </a></li>`;
-
-            template += link;
+        let listItems = '';
+        for (let i = 0; i < data.length; i++) {
+            const idText = getDocumentElementId(tagName, data[i]);
+            listItems += `<li id="${idText}"></li>`;
         }
-        template += `</ul>`
+        const template = `
+            <h3>${tagName}</h3>
+            <ul class="post-list"> ${listItems} </ul>`;
 
         document.getElementById('tag-collection').innerHTML = template;
+
+        for (let i = 0; i < data.length; i ++) {
+            setTimeout(() => insertDocumentLink(data[i], tagName), 0);
+        }
+    }
+
+    /*
+     * 문서 하나의 링크를 생성합니다.
+     */
+    function insertDocumentLink(documentId, tagName) {
+        axios.get(`/data/metadata/${documentId}.json`, {})
+            .then((resp) => {
+                if (resp == null || resp.data == null) {
+                    return;
+                }
+                const d = resp.data;
+
+                const updatedDate = d.updated.replace(/^(\d{4}-\d{2}-\d{2}).*$/, '$1')
+                const summaryText = (d.summary == null || /^\s*$/.test(d.summary))
+                    ? ('')
+                    : ('-' + d.summary);
+                const subDocument = (d.children && d.children.length > 0)
+                    ? `- 서브 문서: ${d.children.length} 개`
+                    : '';
+
+                const link = `
+                <a class="post-link" href="${d.url}">
+                    <span>${d.title}</span>
+                    <div class="post-meta" style="float: right;" title="${d.updated}">${updatedDate}</div>
+                    <div class="post-excerpt">${summaryText}</div>
+                    <div class="post-sub-document">${subDocument}</div>
+                </a>`;
+
+                const idText = getDocumentElementId(tagName, documentId);
+                document.getElementById(idText).innerHTML = link;
+            });
+    }
+
+    function getDocumentElementId(tagName, documentId) {
+        return `tag-${tagName}-${documentId}`;
     }
 
     ;(function showInitTag() {
         const url = window.location.href;
         const req = /#([^\s]+)$/.exec(url);
         if(Array.isArray(req)) {
-            var selector = decodeURI(req.pop());
-            showTag(selector);
+            let tagName = decodeURI(req.pop());
+            showTag(tagName);
         }
     })();
 </script>
