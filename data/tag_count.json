@@ -1,0 +1,998 @@
+[
+ {
+  "name": "1983",
+  "size": 1
+ },
+ {
+  "name": "ACM",
+  "size": 1
+ },
+ {
+  "name": "agile",
+  "size": 5
+ },
+ {
+  "name": "aheui",
+  "size": 1
+ },
+ {
+  "name": "alfred-aho",
+  "size": 1
+ },
+ {
+  "name": "algirithm",
+  "size": 1
+ },
+ {
+  "name": "algorithm",
+  "size": 14
+ },
+ {
+  "name": "alignment",
+  "size": 1
+ },
+ {
+  "name": "amazon",
+  "size": 1
+ },
+ {
+  "name": "annotation",
+  "size": 1
+ },
+ {
+  "name": "architecture",
+  "size": 1
+ },
+ {
+  "name": "asciidoc",
+  "size": 1
+ },
+ {
+  "name": "auto-boxing",
+  "size": 2
+ },
+ {
+  "name": "availability",
+  "size": 1
+ },
+ {
+  "name": "awk",
+  "size": 2
+ },
+ {
+  "name": "aws",
+  "size": 8
+ },
+ {
+  "name": "bash",
+  "size": 58
+ },
+ {
+  "name": "bayes",
+  "size": 12
+ },
+ {
+  "name": "bell-labs",
+  "size": 1
+ },
+ {
+  "name": "Bill-Atkinson",
+  "size": 1
+ },
+ {
+  "name": "binary",
+  "size": 3
+ },
+ {
+  "name": "black-magic",
+  "size": 1
+ },
+ {
+  "name": "blockchain",
+  "size": 1
+ },
+ {
+  "name": "blog",
+  "size": 2
+ },
+ {
+  "name": "book",
+  "size": 17
+ },
+ {
+  "name": "bot",
+  "size": 1
+ },
+ {
+  "name": "brian-kernighan",
+  "size": 2
+ },
+ {
+  "name": "bsd",
+  "size": 1
+ },
+ {
+  "name": "bug",
+  "size": 2
+ },
+ {
+  "name": "business",
+  "size": 1
+ },
+ {
+  "name": "c",
+  "size": 4
+ },
+ {
+  "name": "calculator",
+  "size": 1
+ },
+ {
+  "name": "case",
+  "size": 1
+ },
+ {
+  "name": "centos",
+  "size": 1
+ },
+ {
+  "name": "chatbot",
+  "size": 1
+ },
+ {
+  "name": "cheatsheet",
+  "size": 1
+ },
+ {
+  "name": "chrome",
+  "size": 2
+ },
+ {
+  "name": "command",
+  "size": 63
+ },
+ {
+  "name": "command-line",
+  "size": 1
+ },
+ {
+  "name": "completion",
+  "size": 2
+ },
+ {
+  "name": "complexity",
+  "size": 1
+ },
+ {
+  "name": "config",
+  "size": 1
+ },
+ {
+  "name": "consulting",
+  "size": 1
+ },
+ {
+  "name": "container",
+  "size": 1
+ },
+ {
+  "name": "conway-s-law",
+  "size": 1
+ },
+ {
+  "name": "cs",
+  "size": 14
+ },
+ {
+  "name": "ctags",
+  "size": 1
+ },
+ {
+  "name": "culture",
+  "size": 1
+ },
+ {
+  "name": "curl",
+  "size": 1
+ },
+ {
+  "name": "data-format",
+  "size": 1
+ },
+ {
+  "name": "db",
+  "size": 9
+ },
+ {
+  "name": "design",
+  "size": 1
+ },
+ {
+  "name": "devops",
+  "size": 5
+ },
+ {
+  "name": "DI",
+  "size": 1
+ },
+ {
+  "name": "diary",
+  "size": 3
+ },
+ {
+  "name": "dijkstra",
+  "size": 1
+ },
+ {
+  "name": "docker",
+  "size": 1
+ },
+ {
+  "name": "ed",
+  "size": 1
+ },
+ {
+  "name": "emacs",
+  "size": 2
+ },
+ {
+  "name": "email",
+  "size": 2
+ },
+ {
+  "name": "encryption",
+  "size": 8
+ },
+ {
+  "name": "ethics",
+  "size": 1
+ },
+ {
+  "name": "evil",
+  "size": 1
+ },
+ {
+  "name": "excel",
+  "size": 5
+ },
+ {
+  "name": "experiment",
+  "size": 1
+ },
+ {
+  "name": "facebook",
+  "size": 1
+ },
+ {
+  "name": "filetype",
+  "size": 1
+ },
+ {
+  "name": "finance",
+  "size": 2
+ },
+ {
+  "name": "firefox",
+  "size": 1
+ },
+ {
+  "name": "fish",
+  "size": 1
+ },
+ {
+  "name": "fix",
+  "size": 1
+ },
+ {
+  "name": "float",
+  "size": 1
+ },
+ {
+  "name": "font",
+  "size": 1
+ },
+ {
+  "name": "Fred-Brooks",
+  "size": 3
+ },
+ {
+  "name": "fzf",
+  "size": 1
+ },
+ {
+  "name": "game",
+  "size": 4
+ },
+ {
+  "name": "gc",
+  "size": 9
+ },
+ {
+  "name": "Gerald-Weinberg",
+  "size": 5
+ },
+ {
+  "name": "git",
+  "size": 6
+ },
+ {
+  "name": "github",
+  "size": 1
+ },
+ {
+  "name": "gloang",
+  "size": 1
+ },
+ {
+  "name": "gnu",
+  "size": 3
+ },
+ {
+  "name": "golang",
+  "size": 17
+ },
+ {
+  "name": "google",
+  "size": 3
+ },
+ {
+  "name": "goroutine",
+  "size": 1
+ },
+ {
+  "name": "gradle",
+  "size": 1
+ },
+ {
+  "name": "grep",
+  "size": 2
+ },
+ {
+  "name": "groovy",
+  "size": 1
+ },
+ {
+  "name": "hacker",
+  "size": 1
+ },
+ {
+  "name": "hammerspoon",
+  "size": 11
+ },
+ {
+  "name": "hbr",
+  "size": 1
+ },
+ {
+  "name": "health",
+  "size": 1
+ },
+ {
+  "name": "heroku",
+  "size": 1
+ },
+ {
+  "name": "hhkb",
+  "size": 1
+ },
+ {
+  "name": "history",
+  "size": 2
+ },
+ {
+  "name": "hotkey",
+  "size": 1
+ },
+ {
+  "name": "how-to",
+  "size": 1
+ },
+ {
+  "name": "http",
+  "size": 7
+ },
+ {
+  "name": "hwp",
+  "size": 1
+ },
+ {
+  "name": "ideavim",
+  "size": 1
+ },
+ {
+  "name": "IEEE",
+  "size": 1
+ },
+ {
+  "name": "index",
+  "size": 1
+ },
+ {
+  "name": "input-source",
+  "size": 1
+ },
+ {
+  "name": "intel",
+  "size": 1
+ },
+ {
+  "name": "intellij",
+  "size": 1
+ },
+ {
+  "name": "ip",
+  "size": 1
+ },
+ {
+  "name": "james-gosling",
+  "size": 1
+ },
+ {
+  "name": "java",
+  "size": 63
+ },
+ {
+  "name": "javadoc",
+  "size": 1
+ },
+ {
+  "name": "jekyll",
+  "size": 4
+ },
+ {
+  "name": "jim-gray",
+  "size": 1
+ },
+ {
+  "name": "jls",
+  "size": 1
+ },
+ {
+  "name": "jolt-award",
+  "size": 1
+ },
+ {
+  "name": "jvm-lang",
+  "size": 1
+ },
+ {
+  "name": "jwp",
+  "size": 17
+ },
+ {
+  "name": "karabiner",
+  "size": 1
+ },
+ {
+  "name": "ken-tompson",
+  "size": 1
+ },
+ {
+  "name": "keyboard",
+  "size": 4
+ },
+ {
+  "name": "language",
+  "size": 7
+ },
+ {
+  "name": "latex",
+  "size": 1
+ },
+ {
+  "name": "law",
+  "size": 9
+ },
+ {
+  "name": "legend",
+  "size": 1
+ },
+ {
+  "name": "letter",
+  "size": 1
+ },
+ {
+  "name": "linux",
+  "size": 2
+ },
+ {
+  "name": "log-everything",
+  "size": 1
+ },
+ {
+  "name": "love",
+  "size": 1
+ },
+ {
+  "name": "lua",
+  "size": 1
+ },
+ {
+  "name": "mac",
+  "size": 6
+ },
+ {
+  "name": "macos",
+  "size": 1
+ },
+ {
+  "name": "map",
+  "size": 2
+ },
+ {
+  "name": "markdown",
+  "size": 1
+ },
+ {
+  "name": "martin-fowler",
+  "size": 2
+ },
+ {
+  "name": "math",
+  "size": 47
+ },
+ {
+  "name": "media",
+  "size": 1
+ },
+ {
+  "name": "memory-leak",
+  "size": 1
+ },
+ {
+  "name": "mockito",
+  "size": 1
+ },
+ {
+  "name": "money",
+  "size": 2
+ },
+ {
+  "name": "ms",
+  "size": 1
+ },
+ {
+  "name": "ms-dos",
+  "size": 1
+ },
+ {
+  "name": "ms-office",
+  "size": 1
+ },
+ {
+  "name": "mysql",
+  "size": 1
+ },
+ {
+  "name": "naming",
+  "size": 1
+ },
+ {
+  "name": "network",
+  "size": 7
+ },
+ {
+  "name": "node-js",
+  "size": 1
+ },
+ {
+  "name": "npe",
+  "size": 1
+ },
+ {
+  "name": "o-reilly",
+  "size": 1
+ },
+ {
+  "name": "oop",
+  "size": 8
+ },
+ {
+  "name": "padding",
+  "size": 1
+ },
+ {
+  "name": "pattern",
+  "size": 15
+ },
+ {
+  "name": "pentium",
+  "size": 1
+ },
+ {
+  "name": "people",
+  "size": 2
+ },
+ {
+  "name": "performance",
+  "size": 4
+ },
+ {
+  "name": "perl",
+  "size": 1
+ },
+ {
+  "name": "php",
+  "size": 4
+ },
+ {
+  "name": "plugin",
+  "size": 1
+ },
+ {
+  "name": "principle",
+  "size": 1
+ },
+ {
+  "name": "problem",
+  "size": 1
+ },
+ {
+  "name": "programming",
+  "size": 3
+ },
+ {
+  "name": "proverb",
+  "size": 12
+ },
+ {
+  "name": "python",
+  "size": 2
+ },
+ {
+  "name": "quotes",
+  "size": 1
+ },
+ {
+  "name": "random",
+  "size": 2
+ },
+ {
+  "name": "reflect",
+  "size": 1
+ },
+ {
+  "name": "reflection",
+  "size": 1
+ },
+ {
+  "name": "regex",
+  "size": 3
+ },
+ {
+  "name": "rest",
+  "size": 1
+ },
+ {
+  "name": "review",
+  "size": 10
+ },
+ {
+  "name": "rfc",
+  "size": 2
+ },
+ {
+  "name": "richard-stallman",
+  "size": 1
+ },
+ {
+  "name": "rule",
+  "size": 3
+ },
+ {
+  "name": "rust",
+  "size": 1
+ },
+ {
+  "name": "science",
+  "size": 3
+ },
+ {
+  "name": "sf",
+  "size": 1
+ },
+ {
+  "name": "slack",
+  "size": 1
+ },
+ {
+  "name": "soft-skill",
+  "size": 2
+ },
+ {
+  "name": "sort",
+  "size": 9
+ },
+ {
+  "name": "special-chars",
+  "size": 2
+ },
+ {
+  "name": "spring",
+  "size": 23
+ },
+ {
+  "name": "start-up",
+  "size": 1
+ },
+ {
+  "name": "stat",
+  "size": 1
+ },
+ {
+  "name": "statistics",
+  "size": 1
+ },
+ {
+  "name": "Steve-Jobs",
+  "size": 1
+ },
+ {
+  "name": "story",
+  "size": 9
+ },
+ {
+  "name": "study",
+  "size": 21
+ },
+ {
+  "name": "tagbar",
+  "size": 1
+ },
+ {
+  "name": "telegram",
+  "size": 1
+ },
+ {
+  "name": "terminal",
+  "size": 3
+ },
+ {
+  "name": "test",
+  "size": 5
+ },
+ {
+  "name": "testing",
+  "size": 1
+ },
+ {
+  "name": "the-go-blog",
+  "size": 5
+ },
+ {
+  "name": "Think-Bayes",
+  "size": 7
+ },
+ {
+  "name": "til",
+  "size": 2
+ },
+ {
+  "name": "time",
+  "size": 1
+ },
+ {
+  "name": "tip",
+  "size": 1
+ },
+ {
+  "name": "tldr",
+  "size": 1
+ },
+ {
+  "name": "tmux",
+  "size": 2
+ },
+ {
+  "name": "toml",
+  "size": 1
+ },
+ {
+  "name": "tool",
+  "size": 1
+ },
+ {
+  "name": "tools",
+  "size": 3
+ },
+ {
+  "name": "transaction",
+  "size": 2
+ },
+ {
+  "name": "transistor",
+  "size": 1
+ },
+ {
+  "name": "trouble-shooting",
+  "size": 3
+ },
+ {
+  "name": "turing",
+  "size": 1
+ },
+ {
+  "name": "twitter",
+  "size": 3
+ },
+ {
+  "name": "type",
+  "size": 1
+ },
+ {
+  "name": "ubuntu",
+  "size": 1
+ },
+ {
+  "name": "ultisnips",
+  "size": 1
+ },
+ {
+  "name": "Uncle-Bob",
+  "size": 3
+ },
+ {
+  "name": "unit",
+  "size": 1
+ },
+ {
+  "name": "vagrant",
+  "size": 1
+ },
+ {
+  "name": "vba",
+  "size": 2
+ },
+ {
+  "name": "vim",
+  "size": 27
+ },
+ {
+  "name": "vimwiki",
+  "size": 1
+ },
+ {
+  "name": "vm",
+  "size": 1
+ },
+ {
+  "name": "von-neumann",
+  "size": 2
+ },
+ {
+  "name": "web",
+  "size": 1
+ },
+ {
+  "name": "what",
+  "size": 1
+ },
+ {
+  "name": "why",
+  "size": 1
+ },
+ {
+  "name": "wiki",
+  "size": 2
+ },
+ {
+  "name": "work",
+  "size": 1
+ },
+ {
+  "name": "xml",
+  "size": 2
+ },
+ {
+  "name": "yaml",
+  "size": 1
+ },
+ {
+  "name": "zsh",
+  "size": 1
+ },
+ {
+  "name": "개발자",
+  "size": 2
+ },
+ {
+  "name": "경제",
+  "size": 1
+ },
+ {
+  "name": "공부",
+  "size": 1
+ },
+ {
+  "name": "괴담",
+  "size": 1
+ },
+ {
+  "name": "교육",
+  "size": 1
+ },
+ {
+  "name": "구름입력기",
+  "size": 1
+ },
+ {
+  "name": "단축키",
+  "size": 1
+ },
+ {
+  "name": "미세먼지",
+  "size": 1
+ },
+ {
+  "name": "반도체",
+  "size": 1
+ },
+ {
+  "name": "방법론",
+  "size": 1
+ },
+ {
+  "name": "번역",
+  "size": 14
+ },
+ {
+  "name": "벨-연구소",
+  "size": 1
+ },
+ {
+  "name": "보안",
+  "size": 1
+ },
+ {
+  "name": "소수",
+  "size": 1
+ },
+ {
+  "name": "소트웍스-앤솔러지",
+  "size": 1
+ },
+ {
+  "name": "스크랩",
+  "size": 1
+ },
+ {
+  "name": "언어",
+  "size": 1
+ },
+ {
+  "name": "용어",
+  "size": 1
+ },
+ {
+  "name": "인물",
+  "size": 3
+ },
+ {
+  "name": "장애",
+  "size": 1
+ },
+ {
+  "name": "장인정신",
+  "size": 1
+ },
+ {
+  "name": "정보이론",
+  "size": 1
+ },
+ {
+  "name": "추정",
+  "size": 1
+ },
+ {
+  "name": "통계",
+  "size": 1
+ },
+ {
+  "name": "프로그래밍-심리학",
+  "size": 1
+ },
+ {
+  "name": "확률",
+  "size": 2
+ }
+]

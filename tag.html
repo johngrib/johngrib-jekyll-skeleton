@@ -4,24 +4,36 @@ title: Tag
 permalink: /tag/
 public: true
 ---
-
-{% assign tagCount = site.data.tagCount %}
 <div>
-    <ul class="tag-list">
-{% for tag in tagCount %}
-        <li>
-            <a href="#{{tag.name}}" onclick="showTag('{{tag.name}}')">
-                {{tag.name}}<sup>{{ tag.size }}</sup>
-            </a>
-        </li>
-{% endfor %}
-    </ul>
+    <ul id="tag-list" class="tag-list"></ul>
 </div>
 
 <div id="tag-collection"></div>
 
 <script src="/js/axios.min.js"></script>
 <script>
+    ;(function() {
+        axios.get(`/data/tag_count.json`, {})
+            .then((resp) => {
+                if (resp == null || resp.data == null) {
+                    return;
+                }
+                const tags = resp.data;
+
+                let template = '';
+                for (let i = 0; i < tags.length; i++) {
+                    const tag = tags[i];
+                    template += `
+                    <li class="tag-item">
+                        <a href="#${tag.name}" onclick="showTag('${tag.name}')">${tag.name}<sup>${tag.size}</sup></a>
+                    </li>`
+                }
+                document.getElementById('tag-list').innerHTML = template;
+
+                showInitTag();
+            });
+    })();
+
     /*
      * 주어진 태그에 해당하는 모든 문서의 목록을 보여줍니다.
      */
@@ -93,13 +105,13 @@ public: true
         return `tag-${tagName}-${documentId}`;
     }
 
-    ;(function showInitTag() {
+    function showInitTag() {
         const url = window.location.href;
         const req = /#([^\s]+)$/.exec(url);
         if(Array.isArray(req)) {
             let tagName = decodeURI(req.pop());
             showTag(tagName);
         }
-    })();
+    }
 </script>
 

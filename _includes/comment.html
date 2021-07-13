@@ -14,7 +14,7 @@
     {% if site.comment-support == "utterances" %}
         <script src="https://utteranc.es/client.js"
             repo="{{ site.utterances.repo }}"
-            issue-term="{{ site.utterances.issue-term }}"
+            {% if page.issue-number %}issue-number="{{ page.issue-number }}"{% else %}issue-term="{{ site.utterances.issue-term }}"{% endif %}
             label="{{ site.utterances.label }}"
             branch="{{ site.utterances.branch }}"
         async>

@@ -1,0 +1,1 @@
+{"type":"wiki","title":"Java 8 HashMap 퍼포먼스 향상","summary":"균형 트리를 도입해 O(n) 에서 O(log n)으로 향상됐다","parent":"Java","url":"/wiki/java8-performance-improvement-for-hashmap","updated":"2020-03-04 21:29:58 +0900","children":[]}

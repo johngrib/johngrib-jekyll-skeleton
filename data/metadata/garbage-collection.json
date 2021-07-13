@@ -1,0 +1,1 @@
+{"type":"wiki","title":"Garbage Collection","summary":"","parent":"index","url":"/wiki/garbage-collection","updated":"2019-10-29 22:23:21 +0900","children":["gc-death-spiral","java-g1gc","java-gc-eden-to-survivor","java-gc-parallel-collector","java-gc-serial-collector","java-gc-tuning","java-gc-zgc"]}

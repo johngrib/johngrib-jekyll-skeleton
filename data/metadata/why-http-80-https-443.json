@@ -1,0 +1,1 @@
+{"type":"wiki","title":"http의 기본 포트가 80, https의 기본 포트가 443인 이유는 무엇일까?","summary":"80은 처음부터 지정, 443은 나중에 요청을 받아 빈 공간으로 순서대로 배정","parent":"why","url":"/wiki/why-http-80-https-443","updated":"2018-09-09 11:20:07 +0900","children":[]}

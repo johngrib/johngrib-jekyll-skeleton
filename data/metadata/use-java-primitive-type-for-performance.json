@@ -1,0 +1,1 @@
+{"type":"wiki","title":"Java Autoboxing 자동 변환 주의점","summary":"Long, Integer보다 primitive 타입을 쓰는 쪽이 훨씬 빠르다","parent":"Java","url":"/wiki/use-java-primitive-type-for-performance","updated":"2021-04-22 09:39:22 +0900","children":[]}

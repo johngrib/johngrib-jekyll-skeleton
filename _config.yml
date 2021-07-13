@@ -42,7 +42,7 @@ disqus:
   shortname: johngrib
 utterances:
   repo: johngrib/johngrib.github.io
-  issue-term: pathname
+  issue-term: url
   label: Comment
   branch: master
 
