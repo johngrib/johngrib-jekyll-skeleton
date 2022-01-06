@@ -1,5 +1,14 @@
+# 할일
+[] 나의 구글 맞춤 검색 코드 설정하기
+참조 : https://johngrib.github.io/wiki/my-wiki/#%EA%B2%80%EC%83%89-%EA%B8%B0%EB%8A%A5
+[] 
+
+
+
+
+
 # Vimwiki + Jekyll + Github.io
-파일 변경 테스트
+
 ## 시작하기
 
 블로그 스켈레톤을 fork 하세요.
