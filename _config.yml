@@ -1,15 +1,15 @@
 # Site settings
-title: 기계인간 John Grib
-url: "https://johngrib.github.io"
+title: 키유의 기계인간 따라하기
+url: "https://hyunjoogo.github.io"
 baseurl: ""
 description: >
     기계인간 블로그
 
 # My information
-email: johngrib82@gmail.com
+email: hyunjoogo@gmail.com
 author: 기계인간 John Grib
 profile: 유물론자
-twitter_username: John_Grib
+#twitter_username: John_Grib
 github_username: hyunjoogo
 comment-support: utterances
 
