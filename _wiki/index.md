@@ -10,7 +10,7 @@ regenerate: true
 ## wiki items
 
 * [[mathjax-latex]]
-
+* [[테스트중]]
 ---
 
 ## blog posts

@@ -1,3 +1,12 @@
+# 할일
+[] 나의 구글 맞춤 검색 코드 설정하기
+참조 : https://johngrib.github.io/wiki/my-wiki/#%EA%B2%80%EC%83%89-%EA%B8%B0%EB%8A%A5
+[] 
+
+
+
+
+
 # Vimwiki + Jekyll + Github.io
 
 ## 시작하기
