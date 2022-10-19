@@ -16,3 +16,31 @@ https://github.com/johngrib/johngrib-jekyll-skeleton
 
 https://johngrib.github.io/wiki/my-wiki/
 
+## 설치하기
+
+루비가 설치되어 있지 않을 경우 루비를 설치해 주세요. 여기에서는 `rvm`으로
+설치하는 방법을 소개해 드립니다. 다른 방법으로도 루비를 설치할 수 있으니, 다른
+방법으로 하셔도 됩니다.  
+
+루비 버전은 [GitHub Pages Dependency versions](https://pages.github.com/versions/)을 보면 GitHub Pages에서는 `2.7.4`버전을
+사용하고 있으니 해당 버전을 설치해 줍니다.
+
+```bash
+# See also https://rvm.io/rvm/install
+$ gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+$ curl -sSL https://get.rvm.io | bash
+$ rvm install 2.7.4
+$ rvm use 2.7.4
+```
+
+그다음 `bundle install`을 실행하여 의존성들을 설치합니다.
+
+```bash
+$ bundle install
+```
+
+## 실행하기
+
+```bash
+$ jekyll serve
+```
