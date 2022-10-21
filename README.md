@@ -39,6 +39,15 @@ $ rvm use 2.7.4
 $ bundle install
 ```
 
+### Git hooks 추가하기
+
+새로운 글을 등록하면 메타 데이터를 업데이트해 주어야 합니다. 커밋하기 전에 이를
+자동으로 될 수 있도록 Git Hooks를 추가해야 합니다.
+
+```bash
+$ cp tool/pre-commit ./git/hooks
+```
+
 ## 실행하기
 
 ```bash
