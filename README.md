@@ -39,8 +39,82 @@ $ rvm use 2.7.4
 $ bundle install
 ```
 
+### Git hooks 추가하기
+
+새로운 글을 등록하면 메타 데이터를 업데이트해 주어야 합니다. 커밋하기 전에 이를
+자동으로 될 수 있도록 Git Hooks를 추가해야 합니다.
+
+```bash
+$ cp tool/pre-commit ./.git/hooks
+```
+
+### 노드 모듈 설치하기
+
+메타 데이터 생성을 위해서 `generateData.js`를 실행해야 합니다. 이를 실행하기
+위해서 `yamljs` 의존성을 설치해야 합니다.
+
+```bash
+$ npm install
+```
+
 ## 실행하기
 
 ```bash
 $ jekyll serve
+```
+
+## 글 작성하기
+
+### 새로운 카테고리 만들기
+
+카테고리가 있는 글을 작성하고 싶을 때는 카테고리를 먼저 만들어야 합니다.
+`/_wiki/category-name.md`같이 파일을 만들고 내용에는 다음을 추가해야 합니다.  
+
+이때 `layout`속성은 `category`가 되어야 합니다.
+
+```markdown
+---
+layout  : category
+title   : 제목을 입력합니다.
+summary : 
+date    : 2022-10-06 00:00:00 +0900
+updated : 2022-10-06 00:00:00 +0900
+tag     : 
+toc     : true
+public  : true
+parent  : index
+latex   : false
+---
+
+* TOC
+{:toc}
+```
+
+### 위키에 글 등록하기
+
+위키를 작성할 때는 `/_wiki` 폴더 아래에 마크다운으로 파일을 작성합니다. 만약
+카테고리 아래에 글을 작성하고 싶을 경우에는 카테고리 이름으로 폴더를 만들고
+파일을 추가합니다. 예를 들어 `/_wiki/category-name/document.md`로 만들 수 있습니다.
+`layout`은 `wiki`가 되어야 합니다. `parent`는 상위 카테고리 이름을 작성해야
+합니다.  
+
+만약 상위 카테고리가 없을 경우에는 `parent`에 `index`를 입력합니다.
+
+```markdown
+---
+layout  : wiki
+title   : 제목을 적습니다
+date    : 2022-10-08 11:23:00 +0900
+updated : 2022-10-08 11:23:00 +0900
+tag     : 
+toc     : true
+public  : true
+parent  : category-name
+latex   : false
+---
+
+* TOC
+{:toc}
+
+내용을 적습니다.
 ```
