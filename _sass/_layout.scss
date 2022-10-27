@@ -197,6 +197,7 @@ div.search {
     line-height: 1;
 }
 .searchInput {
+    box-sizing: border-box;
     background-color: transparent;
     width: 100%;
     height: 100%;
