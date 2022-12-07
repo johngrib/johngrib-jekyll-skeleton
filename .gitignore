@@ -7,3 +7,7 @@ Gemfile.lock
 /node_modules
 package-lock.json
 .jekyll-cache/
+.DS_Store
+.localhost.log
+.localhost.pid
+.quickfix-bookmark

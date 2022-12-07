@@ -1,0 +1,34 @@
+/* 글 본문 상단의 메타데이터 */
+
+.post-header {
+    h2 {
+        border: 0px;
+    }
+    p {
+        margin: 0;
+    }
+    // 글의 제목
+    .page-title a {
+        text-decoration: none;
+    }
+}
+
+// 글의 해시태그
+.post-tag a {
+    color: #888888;
+    text-decoration: none;
+}
+
+// 글 이력 버튼 (created, updated)
+.history-button {
+    text-align: right;
+    font-size: 0.8em;
+}
+
+// 글의 부제목
+.title-summary {
+    font-size: 1.6em;
+    font-style: italic;
+    color: gray;
+}
+

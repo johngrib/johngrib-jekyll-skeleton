@@ -5,6 +5,7 @@
     <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
 
     <meta name="description" content="{{ page.summary }}">
+    <meta name="google-site-verification" content="xD2UvBTOH6xxBi9MseahHz4Nt9u2vYZbgY2wVo7Bdyc" />
 
     <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
@@ -40,15 +41,50 @@
     <meta name="msapplication-TileImage" content="/resource/icon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
-{% if site.google_analytics.ua %}
+{% if site.google_analytics.ua and site.google_analytics.encrypted_ua %}
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics.ua }}"></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+        // https://gist.github.com/chrisveness/43bcda93af9f646d083fad678071b90a
+        async function aesGcmDecrypt(ciphertext, password) {
+            const pwUtf8 = new TextEncoder().encode(password);
+            const pwHash = await crypto.subtle.digest('SHA-256', pwUtf8);
+            const iv = ciphertext.slice(0,24).match(/.{2}/g).map(byte => parseInt(byte, 16));
+            const alg = { name: 'AES-GCM', iv: new Uint8Array(iv) };
+            const key = await crypto.subtle.importKey('raw', pwHash, alg, false, ['decrypt']);
+            const ctStr = atob(ciphertext.slice(24));
+            const ctUint8 = new Uint8Array(ctStr.match(/[\s\S]/g).map(ch => ch.charCodeAt(0)));
+            const plainBuffer = await crypto.subtle.decrypt(alg, key, ctUint8);
+            const plaintext = new TextDecoder().decode(plainBuffer);
+            return plaintext;
+        }
+        async function aesGcmEncrypt(plaintext, password) {
+            const pwUtf8 = new TextEncoder().encode(password);
+            const pwHash = await crypto.subtle.digest('SHA-256', pwUtf8);
+            const iv = crypto.getRandomValues(new Uint8Array(12));
+            const alg = { name: 'AES-GCM', iv: iv };
+            const key = await crypto.subtle.importKey('raw', pwHash, alg, false, ['encrypt']);
+            const ptUint8 = new TextEncoder().encode(plaintext);
+            const ctBuffer = await crypto.subtle.encrypt(alg, key, ptUint8);
+            const ctArray = Array.from(new Uint8Array(ctBuffer));
+            const ctStr = ctArray.map(byte => String.fromCharCode(byte)).join('');
+            const ctBase64 = btoa(ctStr);
+            const ivHex = Array.from(iv).map(b => ('00' + b.toString(16)).slice(-2)).join('');
+            return ivHex+ctBase64;
+        }
 
-        gtag('config', '{{ site.google_analytics.ua }}');
+        aesGcmDecrypt('{{ site.google_analytics.encrypted_ua }}', '{{ site.url }}')
+            .then(function(ua) {
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', ua);
+                console.log('The gtag config has been finished.');
+            })
+            .catch(function(error) {
+                console.log(error);
+                console.log('The gtag id is invalid.');
+            });
     </script>
 {% endif %}
 {% if site.google_adsense.client and page.adsense == true %}
@@ -70,13 +106,31 @@
         <a class="site-title-right" href="/about/">me</a>
     </div>
     <div>
-        <a id="random-button" class="site-title-right" href="/wiki/index/#random" onClick="if(typeof random === 'function')random()">random</a>
+        <a id="random-button" class="site-title-right" onClick="goToRandomDocument()">random</a>
     </div>
     <div>
-        <a class="site-title-right" href="/wiki/index/">wiki</a>
+        <a class="site-title-right" href="/wiki/root-index/">index</a>
     </div>
 </header>
 <script>
+function goToRandomDocument() {
+    fetch(`/data/total-document-url-list.json`)
+        .then(response => response.json())
+        .then(function(data) {
+            const num = getRandomInt(0, data.length);
+            window.location.href = data[num];
+        })
+        .catch(function(error) {
+            console.log(error);
+        });
+}
+
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min)) + min; //최댓값은 제외, 최솟값은 포함
+}
+
 ;(function(){
     var isCtrl = false;
 
@@ -91,7 +145,7 @@
             isCtrl = true;
         }
         if(e.which == 82 && isCtrl == true) {
-            document.getElementById("random-button").click();
+            goToRandomDocument();
         }
     }
 })();

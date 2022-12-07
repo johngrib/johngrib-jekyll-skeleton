@@ -30,13 +30,16 @@
      * 모든 부모 문서를 가져오면 화면에 부모 문서 링크를 만들어 준다.
      */
     function insertParent(target, recursiveCount, parentList) {
-        axios.get(`/data/metadata/${target}.json`, {})
-            .then(function(resp) {
-                if (resp.data == null || recursiveCount > recursiveLimit) {
+        if (recursiveCount > recursiveLimit) {
+            return;
+        }
+
+        fetch(`/data/metadata/${target}.json`)
+            .then(response => response.json())
+            .then(function(data) {
+                if (data == null) {
                     return;
                 }
-
-                const data = resp.data;
                 parentList.unshift(data);
 
                 if (data.parent == null) {
@@ -47,6 +50,9 @@
 
                 setTimeout(() => insertParent(data.parent, recursiveCount + 1, parentList), 0);
                 return;
+            })
+            .catch(function(error) {
+                console.error(error);
             });
     }
 })();

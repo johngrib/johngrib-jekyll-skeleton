@@ -1,0 +1,61 @@
+<script async>
+    ;(function() {
+        const tableList = document.querySelectorAll('.table-generate');
+
+        if (tableList == null) {
+            return;
+        }
+
+        for (let i = 0; i < tableList.length; i++) {
+            const ul = tableList[i];
+            const draw = {
+                th: '',
+                td: ''
+            };
+
+            const rows = ul.children;
+            for (let j = 0; j < rows.length; j++) {
+                const row = rows[j].children[0];
+                const columns = row.children;
+                const isHeader = /^th/.test(rows[j].innerHTML);
+                const colTag = isHeader ? 'th' : 'td';
+
+                let colData = '';
+                for (let k = 0; k < columns.length; k++) {
+                    const column = columns[k];
+                    const content = column.innerHTML;
+                    colData += `<${colTag}>${content}</${colTag}>`;
+                }
+
+                const trHtml = `<tr>${colData}</tr>`
+
+                draw[colTag] += trHtml;
+            }
+
+            const result = `
+                <table>
+                    <thead>${draw.th}</thead>
+                    <tbody>${draw.td}</tbody>
+                </table>`
+
+            const targetId = ul.getAttribute('data-target-id');
+            document.getElementById(targetId).innerHTML = result;
+            ul.remove();
+        }
+    })();
+    ;(function() {
+        const source = document.querySelectorAll('.dynamic-insert');
+
+        if (source == null) {
+            return;
+        }
+
+        for (let i = 0; i < source.length; i++) {
+            const item = source[i];
+
+            const target = item.getAttribute('data-target-selector');
+            document.querySelector(target).innerHTML = item.outerHTML;
+            item.remove();
+        }
+    })();
+</script>

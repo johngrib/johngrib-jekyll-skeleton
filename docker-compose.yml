@@ -1,7 +1,9 @@
-jekyll:
-    image: jekyll/jekyll
-    command: jekyll serve --watch
+
+services:
+  jekyll:
+    image: jekyll/jekyll:latest
+    command: jekyll serve --incremental --trace
     ports:
-        - 4000:4000
+      - 4000:4000
     volumes:
-        - .:/srv/jekyll
+      - .:/srv/jekyll

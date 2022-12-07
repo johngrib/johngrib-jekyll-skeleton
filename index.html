@@ -42,7 +42,7 @@ regenerate: true
 {% for doc in documents limit: 30 %}
     {% if doc.public == true and doc.title != 'wiki'%}
         <li>
-            <div>
+            <div class="post-item">
                 <a class="post-link" href="{{ doc.url | prepend: site.baseurl }}">
                     <div class="post-meta">
                         {{ doc.updated | date: "%Y.%m.%d" }}

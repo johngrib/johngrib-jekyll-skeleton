@@ -1,1 +1,0 @@
-{"type":"wiki","title":"디미터 법칙 (The Law of Demeter)","summary":"객체는 그것이 내부적으로 보유하고 있거나 메시지를 통해 확보한 정보만 가지고 의사 결정을 내려야 한다","parent":"proverb","url":"/wiki/law-of-demeter","updated":"2020-07-19 13:38:01 +0900","children":[]}

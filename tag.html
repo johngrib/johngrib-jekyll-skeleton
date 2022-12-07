@@ -10,15 +10,15 @@ public: true
 
 <div id="tag-collection"></div>
 
-<script src="/js/axios.min.js"></script>
 <script>
     ;(function() {
-        axios.get(`/data/tag_count.json`, {})
-            .then((resp) => {
-                if (resp == null || resp.data == null) {
+        fetch(`/data/tag_count.json`)
+            .then(response => response.json())
+            .then(function(data) {
+                if (data == null) {
                     return;
                 }
-                const tags = resp.data;
+                const tags = data;
 
                 let template = '';
                 for (let i = 0; i < tags.length; i++) {
@@ -31,6 +31,9 @@ public: true
                 document.getElementById('tag-list').innerHTML = template;
 
                 showInitTag();
+            })
+            .catch(function(error) {
+                console.error(error);
             });
     })();
 
@@ -38,25 +41,28 @@ public: true
      * 주어진 태그에 해당하는 모든 문서의 목록을 보여줍니다.
      */
     function showTag(tagName) {
-        axios.get(`/data/tag/${tagName}.json`, {})
-            .then((resp) => createLinks(resp, tagName));
+        fetch(`/data/tag/${tagName}.json`)
+            .then(response => response.json())
+            .then((data) => createLinks(data, tagName))
+            .catch(function(error) {
+                console.error(error);
+            });
     }
 
     /*
      * 주어진 태그에 해당하는 모든 문서의 링크를 만들어 줍니다.
      */
-    function createLinks(resp, tagName) {
-        if (resp.data == null) {
+    function createLinks(data, tagName) {
+        if (data == null) {
             return;
         }
 
-        const data = resp.data;
         const documents = [];
 
         let listItems = '';
         for (let i = 0; i < data.length; i++) {
             const idText = getDocumentElementId(tagName, data[i]);
-            listItems += `<li id="${idText}"></li>`;
+            listItems += `<li id="${idText}" class="post-item"></li>`;
         }
         const template = `
             <h3>${tagName}</h3>
@@ -73,12 +79,13 @@ public: true
      * 문서 하나의 링크를 생성합니다.
      */
     function insertDocumentLink(documentId, tagName) {
-        axios.get(`/data/metadata/${documentId}.json`, {})
-            .then((resp) => {
-                if (resp == null || resp.data == null) {
+        fetch(`/data/metadata/${documentId}.json`)
+            .then(response => response.json())
+            .then(function(data) {
+                if (data == null) {
                     return;
                 }
-                const d = resp.data;
+                const d = data;
 
                 const updatedDate = d.updated.replace(/^(\d{4}-\d{2}-\d{2}).*$/, '$1')
                 const summaryText = (d.summary == null || /^\s*$/.test(d.summary))
@@ -98,6 +105,9 @@ public: true
 
                 const idText = getDocumentElementId(tagName, documentId);
                 document.getElementById(idText).innerHTML = link;
+            })
+            .catch(function(error) {
+                console.error(error);
             });
     }
 

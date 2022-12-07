@@ -4,6 +4,7 @@ title   : emacs 사용 시작!
 summary : 하지만 Vim은 포기하지 않는다.
 date    : 2017-04-03 16:33:24 +0900
 tag     : emacs evil
+resource: 66/EF3775-1D80-4EFF-9211-264D6D7B700E
 toc     : true
 comment : true
 public  : true

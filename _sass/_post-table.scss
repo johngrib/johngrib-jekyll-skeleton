@@ -1,0 +1,46 @@
+/* 문서 본문에 포함되는 마크다운 테이블의 스타일. */
+
+.post {
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        border-color: #000000;
+        margin-bottom: 10px;
+
+        td, th {
+            border: 1px solid $third-font-color;
+            padding: 5px 5px;
+        }
+        th {
+            font-weight:normal;
+            color: #000000;
+            background: #E6E6E6;
+        }
+        tr:nth-child(even) {
+            background-color: #f4f4f4;
+        }
+        tr:hover {
+            background: #BEE7F6;
+        }
+    }
+}
+
+.post {
+    li:hover {
+        background: #F3F3F3;
+    }
+    li > ul > li:hover {
+        background: #F6FBF2;
+    }
+    li > ul > li > ul > li:hover {
+        background: #FAF0F4;
+    }
+    li > ul > li > ul > li > ul > li:hover {
+        background: #F0F4FA;
+    }
+    li > ul > li > ul > li > ul > li > ul > li:hover {
+        background: #E8F8F5;
+    }
+}
+
+

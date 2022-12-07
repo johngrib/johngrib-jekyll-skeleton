@@ -51,27 +51,6 @@ blockquote {
         color: $second-font-color;
     }
 }
-code,pre {
-    font-family:  $coding-font;
-}
-code {
-    color: inherit;
-    background-color: #ebedf0;
-    padding: 1px 3px;
-    border-radius: 3px;
-}
-pre {
-    overflow-x: auto;
-    padding: 10px 10px;
-}
-pre, pre code {
-    color: #fafafa;
-    background-color: #223;
-    // font-weight: 600;
-}
-pre code {
-    padding: 0;
-}
 .hide {
     display: none;
 }
@@ -145,4 +124,94 @@ h6 {
 }
 .post-content h6 {
     &:before { content:"⠟"; }
+}
+
+.post-content .external-link {
+    &:after {
+        content: url("/resource/icon/external-link.svg");
+    }
+}
+
+.post-content .tagged-link {
+    &:before { content:"#"; }
+}
+
+.error-link {
+    &:after {
+        font-style: italic;
+        color: red;
+    }
+}
+
+.link-404 {
+    @extend .error-link;
+    &:after {
+        content: "[404 Not Found]"
+    }
+}
+
+.link-400 {
+    @extend .error-link;
+    &:after {
+        content: "[400 Bad Request]"
+    }
+}
+
+.link-408 {
+    @extend .error-link;
+    &:after {
+        content: "[408 Request Timeout]"
+    }
+}
+
+.link-500 {
+    @extend .error-link;
+    &:after {
+        content: "[500 Internal Server Error]"
+    }
+}
+
+.post-item:hover {
+  background-color: #FFF5FF;
+}
+
+video {
+    max-width: 100%;
+}
+
+// 팝업 주석
+sup[role=doc-noteref] {
+    position: absolute;
+
+    a.footnote {
+        position: relative;
+        padding-bottom: 1em;
+        top: -0.9em;
+        text-decoration: none;
+
+        &:before { content: "[" }
+        &:after { content: "]" }
+        &:hover {
+            color: #df0000;
+            & + .tooltiptext {
+                color: red;
+                // display: block; // create-link.js 에서 처리한다
+            }
+        }
+
+        & + .tooltiptext {
+            display: none;
+            max-width: 800px;
+            min-width: 300px;
+            background-color: #ffffff;
+            color: $main-font-color;
+            text-align: left;
+            border-radius: 7px;
+            border: 1px solid #df0000;
+            padding: 0px 12px 0px 12px;
+            position: absolute;
+            bottom: 29px;
+            z-index: 1;
+        }
+    }
 }

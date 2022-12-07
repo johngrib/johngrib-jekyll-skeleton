@@ -4,6 +4,7 @@ title   : Vim 사용시 한/영 전환 문제 해결하기
 summary : hammerspoon으로 해결
 date    : 2017-05-04 22:05:30 +0900
 tag     : vim 구름입력기 hammerspoon karabiner input-source
+resource: 91/85DCEB-2F93-4628-A383-2DCD67F2E500
 toc     : true
 comment : true
 public  : true

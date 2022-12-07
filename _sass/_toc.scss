@@ -6,7 +6,7 @@
         left: calc(50vw + 410px);
         width: 380px;
         background-color: white;
-        z-index: 9999;
+        z-index: 1;
         font-size: 0.8em;
         overflow-y:auto;
         overflow-x:hidden;
@@ -30,3 +30,4 @@ $active-color: red;
 .active-toc:visited {
   color: $active-color;
 }
+

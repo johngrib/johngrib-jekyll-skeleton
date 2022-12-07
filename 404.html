@@ -1,5 +1,6 @@
 ---
 layout: default
+permalink: /404.html
 ---
 
 <style type="text/css" media="screen">
@@ -22,3 +23,127 @@ layout: default
   <p><strong>Page not found :(</strong></p>
   <p>The requested page could not be found.</p>
 </div>
+<script>
+    const url = window.location.pathname
+        .replace(/[/]*$/, '/');
+
+    console.log(window.location.pathname, "->", url);
+
+    const fallbackRouter = {
+        '/wiki/spring-documents-overview/': '/wiki/spring/document/overview/',
+        '/wiki/template-method-pattern/': '/wiki/pattern/template-method/',
+        '/wiki/design-pattern/template-method-pattern/': '/wiki/pattern/template-method/',
+
+        '/wiki/design-pattern/': '/wiki/pattern/',
+            '/wiki/abstract-factory-pattern/'               : '/wiki/pattern/abstract-factory/',
+            '/wiki/design-pattern/abstract-factory-pattern/': '/wiki/pattern/abstract-factory/',
+
+            '/wiki/adapter-pattern/'               : '/wiki/pattern/adapter/',
+            '/wiki/design-pattern/adapter-pattern/': '/wiki/pattern/adapter/',
+
+            '/wiki/builder-pattern/'                : '/wiki/pattern/builder/',
+            '/wiki/design-pattern/builder-pattern/' : '/wiki/pattern/builder/',
+
+            '/wiki/strategy-pattern/'                : '/wiki/pattern/strategy/',
+            '/wiki/design-pattern/strategy-pattern/' : '/wiki/pattern/strategy/',
+
+            '/wiki/strangler-pattern/': '/wiki/pattern/strangler/',
+            '/wiki/command-pattern/': '/wiki/pattern/command/',
+            '/wiki/controller-pattern/': '/wiki/pattern/controller/',
+            '/wiki/design-pattern-quotes/': '/wiki/pattern/quotes/',
+            '/wiki/decorator-pattern/': '/wiki/pattern/decorator/',
+            '/wiki/factory-method-pattern/': '/wiki/pattern/factory-method/',
+            '/wiki/null-object-pattern/': '/wiki/pattern/null-object/',
+            '/wiki/observer-pattern/': '/wiki/pattern/observer/',
+            '/wiki/static-factory-method-pattern/': '/wiki/pattern/static-factory-method/',
+
+        '/wiki/programming-language/': '/wiki/language/',
+        '/wiki/java-exception-handling/': '/wiki/java/exception-handling/',
+        '/wiki/Object-equals/': '/wiki/java/object-equals/',
+        '/wiki/gerald-weinberg-language-king/': '/wiki/people/gerald-weinberg/',
+        '/wiki/java-stream/': '/wiki/java/stream/',
+        '/wiki/ronald-wayne/': '/wiki/people/ronald-wayne/',
+        '/wiki/man-cmd/': '/wiki/cmd/man/',
+        '/wiki/two-eggs-100-floor/': '/wiki/problem/two-eggs-100-floor/',
+        '/wiki/ag/': '/wiki/cmd/ag/',
+        '/wiki/curl/': '/wiki/cmd/curl/',
+        '/wiki/proverb/': '/wiki/jargon/',
+        '/wiki/vim-auto-completion/': '/wiki/vim/auto-completion/',
+        '/wiki/mv-cmd/': '/wiki/cmd/mv/',
+        '/wiki/git-index/': '/wiki/git/index/',
+        '/wiki/sed/': '/wiki/cmd/sed/',
+        '/wiki/git-chagne-hundreds-commit-messages/': '/wiki/git/examples/',
+        '/wiki/git-checkout-specific-files/': '/wiki/git/examples/',
+        '/wiki/java-javadoc/': '/wiki/java/javadoc/',
+        '/wiki/java-util-arraylist/': '/wiki/java/arraylist/',
+        '/wiki/fc/': '/wiki/cmd/fc/',
+        '/wiki/openssl/': '/wiki/cmd/openssl/',
+        '/wiki/TOML/': '/wiki/language/toml/',
+        '/wiki/clojure/study/PersistentList/': '/wiki/clojure/study/persistent-list/',
+        '/wiki/tr-cmd/': '/wiki/cmd/tr/',
+        '/wiki/find-cmd/': '/wiki/cmd/find/',
+        '/wiki/java8/': '/wiki/java/8/',
+        '/wiki/clojure/study/persistent-map/': '/wiki/clojure/study/map/',
+        '/wiki/cal-cmd/': '/wiki/cmd/cal/',
+        '/wiki/ditto-cmd/': '/wiki/cmd/ditto/',
+        '/wiki/links-2019/': '/wiki/links/2019/',
+        '/wiki/links-2018/': '/wiki/links/2018/',
+        '/wiki/ultisnips/': '/wiki/vim/ultisnips/',
+        '/wiki/clojure/threading-macros/': '/wiki/clojure/guide/threading-macros/',
+        '/wiki/date-cmd/': '/wiki/cmd/date/',
+        '/wiki/tree-cmd/': '/wiki/cmd/tree/',
+        '/wiki/vim-persistent-undo/': '/wiki/vim/persistent-undo/',
+        '/wiki/git-log/': '/wiki/git/log/',
+        '/wiki/vim-coc/': '/wiki/vim/coc-nvim/',
+        '/wiki/less-cmd/': '/wiki/cmd/less/',
+        '/wiki/Python3/': '/wiki/python/',
+        '/wiki/Object-hashCode/': '/wiki/java/object-hashcode/',
+        '/wiki/Golang/': '/wiki/go/',
+        '/wiki/study-note/': '/wiki/study/note/',
+        '/wiki/study-data-intensive-application/': '/wiki/study/ddia/',
+        '/wiki/book-lyubishev/': '/wiki/book/lyubishev/',
+        '/wiki/The-Jargon-File/': '/wiki/book/the-jargon-file/',
+        '/wiki/vim-configure-split/': '/wiki/vim/configure-split/',
+        '/wiki/vim-rest-console/': '/wiki/vim/rest-console/',
+        '/wiki/vim-with-space-char/': '/wiki/vim/set-empty-chars/',
+        '/wiki/bat-cmd/': '/wiki/cmd/bat/',
+        '/wiki/airplain-rule/': '/wiki/jargon/airplane-rule/',
+        '/wiki/java-enum/': '/wiki/java/enum/',
+        '/wiki/Object-toString/': '/wiki/java/object-tostring/',
+        '/wiki/two-n-base-converting/': '/wiki/math/two-n-base-converting/',
+        '/wiki/scrum/': '/wiki/software-engineering/scrum/',
+        '/wiki/kanban/': '/wiki/software-engineering/kanban/',
+        '/wiki/bootstrapping/': '/wiki/jargon/bootstrapping/',
+        '/wiki/migrate-to-new-macbook/': '/wiki/mac/setting/',
+        '/wiki/yes-cmd/': '/wiki/cmd/yes/',
+        '/wiki/brew/': '/wiki/cmd/brew/',
+        '/wiki/vim-conceallevel/': '/wiki/vim/conceallevel/',
+        '/wiki/Bill-Atkinson-productivity/': '/wiki/people/bill-atkinson/',
+        '/wiki/file-cmd/': '/wiki/cmd/file/',
+        '/wiki/Postel-s-law/': '/wiki/jargon/postel-s-law/',
+        '/wiki/Edsel-edict/': '/wiki/jargon/edsel-edict/',
+        '/wiki/metcalfe-s-law/': '/wiki/jargon/metcalfe-s-law/',
+        '/wiki/SOLID/': '/wiki/jargon/solid/',
+        '/wiki/start-rust-with-vim/': '/wiki/rust/vim-setting/',
+        '/wiki/basename/': '/wiki/cmd/basename/',
+        '/wiki/java-enhancements/': '/wiki/java/enhancements/',
+        '/wiki/email-validation/': '/wiki/regex/email-validation/',
+        '/wiki/regex-prime/': '/wiki/regex/prime-number/',
+        '/wiki/egyptian-multiplication/': '/wiki/algorithm/egyptian-multiplication/',
+        '/wiki/article/vim-night/2022-03-31-insert-mode/': '/wiki/article/vim-night/20220331-insert-mode/',
+        '/wiki/article/vim-night/2022-03-27-ultisnips/': '/wiki/article/vim-night/20220327-ultisnips/',
+        '/wiki/java_home/': '/wiki/cmd/java_home/',
+        '/wiki/gc-death-spiral/': '/wiki/java/gc/death-spiral/',
+        '/wiki/hofstadter-s-law/': '/wiki/jargon/hofstadter-s-law/',
+        '/wiki/dc-cmd/': '/wiki/cmd/dc/',
+        '/wiki/java-optional/': '/wiki/java/optional/',
+        '/wiki/java8-performance-improvement-for-hashmap/': '/wiki/java/hashmap/',
+        '/wiki/strfile-cmd/': '/wiki/cmd/strfile/',
+        '/wiki/ACID/': '/wiki/database/acid/',
+        '/wiki/jargon/acid/': '/wiki/database/acid/',
+    };
+
+    if (fallbackRouter[url]) {
+        window.location.href = fallbackRouter[url].concat(window.location.hash);
+    }
+</script>

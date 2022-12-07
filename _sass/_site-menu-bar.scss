@@ -1,0 +1,85 @@
+/* 사이트 최상단 메뉴 바 + 구글 검색 */
+
+.header {
+    background-color: $theme-color;
+
+    &:after {
+        clear: both;
+        content: ' ';
+        display: block;
+    }
+
+    // 사이트 이름 (왼쪽)
+    .site-title {
+        float: left;
+        text-decoration: none;
+        color: #FFFFFF;
+        line-height: 1.3;
+        padding-left: 10px;
+        font-style: italic;
+    }
+    // 사이트 이름 (오른쪽: index, random, me)
+    .site-title-right {
+        float: right;
+        text-decoration: none;
+        color: #FFFFFF;
+        line-height: 1.3;
+        padding-right: 10px;
+        font-style: italic;
+    }
+}
+
+#random-button:hover {
+    cursor: pointer;
+}
+
+// 최상단 구글 검색 입력창
+div.search {
+    background-color: #f6f5ea;
+    width: 100%;
+    position: relative;
+    border-bottom: 1px solid $theme-color;
+    line-height: 1;
+}
+.searchInput {
+    box-sizing: border-box;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    position: relative;
+    padding: 0px;
+    padding-left: 5px;
+    border: 0px;
+    margin: 0px;
+    font-size: 13px;
+    direction: ltr;
+    -webkit-appearance: textfield;
+    border-radius: 0px;
+}
+
+// 검색 버튼
+.searchButton {
+    border: 0px;
+    border-radius: 0px;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    z-index: 2;
+}
+
+// 구글 검색 결과
+div.gsc-control-cse {
+    padding: 0;
+}
+
+.search form.gsc-search-box {
+    margin: 0;
+}
+
+table.gsc-search-box {
+    margin: 0px;
+}
+

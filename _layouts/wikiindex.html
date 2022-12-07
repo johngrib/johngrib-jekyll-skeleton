@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<div class="post-main" style="display:none">
+<div class="post-main" style="display:block">
     <header class="post-header">
         <h1 class="page-title">{{ page.title }}</h1>
     </header>
@@ -9,25 +9,4 @@ layout: default
         {{ content }}
     </article>
 </div>
-<script>
-    function random() {
-        var list = document.querySelectorAll('.wiki-list a')
-        var random = Math.floor((Math.random() * list.length));
-        var url = list[random].href;
-        window.location.href = url;
-    }
-
-    function init() {
-        if(/#random$/.test(window.location.href)) {
-            return random();
-        }
-        document.querySelector('div.post-main').style.display = 'block';
-    };
-
-    if (document.readyState === 'complete' || document.readyState !== 'loading') {
-      init();
-    } else {
-      document.addEventListener('DOMContentLoaded', init);
-    }
-</script>
 {% include createLink.html %}

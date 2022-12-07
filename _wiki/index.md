@@ -1,30 +1,11 @@
 ---
-layout  : wikiindex
-title   : wiki
+layout  : category
+title   : ROOT
+date    : 2017-11-26 12:42:03 +0900
 toc     : true
 public  : true
 comment : false
+updated : 2021-07-25 18:00:13 +0900
 regenerate: true
 ---
-
-## wiki items
-
-* [[mathjax-latex]]
-
----
-
-## blog posts
-<div>
-    <ul>
-{% for post in site.posts %}
-    {% if post.public != false %}
-        <li>
-            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
-                {{ post.title }}
-            </a>
-        </li>
-    {% endif %}
-{% endfor %}
-    </ul>
-</div>
 
