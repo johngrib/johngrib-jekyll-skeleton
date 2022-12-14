@@ -148,7 +148,7 @@
 
         sup.addEventListener('mouseover', function() {
             const supRect = sup.getBoundingClientRect();
-            const postRect =  document.querySelector('.page-content')
+            const postRect =  document.querySelector('.post-content')
                 .getBoundingClientRect();
 
             tooltip.style.display = "block";
@@ -169,6 +169,8 @@
 
         sup.addEventListener('mouseout', function() {
             tooltip.style.display = "none";
+            tooltip.style.left = null;
+            tooltip.style.right = null;
         });
     }
 })();

@@ -181,12 +181,11 @@ video {
 
 // 팝업 주석
 sup[role=doc-noteref] {
-    position: absolute;
+    position: relative;
 
     a.footnote {
         position: relative;
         padding-bottom: 1em;
-        top: -0.9em;
         text-decoration: none;
 
         &:before { content: "[" }
@@ -210,7 +209,7 @@ sup[role=doc-noteref] {
             border: 1px solid #df0000;
             padding: 0px 12px 0px 12px;
             position: absolute;
-            bottom: 29px;
+            bottom: 1em;
             z-index: 1;
         }
     }
