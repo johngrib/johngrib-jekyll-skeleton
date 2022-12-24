@@ -132,20 +132,39 @@ function getRandomInt(min, max) {
 }
 
 ;(function(){
-    var isCtrl = false;
-
-    document.onkeyup=function(e){
-        if (e.which == 17) {
-            isCtrl = false;
+    document.onkeydown = function(e){
+        // 만약 포커스가 input, textarea, select 에 있으면 동작하지 않도록 바로 리턴한다.
+        const target_tag = e.target.tagName.toLowerCase();
+        if (target_tag == 'input' || target_tag == 'textarea' || target_tag == 'select') {
+            return;
         }
-    }
-
-    document.onkeydown=function(e){
-        if(e.which == 17) {
-            isCtrl = true;
+        if (!e.ctrlKey) {
+            return;
         }
-        if(e.which == 82 && isCtrl == true) {
+        if (e.which == 72) {
+            // Ctrl + h : 도움말
+            alert('[도움말]\nCtrl + h : 도움말\nCtrl + r : 랜덤 문서\nCtrl + i : 인덱스\nCtrl + f : 검색창\nCtrl + m : 메인화면');
+            return;
+        }
+        if (e.which == 82) {
+            // ctrl + r : random 문서로 이동
             goToRandomDocument();
+            return;
+        }
+        if (e.which == 73) {
+            // ctrl + i : index 페이지로 이동
+            window.location.href = '/wiki/root-index/';
+            return;
+        }
+        if (e.which == 70) {
+            // ctrl + f : 검색창으로 포커스 이동
+            document.querySelector('div.search > form > input.searchInput').focus();
+            return;
+        }
+        if (e.which == 77) {
+            // ctrl + m : main 화면으로 이동
+            window.location.href = '/';
+            return;
         }
     }
 })();
