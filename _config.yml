@@ -1,5 +1,5 @@
 # Site settings
-title: 소프트웨어 개발자 Spes Lim
+title: 책 읽는 프로그래머
 url: "https://bloomspes.github.io"
 baseurl: ""
 description: >
@@ -9,7 +9,7 @@ description: >
 email: bloomspes@gmail.com
 author: Spes Lim
 profile: 
-twitter_username: bloomspes
+twitter_username: none
 github_username: bloomspes
 comment-support: utterances
 
