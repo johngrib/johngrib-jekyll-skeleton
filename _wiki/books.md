@@ -1,6 +1,6 @@
 ---
 layout  : wiki
-title   : 한 주에 나는 얼마나 책을 읽었나?
+title   : Extreme Programming Installed
 toc     : true
 date    : 2023-01-03 02:33:00 +0900
 public  : true
