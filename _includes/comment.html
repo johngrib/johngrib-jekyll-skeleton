@@ -1,24 +1,21 @@
 {% if page.comment != false %}
+    <div class="giscus"></div>
     <div class="post-comments">
-    {% if site.comment-support == "disqus" %}
-        <div id="disqus_thread"></div>
-        <script type="text/javascript">
-            var disqus_shortname = '{{ site.disqus.id }}'; // required: replace example with your forum shortname
-            (function() {
-                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-            })();
-        </script>
-    {% endif %}
-    {% if site.comment-support == "utterances" %}
-        <script src="https://utteranc.es/client.js"
-            repo="{{ site.utterances.repo }}"
-            {% if page.issue-number %}issue-number="{{ page.issue-number }}"{% else %}issue-term="{{ site.utterances.issue-term }}"{% endif %}
-            label="{{ site.utterances.label }}"
-            branch="{{ site.utterances.branch }}"
+    <script src="https://giscus.app/client.js"
+        data-repo="{{ site.giscus.repo }}"
+        data-repo-id="{{ site.giscus.repo_id }}"
+        data-category="{{ site.giscus.category }}"
+        data-category-id="{{ site.giscus.category_id }}"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="ko"
+        crossorigin="anonymous"
+        data-mapping="specific"
+        data-term="{{ page.resource }}"
+        data-strict="0"
         async>
-        </script>
-    {% endif %}
+    </script>
     </div>
 {% endif %}
