@@ -37,19 +37,11 @@ collections:
         permalink: /:collection/:path/
 
 # Comment Service
-disqus:
-  id: johngrib
-  shortname: johngrib
-utterances:
-  repo: johngrib/johngrib.github.io
-  issue-term: url
-  label: Comment
-  branch: master
 giscus:
   repo: johngrib/johngrib.github.io
-  repo_id: MDEwOlJlcG9zaXRvcnkxMTIwODgwNDc=
+  repo_id: SAMPLE-VALUE
   category: Announcements
-  category_id: DIC_kwDOBq5T784CTYB0
+  category_id: SAMPLE-VALUE
 
 google_analytics:
   ua: SAMPLE-VALUE
