@@ -125,6 +125,24 @@ function goToRandomDocument() {
         });
 }
 
+function openRandomLink() {
+    // 문서 내 링크 중 하나를 랜덤 선택해 열어줍니다.
+    const links = document.querySelectorAll('.post-content a[href]:not(.link-checked):not([href^="#"]):not([href^="mailto"]):not([href^="javascript"])');
+
+    if (links == null || links.length == null || links.length == 0) {
+        return;
+    }
+
+    const num = getRandomInt(0, links.length);
+    const link = links[num];
+
+    window.open(link.getAttribute('href'), '_blank');
+    console.log('opened')
+    console.log(link);
+
+    link.classList.add('link-checked');
+}
+
 function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
@@ -143,7 +161,12 @@ function getRandomInt(min, max) {
         }
         if (e.which == 72) {
             // Ctrl + h : 도움말
-            alert('[도움말]\nCtrl + h : 도움말\nCtrl + r : 랜덤 문서\nCtrl + i : 인덱스\nCtrl + f : 검색창\nCtrl + m : 메인화면');
+            alert('[도움말]\nCtrl + h : 도움말\nCtrl + i : 인덱스\nCtrl + f : 검색창\nCtrl + m : 메인화면\nCtrl + r : 랜덤 문서\nCtrl + Shift + r : 문서 내 랜덤 링크');
+            return;
+        }
+        if (e.which == 82 && e.shiftKey) {
+            // Ctrl + Shift + r : 랜덤하게 문서 내 링크를 다른 탭에 열어준다
+            openRandomLink();
             return;
         }
         if (e.which == 82) {
