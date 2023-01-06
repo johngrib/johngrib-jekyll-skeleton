@@ -87,4 +87,7 @@ Ctrl + Shift + r : 문서 내 랜덤 링크`;
             return;
         }
     }
+
+    document.getElementById('random-button')
+        .addEventListener('click', goToRandomDocument);
 })();
