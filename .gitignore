@@ -11,3 +11,5 @@ package-lock.json
 .localhost.log
 .localhost.pid
 .quickfix-bookmark
+.ruby-version
+
