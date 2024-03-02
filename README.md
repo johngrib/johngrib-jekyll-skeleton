@@ -18,25 +18,49 @@ https://johngrib.github.io/wiki/my-wiki/
 
 ## 설치하기
 
-루비가 설치되어 있지 않을 경우 루비를 설치해 주세요. 여기에서는 `rvm`으로
+루비가 설치되어 있지 않을 경우 루비를 설치해 주세요. 여기에서는 `rbenv`로
 설치하는 방법을 소개해 드립니다. 다른 방법으로도 루비를 설치할 수 있으니, 다른
 방법으로 하셔도 됩니다.  
 
-루비 버전은 [GitHub Pages Dependency versions](https://pages.github.com/versions/)을 보면 GitHub Pages에서는 `2.7.4`버전을
-사용하고 있으니 해당 버전을 설치해 줍니다.
-
 ```bash
-# See also https://rvm.io/rvm/install
-$ gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+$ gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
 $ curl -sSL https://get.rvm.io | bash
-$ rvm install 2.7.4
-$ rvm use 2.7.4
 ```
 
-그다음 `bundle install`을 실행하여 의존성들을 설치합니다.
+아래 페이지를 보고 rbenv를 Basic Git Checkout 방식으로 설치해줍시다.
+https://github.com/rbenv/rbenv
 
+
+그리고 rbenv install에 필요한 의존성들을 설치해줍니다.
+```bash
+$ git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build
+$ sudo apt-get install libffi-dev
+$ sudo apt-get install libyaml-dev
+$ rbenv install 3.2.3
+```
+
+다음 구문을 환경설정 파일 (.zshrc 또는 .bashrc 등)에 추가합니다.
+```
+export PATH="$PATH:$HOME/.rvm/bin"
+export GEM_HOME="$HOME/.gems"
+export PATH="$HOME/.gems/bin:$PATH"
+```
+
+skeleton을 fork한 원격저장소를 clone하고
+해당 폴더로 이동합시다.
+그리고 루비의 버전을 3.2.3으로 특정합니다.
+```bash
+$ rbenv global 3.2.3
+```
+
+`bundle install`을 실행하여 의존성들을 설치합니다.
 ```bash
 $ bundle install
+```
+
+webrick을 추가합니다.
+```bash
+$ bundle add webrick
 ```
 
 ### Git hooks 추가하기
@@ -60,7 +84,7 @@ $ npm install
 ## 실행하기
 
 ```bash
-$ jekyll serve
+$ bundle exec jekyll serve
 ```
 
 ## 글 작성하기
